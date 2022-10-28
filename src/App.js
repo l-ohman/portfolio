@@ -1,11 +1,13 @@
 import React from "react";
+import { Header, Footer } from "./components";
+import Router from "./Routes";
 
 export default function App() {
   return (
-    <div>
-      <header>
-        <h2>Hello World</h2>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Router />
+      <Footer />
+    </>
   );
 }
