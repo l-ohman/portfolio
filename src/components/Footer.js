@@ -13,7 +13,7 @@ const FooterContainer = styled.div`
 export default function Footer() {
     return(
         <FooterContainer>
-            <h3>Footer</h3>
+            <h3>Placeholder</h3>
         </FooterContainer>
     );
 }

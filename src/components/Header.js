@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Home, Contact, ProjectView } from "./";
 
 const HeaderContainer = styled.div`
     margin: 0;
-    padding: 0.3em 0.7em;
+    padding: 0.5em 0.7em;
     width: 100%;
     background: darkblue;
     color: white;
@@ -13,27 +15,38 @@ const HeaderContainer = styled.div`
     justify-content: flex-start;
 
     #header-links {
-        margin-left: 0.5em;
+        margin: 0 auto;
         display: flex;
         width: 100%;
         justify-content: space-around;
+        max-width: 500px;
+    }
+
+    a {
+        font-size: 1.2em;
+        color: inherit;
+        text-decoration: inherit;
+        transition: color 0.2s;
+        &:hover {
+            color: #dfdfdf;
+        }
     }
 `;
 
 export default function Header() {
-    const thereProbablyWontBeAHeader = [
-        "Projects",
-        "Bio",
-        "Contact",
-        "Example"
+    const headerLinks = [
+        "home",
+        "projects",
+        "contact"
     ];
 
     return(
         <HeaderContainer>
-            <h2>Hello</h2>
             <div id="header-links">
-                {thereProbablyWontBeAHeader.map(i=>(
-                    <p>{i}</p>
+                {headerLinks.map(i=>(
+                    <Link to={i}>
+                        <p key={i}>{i}</p>
+                    </Link>
                 ))}
             </div>
         </HeaderContainer>
