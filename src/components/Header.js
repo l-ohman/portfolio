@@ -43,9 +43,9 @@ export default function Header() {
     return(
         <HeaderContainer>
             <div id="header-links">
-                {headerLinks.map(i=>(
-                    <Link to={i}>
-                        <p key={i}>{i}</p>
+                {headerLinks.map((route, i)=>(
+                    <Link to={route} key={i}>
+                        <p>{route}</p>
                     </Link>
                 ))}
             </div>
