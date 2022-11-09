@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

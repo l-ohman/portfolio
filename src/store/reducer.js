@@ -13,12 +13,16 @@ const { setData } = dataSlice.actions;
 
 export const getAllData = () => async (dispatch) => {
   try {
-    const data = await db.collection("data").get();
+    const fetchedData = await db.collection("data").get();
+    const data = [];
+    fetchedData.forEach(itm => data.push(itm.data()));
+    
+    // data.forEach(doc => console.log(`${doc.id} => ${doc.data()}`));
     dispatch(setData(data));
-    // alert("Data successfully set");
+    console.log("success");
     return true;
   } catch (error) {
-    // alert("Error getting data");
+    console.log("error", error);
     return false;
   }
 };

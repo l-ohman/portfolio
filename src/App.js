@@ -10,10 +10,12 @@ export default function App() {
   React.useEffect(() => {
     const fetch = async () => {
       const fetchSuccessful = await dispatch(getAllData());
-      if (fetchSuccessful){
-        console.log("success");
-      } 
-    }
+      // if (fetchSuccessful) {
+      //   console.log("success");
+      // } else {
+      //   console.log("failure");
+      // }
+    };
     fetch();
   }, []);
 
