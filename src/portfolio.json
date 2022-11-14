@@ -1,6 +1,7 @@
 {
   "projects": {
     "book-beasts": {
+      "title": "Book Beasts",
       "contributions": [
         "Login/Signup process",
         "User security and authentication",
@@ -32,6 +33,7 @@
       }
     },
     "umami-meats": {
+      "title": "Umami Meats",
       "full": [
         "Built in roughly 10 days, Umami Meats is an ecommerce site that sells a small variety of quality meat and fish. The vast majority of my time on this project was spent designing and building the frontend. At the very beginning of the project, I drew the wireframes for nearly every page; these proved to be invaluable, as they greatly sped up our process and ensured visual consistency throughout the entire application. Once we had built the foundation for each page, I revised much of the styling and added subtle animations to construct a user experience that is both aesthetically pleasing and extremely clear."
       ],
@@ -53,6 +55,7 @@
       }
     },
     "solar-sandbox": {
+      "title": "Solar Sandbox",
       "short": "Solar Sandbox is an interactive application where users can design their own solar system from scratch. Build a network of planets and moons and watch the 3D view update in realtime!",
       "contributions": [
         "Procedurally generated star system",

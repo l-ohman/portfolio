@@ -1,9 +1,21 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Home from "./Home/_Home";
-import Contact from "./Contact/_Contact";
-import AllProjects from "./AllProjects/_AllProjects";
-import ProjectView from "./ProjectView/_ProjectView";
+import MainPage from "./_MainPage";
+import Bio from "./Bio";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import ProjectView from "./_ProjectView";
+import Contact from "./Contact";
 import Error from "./Error";
 
-export { Header, Footer, Home, Contact, AllProjects, ProjectView, Error };
+export {
+  Header,
+  Footer,
+  MainPage,
+  Bio,
+  Skills,
+  Projects,
+  ProjectView,
+  Contact,
+  Error
+};

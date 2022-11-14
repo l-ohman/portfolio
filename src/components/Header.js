@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.div`
     margin: 0;
@@ -34,18 +33,23 @@ const HeaderContainer = styled.div`
 
 export default function Header() {
     const headerLinks = [
-        "home",
+        "about",
+        "skills",
         "projects",
         "contact"
     ];
+
+    const test = (location) => {
+        console.log(location);
+    }
 
     return(
         <HeaderContainer>
             <div id="header-links">
                 {headerLinks.map((route, i)=>(
-                    <Link to={route} key={i}>
+                    <div key={i} onClick={(e) => test(route)}>
                         <p>{route}</p>
-                    </Link>
+                    </div>
                 ))}
             </div>
         </HeaderContainer>
