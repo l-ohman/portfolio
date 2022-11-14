@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import loggerMiddleware from "redux-logger";
-import dataReducer from "./reducer";
+// import loggerMiddleware from "redux-logger";
+import { _projects, _skills, _bio } from "./reducers";
 
 export default configureStore({
   reducer: {
-    data: dataReducer
+    projects: _projects,
+    skills: _skills,
+    bio: _bio
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(loggerMiddleware)
+    getDefaultMiddleware()/*.concat(loggerMiddleware)*/
 });

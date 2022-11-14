@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Home, Contact, ProjectView } from "./";
 
 const HeaderContainer = styled.div`
     margin: 0;
