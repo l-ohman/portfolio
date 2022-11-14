@@ -1,10 +1,16 @@
 import React from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Error } from "../";
 
 export default function ProjectView() {
-    // const params = useParams();
+  const projectSlug = useParams().id;
+  const project = useSelector((state) => state.projects[projectSlug]);
 
-    return(
-        <div>Project View</div>
-    )
+  React.useEffect(() => {
+    // console.dir(project[projectSlug]);
+  }, []);
+
+  if (!project) return <Error is404={true} />;
+  return <div>Project View</div>;
 }
