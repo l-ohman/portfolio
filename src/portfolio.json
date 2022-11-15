@@ -16,10 +16,7 @@
         "Mocha"
       ],
       "short": "Book Beasts is a web application designed for students to create and share their own custom story books. It also includes an extensive interface that provides instructors with the tools necessary to manage their students and keep track of their progress.",
-      "tags": [
-        "Content Management",
-        "Education"
-      ],
+      "tags": ["Content Management", "Education"],
       "full": [
         "For our final project at Fullstack Academy, my team and I wanted to build an educational and interactive experience — so we built Book Beasts. This project had two main goals: the first was to enable students’ creativity by giving them a platform to create, and the second was to provide instructors with the tools necessary to monitor and manage their students’ works.",
         "I was responsible for the interface through which students create and edit their own books, as well as the database structure that supports it. Due to the complex nature of our relational database, I also wrote a great deal of tests to ensure that the books and pages worked as intended as we made changes throughout the project. This experience helped me understand how valuable test-driven development can be, even when on a short schedule."
@@ -37,10 +34,7 @@
       ],
       "short": "Umami Meats is an ecommerce site where users can view and buy various types of high-end steak and sushi.",
       "technologies": ["Node.js", "Next.js", "React", "Redux", "PostgreSQL"],
-      "tags": [
-        "Ecommerce",
-        "UI/UX Design"
-      ],
+      "tags": ["Ecommerce", "UI/UX Design"],
       "contributions": [
         "Login/Signup process",
         "User security and authentication"
