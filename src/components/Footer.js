@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+const footerHeight = 2;
 const FooterContainer = styled.div`
     position: absolute;
     width: 100%;
+    height: ${footerHeight + "em"};
+    bottom: ${"-" + (footerHeight + 2) + "em"};
     padding: 0.3em 0;
-    bottom: 0;
+
     background: black;
     color: white;
     text-align: center;

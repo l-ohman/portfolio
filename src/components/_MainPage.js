@@ -6,6 +6,10 @@ import { Bio, Skills, Projects, Contact } from "./";
 const ContentContainer = styled.div`
   margin: 1.5em;
   max-width: 650px;
+  > div {
+    /* background: aqua; */
+    margin-bottom: 2em;
+  }
 `;
 
 export default function MainPage() {
