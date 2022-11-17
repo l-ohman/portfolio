@@ -1,11 +1,10 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import MainPage from "./_MainPage";
-import Bio from "./Bio";
+import Bio from "./personal/Bio";
+import Contact from "./personal/Contact";
 import Skills from "./Skills";
-import Projects from "./Projects";
-import ProjectView from "./_ProjectView";
-import Contact from "./Contact";
+import Projects from "./projects/_Projects";
 import Error from "./Error";
 
 export {
@@ -15,7 +14,6 @@ export {
   Bio,
   Skills,
   Projects,
-  ProjectView,
   Contact,
   Error
 };

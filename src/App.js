@@ -1,13 +1,12 @@
 import React from "react";
-import { Header, Footer } from "./components";
-import Router from "./Routes";
+import { Header, MainPage, Footer } from "./components";
 import "./main.css";
 
 export default function App() {
   return (
     <>
       <Header />
-      <Router />
+      <MainPage />
       <Footer />
     </>
   );
