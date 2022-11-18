@@ -1,29 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
-// importing the data directly from the json here instead of using the db,
-// since the quantity of data is very small and not regularly updated.
-// will move to firestore later, but seems unnecessary for now.
-import { projects, skills, bio } from "../portfolio.json";
 
-export const _projects = createSlice({
-  name: "projects",
-  initialState: projects,
+// may not need this (depends on structure of ProjectListContainer)
+const selectedProjectSlice = createSlice({
+  name: "selectedProject",
+  initialState: 0,
   reducers: {
-    setData: (state, action) => action.payload,
+    selectProject: (state, action) => action.payload,
+    unselectProject: (state, action) => 0,
   },
-}).reducer;
+});
+export const selectedProject = selectedProjectSlice.reducer;
+export const { selectProject, unselectProject } = selectedProjectSlice.actions;
 
-export const _skills = createSlice({
-  name: "skills",
-  initialState: skills,
+// ... because why not
+const darkModeSlice = createSlice({
+  name: "isDark",
+  initialState: false,
   reducers: {
-    setData: (state, action) => action.payload,
-  },
-}).reducer;
-
-export const _bio = createSlice({
-  name: "bio",
-  initialState: bio,
-  reducers: {
-    setData: (state, action) => action.payload,
-  },
-}).reducer;
+    setDarkMode: (state, action) => action.payload,
+  }
+})
+export const darkMode = darkModeSlice.reducer;
+export const { setDarkMode } = darkModeSlice.actions;
