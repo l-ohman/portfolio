@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loggerMiddleware from "redux-logger";
-import { darkMode } from "./reducers";
+import { selectedProject, darkMode } from "./reducers";
 
 export default configureStore({
   reducer: {
+    selectedProject,
     isDark: darkMode,
   },
   middleware: (getDefaultMiddleware) =>
