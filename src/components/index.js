@@ -1,19 +1,13 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import MainPage from "./_MainPage";
-import Bio from "./personal/Bio";
-import Contact from "./personal/Contact";
-import Skills from "./Skills";
-import Projects from "./projects/_Projects";
-import Error from "./Error";
+import Header from "./auxiliary/Header";
+import Footer from "./auxiliary/Footer";
 
-export {
-  Header,
-  Footer,
-  MainPage,
-  Bio,
-  Skills,
-  Projects,
-  Contact,
-  Error
-};
+import Error from "./auxiliary/Error";
+// Error not in use atm since there are no longer multiple routes
+
+import MainPage from "./_MainPage";
+import Bio from "./Bio";
+import Skills from "./Skills";
+import ProjectList from "./ProjectList";
+import Contact from "./Contact";
+
+export { Header, Footer, Error, MainPage, Bio, Skills, ProjectList, Contact };

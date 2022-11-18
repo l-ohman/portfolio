@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // import { useSelector } from "react-redux";
-import { Bio, Skills, Projects, Contact } from "./";
+import { Bio, Skills, ProjectList, Contact } from "./";
 
 const maxWidth = 650;
 const ContentContainer = styled.div`
@@ -21,7 +21,7 @@ export default function MainPage() {
     <ContentContainer>
       <Bio />
       <Skills />
-      <Projects />
+      <ProjectList />
       <Contact />
     </ContentContainer>
   )

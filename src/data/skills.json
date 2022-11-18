@@ -1,0 +1,28 @@
+{
+  "technical": {
+    "fullstack": [
+      "Passionate about creating clear, accessible user experiences and building backends with scalability and maintainability in mind.",
+      "Proficient with Javascript and comfortable with Python."
+    ],
+    "test": [
+      "Experienced with writing tests to maintain proper functionality and ensure developer confidence.",
+      "Committed to improving my colleagues' developer experience by writing documentation and assisting with research."
+    ],
+    "technologies": [
+      "Node.js",
+      "PostgreSQL",
+      "Express",
+      "React",
+      "Next.js",
+      "Redux",
+      "HTML",
+      "CSS"
+    ]
+  },
+  "learning": {
+    "Machine Learning": "In my opinion, one of the most fascinating fields to study at the moment; has an extremely wide range of potential applications",
+    "MongoDB": "Interested in learning and understanding new ways of storing and managing data",
+    "Python": "My close friends' programming language of choice — we enjoy occasionally working on small projects together",
+    "C++": "The primary language used to build VSTs (Virtual Studio Technologies) and video games, both of which I have plans to create in the near future"
+  }
+}
