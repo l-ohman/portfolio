@@ -6,6 +6,8 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { selectProject } from "../../store/reducers";
 
+import images from "../../images";
+
 const SingleProjectContainer = styled.div`
   /* border: 2px solid green; */
   border: 1px solid red;
@@ -19,8 +21,12 @@ const SingleProjectContainer = styled.div`
   .single-project-header {
     display: flex;
     align-items: center;
-    .solo-team-icon {
-      margin-left: 8px;
+
+    .project-icon {
+      width: 20px;
+      max-height: 20px;
+      margin-left: 5px;
+      border-radius: 50%;
     }
   }
 
@@ -90,7 +96,7 @@ export default function SingleProject({ id, project }) {
   const dispatch = useDispatch();
   const selectThis = () => {
     dispatch(selectProject(id));
-  }
+  };
 
   return (
     <SingleProjectContainer id={isFeatured ? "featured" : ""}>
@@ -101,6 +107,17 @@ export default function SingleProject({ id, project }) {
       ) : (
         <FaUserFriends size={23} className="solo-team-icon" />
       )} */}
+        {images[id].icon && (
+          <img
+            src={images[id].icon}
+            className="project-icon"
+            alt={`${project.title} Icon`}
+            style={{
+              backgroundColor: id === 2 ? "#000000" : "none",
+              padding: id === 2 ? "2px" : "0",
+            }}
+          />
+        )}
       </div>
 
       <TagContainer>
@@ -137,10 +154,7 @@ export default function SingleProject({ id, project }) {
           )}
         </div>
 
-        <p
-          className="readmore"
-          onClick={selectThis}
-        >
+        <p className="readmore" onClick={selectThis}>
           Read more
         </p>
       </ProjectLinksAndInfo>

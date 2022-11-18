@@ -5,6 +5,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import { useDispatch } from "react-redux";
 import { unselectProject } from "../../store/reducers";
+import images from "../../images";
 
 const ExpandedContainer = styled.div`
   /* border: 2px solid green; */
@@ -19,8 +20,11 @@ const ExpandedContainer = styled.div`
   .single-project-header {
     display: flex;
     align-items: center;
-    .solo-team-icon {
-      margin-left: 8px;
+    .project-icon {
+      width: 20px;
+      max-height: 20px;
+      margin-left: 5px;
+      border-radius: 50%;
     }
   }
 
@@ -41,6 +45,11 @@ const ExpandedContainer = styled.div`
   }
 `;
 
+const TagContainer = styled.div`
+  border: 2px solid purple;
+  display: flex;
+`;
+
 const DescriptionContainer = styled.div`
   /* border: 1px solid purple; */
   #extended-description {
@@ -50,9 +59,52 @@ const DescriptionContainer = styled.div`
   }
 `;
 
-const TagContainer = styled.div`
-  border: 2px solid purple;
+const ImageContainer = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+
+  img {
+    max-width: 48%;
+    height: fit-content;
+    object-fit: contain;
+
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
+  }
+
+  &#umami-meats {
+    /* justify-content: space-around; */
+    img {
+      max-height: 300px;
+    }
+    #homepage-screenshot {
+      min-width: 55%;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+
+  &#solar-sandbox {
+    img {
+      height: 300px;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+    }
+    #node-graph-img {
+      min-width: 60%;
+      border-radius: 8px 0 0 8px;
+      border-right: none;
+    }
+    #solar-system-img {
+      width: 40%;
+      border-radius: 0 8px 8px 0;
+      object-position: 50%;
+      border-left: none;
+    }
+  }
 `;
 
 const TechnologiesContainer = styled.div`
@@ -120,6 +172,17 @@ export default function SingleProjectExpanded({ id, project }) {
       ) : (
         <FaUserFriends size={23} className="solo-team-icon" />
       )} */}
+        {images[id].icon && (
+          <img
+            src={images[id].icon}
+            className="project-icon"
+            alt={`${project.title} Icon`}
+            style={{
+              backgroundColor: id === 2 ? "#000000" : "none",
+              padding: id === 2 ? "2px" : "0",
+            }}
+          />
+        )}
       </div>
 
       <TagContainer>
@@ -140,13 +203,40 @@ export default function SingleProjectExpanded({ id, project }) {
         </div>
       </DescriptionContainer>
 
-      {/*
-        to add:
-          x button at top to return (helpful UI)
-          images (with wrap),
-          solo/team somewhere,
-          'other contributions'(team) and 'contributions'(solo)(rename)
+      {/* 
+        i probably should have hard-coded most of this, especially for the image formatting;
+        each portfolio piece should have had a somewhat unique design.
+        lesson learned for my next portfolio, i suppose.
       */}
+      {id === 1 ? (
+        <ImageContainer id="book-beasts">
+          <img src={images[id].main} alt="Book Beasts Student View" />
+          <img src={images[id].secondary} alt="Book Beasts Book-Editor" />
+        </ImageContainer>
+      ) : id === 2 ? (
+        <ImageContainer id="umami-meats">
+          <img
+            src={images[id].main}
+            alt="Umami Meats Homepage"
+            id="homepage-screenshot"
+          />
+          <img src={images[id].secondary} alt="Umami Meats Cart View" />
+        </ImageContainer>
+      ) : (
+        <ImageContainer id="solar-sandbox">
+          <img
+            src={images[id].main}
+            alt={`${project.title} Screenshot 1`}
+            id="node-graph-img"
+          />
+          <img
+            src={images[id].secondary}
+            alt={`${project.title} Screenshot 2`}
+            id="solar-system-img"
+          />
+          {/* <img src={images[id].alt} alt={`${project.title} Screenshot 3`} /> */}
+        </ImageContainer>
+      )}
 
       <TechnologiesContainer>
         <h3 id="tech-header">Technologies used</h3>

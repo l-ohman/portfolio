@@ -45,7 +45,7 @@
   },
   {
     "title": "Solar Sandbox",
-    "short": "Solar Sandbox is an interactive application where users can design their own solar system from scratch. Build a network of planets and moons and watch the 3D view update in realtime!",
+    "short": "Solar Sandbox is an interactive application where users can design their own solar system from scratch with a 3D view that updates in realtime.",
     "full": [
       "As someone who loves to watch and study the stars, I have always imagined what it would be like to toy with the vast systems that contain our tiny planet. Solar Sandbox is a small, fun project that provides the ability to do so. Users can add planets to orbit their sun, and they can add moons to orbit their planets. Additionally, they can alter various parameters on the bodies in their solar system, such as size, color, orbit distance, and orbit speed.",
       "This project was built in about 4 days for ‘Async Week’ during my time at Fullstack Academy. When I occasionally have time, I enjoy returning to this project to make small tweaks, such as bug fixes and UI/UX improvements."
