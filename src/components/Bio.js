@@ -25,12 +25,12 @@ export default function Bio() {
         main goal at the moment is to learn and grow as a developer as much as
         possible.
       </p>
-      {/* <p>
+      <p>
         My main priorities are accessibility and maintainability. When working
         on the user-side of things, I prioritize simplicity and clarity; but on
         the developer-side, I focus on writing readable code that can be easily
         understood and revised by the next developer.
-      </p> */}
+      </p>
     </ContentContainer>
   );
 }

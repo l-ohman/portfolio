@@ -10,6 +10,10 @@ const ContentContainer = styled.div`
   @media screen and (min-width: ${maxWidth + 35 + "px"}) {
     margin: 1.5em auto;
   }
+  /* @media screen and (max-width: 310px) {
+    min-width: 310px;
+    overflow: scroll;
+  } */
   > div {
     /* background: aqua; */
     margin-bottom: 2em;

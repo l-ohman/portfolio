@@ -4,3 +4,10 @@
     margin: 0;
     position: relative;
 }
+
+@media screen and (max-width: 310px) {
+    #root {
+        min-width: 310px;
+        overflow: scroll;
+    }
+}

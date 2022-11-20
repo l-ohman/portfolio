@@ -7,7 +7,7 @@ import Error from "./auxiliary/Error";
 import MainPage from "./_MainPage";
 import Bio from "./Bio";
 import Skills from "./Skills";
-import ProjectList from "./projects/ProjectList";
+import ProjectList from "./ProjectList";
 import Contact from "./Contact";
 
 export { Header, Footer, Error, MainPage, Bio, Skills, ProjectList, Contact };

@@ -3,16 +3,14 @@ import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 // import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
-import { useDispatch } from "react-redux";
-import { unselectProject } from "../../store/reducers";
-import images from "../../images";
+import images from "../images";
 
 const ExpandedContainer = styled.div`
   /* border: 2px solid green; */
   border: 1px solid red;
   width: 100%;
   margin: 0.2em 0 0.9em;
-  padding: 0.2em 0.2em 3.4em;
+  padding: 0.2em 0.9em;
 
   border-radius: 0.5em;
   /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15); */
@@ -47,7 +45,10 @@ const ExpandedContainer = styled.div`
 
 const TagContainer = styled.div`
   border: 2px solid purple;
+  text-align: center;
   display: flex;
+  /* justify-content: center; */
+  align-items: center;
 `;
 
 const DescriptionContainer = styled.div`
@@ -145,23 +146,20 @@ const ProjectLinksAndInfo = styled.div`
       }
     }
   }
-  .return-to-projects {
+  .collapse-details {
     border: 1px solid blue;
 
     width: fit-content;
     font-size: 0.96em;
     font-style: italic;
-    padding: 0.43em 1.2em 0.31em 1.2em;
+    padding: 0.43em 1.3em 0.31em 1.15em;
     border-radius: 35% 10% 35% 10%;
   }
 `;
 
 // eventually this should be consolidated with SingleProject.js
-export default function SingleProjectExpanded({ id, project }) {
-  const dispatch = useDispatch();
-  const unselectThis = () => {
-    dispatch(unselectProject());
-  };
+export default function SingleProject({ id, project }) {
+  const [isExpanded, setExpanded] = React.useState(false);
 
   return (
     <ExpandedContainer>
@@ -195,59 +193,66 @@ export default function SingleProjectExpanded({ id, project }) {
 
       <DescriptionContainer>
         <div id="extended-description">
-          {project.full.map((paragraph, i) => (
-            <p key={i} className="paragraph">
-              {paragraph}
-            </p>
-          ))}
+          {isExpanded ? (
+            project.full.map((paragraph, i) => (
+              <p key={i} className="paragraph">
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className="paragraph">{project.short}</p>
+          )}
         </div>
       </DescriptionContainer>
 
-      {/* 
-        i probably should have hard-coded most of this, especially for the image formatting;
-        each portfolio piece should have had a somewhat unique design.
-        lesson learned for my next portfolio, i suppose.
-      */}
-      {id === 1 ? (
-        <ImageContainer id="book-beasts">
-          <img src={images[id].main} alt="Book Beasts Student View" />
-          <img src={images[id].secondary} alt="Book Beasts Book-Editor" />
-        </ImageContainer>
-      ) : id === 2 ? (
-        <ImageContainer id="umami-meats">
-          <img
-            src={images[id].main}
-            alt="Umami Meats Homepage"
-            id="homepage-screenshot"
-          />
-          <img src={images[id].secondary} alt="Umami Meats Cart View" />
-        </ImageContainer>
-      ) : (
-        <ImageContainer id="solar-sandbox">
-          <img
-            src={images[id].main}
-            alt={`${project.title} Screenshot 1`}
-            id="node-graph-img"
-          />
-          <img
-            src={images[id].secondary}
-            alt={`${project.title} Screenshot 2`}
-            id="solar-system-img"
-          />
-          {/* <img src={images[id].alt} alt={`${project.title} Screenshot 3`} /> */}
-        </ImageContainer>
-      )}
+      {isExpanded && (
+        <>
+          <TechnologiesContainer>
+            <h3 id="tech-header">Technologies used</h3>
+            <div id="tech-list">
+              {project.technologies.map((tech, i) => (
+                <p className="tag" key={i}>
+                  {tech}
+                </p>
+              ))}
+            </div>
+          </TechnologiesContainer>
 
-      <TechnologiesContainer>
-        <h3 id="tech-header">Technologies used</h3>
-        <div id="tech-list">
-          {project.technologies.map((tech, i) => (
-            <p className="tag" key={i}>
-              {tech}
-            </p>
-          ))}
-        </div>
-      </TechnologiesContainer>
+          {/*
+        probably should have hard-coded most of this, esp. for image formatting; each itm
+        should have a somewhat unique design. (lesson learned for next portfolio, i guess.)
+      */}
+          {id === 1 ? (
+            <ImageContainer id="book-beasts">
+              <img src={images[id].main} alt="Book Beasts Student View" />
+              <img src={images[id].secondary} alt="Book Beasts Book-Editor" />
+            </ImageContainer>
+          ) : id === 2 ? (
+            <ImageContainer id="umami-meats">
+              <img
+                src={images[id].main}
+                alt="Umami Meats Homepage"
+                id="homepage-screenshot"
+              />
+              <img src={images[id].secondary} alt="Umami Meats Cart View" />
+            </ImageContainer>
+          ) : (
+            <ImageContainer id="solar-sandbox">
+              <img
+                src={images[id].main}
+                alt={`${project.title} Screenshot 1`}
+                id="node-graph-img"
+              />
+              <img
+                src={images[id].secondary}
+                alt={`${project.title} Screenshot 2`}
+                id="solar-system-img"
+              />
+              {/* <img src={images[id].alt} alt={`${project.title} Screenshot 3`} /> */}
+            </ImageContainer>
+          )}
+        </>
+      )}
 
       <ProjectLinksAndInfo>
         <div className="links">
@@ -271,8 +276,11 @@ export default function SingleProjectExpanded({ id, project }) {
           )}
         </div>
 
-        <p className="return-to-projects" onClick={unselectThis}>
-          Return to all projects
+        <p
+          className="collapse-details"
+          onClick={() => setExpanded(!isExpanded)}
+        >
+          {isExpanded ? "Collapse details" : "Read more"}
         </p>
       </ProjectLinksAndInfo>
     </ExpandedContainer>
