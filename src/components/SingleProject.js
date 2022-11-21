@@ -19,9 +19,9 @@ const ExpandedContainer = styled.div`
     display: flex;
     align-items: center;
     .project-icon {
-      width: 20px;
-      max-height: 20px;
-      margin-left: 5px;
+      width: 22px;
+      max-height: 22px;
+      margin: 0 0 2px 7px;
       border-radius: 50%;
     }
   }
@@ -33,14 +33,6 @@ const ExpandedContainer = styled.div`
     padding: 0.8em 1.2em 0.2em;
   }
 `;
-
-// const TagContainer = styled.div`
-//   border: 2px solid purple;
-//   text-align: center;
-//   display: flex;
-//   /* justify-content: center; */
-//   align-items: center;
-// `;
 
 const TechnologiesContainer = styled.div`
   border: 1px solid purple;
@@ -63,13 +55,13 @@ const TechnologiesContainer = styled.div`
 `;
 
 const DescriptionContainer = styled.div`
-  /* border: 1px solid purple; */
   .paragraph {
     margin: 0.3em 0;
   }
 `;
 
 const ImageContainer = styled.div`
+  margin: 0.5em 0 0.7em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,13 +78,18 @@ const ImageContainer = styled.div`
 
   &#umami-meats {
     /* justify-content: space-around; */
+    max-height: 300px;
     img {
       max-height: 300px;
-    }
-    #homepage-screenshot {
-      min-width: 55%;
       object-fit: cover;
+    }
+    #umami-homepage-screenshot {
+      min-width: 55%;
+      /* object-fit: cover; */
       object-position: 0 0;
+    }
+    #umami-cart-view {
+      max-width: 45%;
     }
   }
 
@@ -104,15 +101,27 @@ const ImageContainer = styled.div`
       object-fit: cover;
     }
     #node-graph-img {
-      min-width: 60%;
+      min-width: 58%;
       border-radius: 8px 0 0 8px;
       border-right: none;
     }
     #solar-system-img {
-      width: 40%;
+      width: 42%;
       border-radius: 0 8px 8px 0;
       object-position: 50%;
       border-left: none;
+    }
+
+    @media screen and (max-width: 500px) {
+      /* background: blue; */
+      #node-graph-img {
+        min-width: 42%;
+        max-width: 42%;
+      }
+      #solar-system-img {
+        min-width: 58%;
+        max-width: 58%;
+      }
     }
   }
 `;
@@ -124,7 +133,7 @@ const ExpandInfo = styled.div`
     font-style: italic;
     text-decoration: underline;
     text-align: center;
-    margin: 0.2em auto 0.6em;
+    margin: 0.4em auto 0.6em;
   }
 `;
 
@@ -228,8 +237,8 @@ export default function SingleProject({ id, project }) {
       </TechnologiesContainer>
 
       <DescriptionContainer>
-        <p className="paragraph">{project.full[0]}</p>
-        {isExpanded && <p className="paragraph">{project.full[1]}</p>}
+        <p className="paragraph">{project.description[0]}</p>
+        {isExpanded && <p className="paragraph">{project.description[1]}</p>}
       </DescriptionContainer>
 
       {isExpanded && (
@@ -248,9 +257,13 @@ export default function SingleProject({ id, project }) {
               <img
                 src={images[id].main}
                 alt="Umami Meats Homepage"
-                id="homepage-screenshot"
+                id="umami-homepage-screenshot"
               />
-              <img src={images[id].secondary} alt="Umami Meats Cart View" />
+              <img
+                src={images[id].secondary}
+                alt="Umami Meats Cart View"
+                id="umami-cart-view"
+              />
             </ImageContainer>
           ) : (
             <ImageContainer id="solar-sandbox">
