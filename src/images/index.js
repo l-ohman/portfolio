@@ -1,18 +1,13 @@
-// import bookBeasts0 from "./screenshots/book-beasts-0.png";
 import bookBeasts1 from "./screenshots/book-beasts-1.png";
 import bookBeasts2 from "./screenshots/book-beasts-2.png";
 import bookBeastsIcon from "./icons/book-beasts-favicon.png";
 
 import umamiMeats0 from "./screenshots/umami-meats-0.png";
 import umamiMeats1 from "./screenshots/umami-meats-1.png";
-// import umamiMeats2 from "./screenshots/umami-meats-2.png";
 import umamiMeatsIcon from "./icons/umami-meats-favicon.ico";
 
-// import solarSandbox0 from "./screenshots/solar-sandbox-0.png";
-// import solarSandbox1 from "./screenshots/solar-sandbox-1.jpg";
 import solarSandbox1a from "./screenshots/solar-sandbox-1a.jpg";
 import solarSandbox1b from "./screenshots/solar-sandbox-1b.jpg";
-// import solarSandbox2 from "./screenshots/solar-sandbox-2.jpg";
 
 import Nodejs from "./techLogos/Node.js.png";
 import PostgreSQL from "./techLogos/PostgreSQL.png";

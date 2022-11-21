@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { technologies, languages } from "../data/skills.json";
 import images from "../images";
-// technical contains: technologies and languages
 
 const logoSize = 100;
 const SkillsContainer = styled.div`
@@ -63,7 +62,6 @@ export default function Skills() {
           <ul className="tech-list" id="technologies">
             {technologies.map((itm, i) => (
               <>
-                {/* <li key={i}>{itm}</li> */}
                 <img
                   src={images.skills[itm]}
                   alt={`${itm} Logo`}
@@ -79,7 +77,7 @@ export default function Skills() {
           <ul className="tech-list" id="languages">
             {languages.map((itm, i) => (
               <>
-                {/* have to do specific styling for html/css due to semi-off proportions */}
+                {/* have to do specific styling for html/css due to 'off' proportions */}
                 {itm === "HTML" || itm === "CSS" ? (
                   <img
                     key={i}

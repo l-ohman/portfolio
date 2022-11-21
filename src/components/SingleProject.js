@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 // import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
-
 import images from "../images";
 
 const ExpandedContainer = styled.div`
@@ -27,7 +26,7 @@ const ExpandedContainer = styled.div`
   }
 
   hr {
-    margin: 0.3em 0 3.5em;
+    margin: 0.3em 0 /*3.5em*/;
   }
   @media screen and (min-width: 650px) {
     padding: 0.8em 1.2em 0.2em;
@@ -132,20 +131,20 @@ const ExpandInfo = styled.div`
     font-size: 0.94em;
     font-style: italic;
     text-decoration: underline;
-    text-align: center;
-    margin: 0.4em auto 0.6em;
+    text-align: right;
+    margin: 0.35em 0.5em 0.6em;
   }
 `;
 
 const ProjectLinksAndInfo = styled.div`
   /* border: 1px solid purple; */
 
-  position: absolute;
+  /* position: absolute;
   bottom: 0.5em;
-  right: 1.2em;
+  right: 1.2em; */
   height: 3em;
   width: fit-content;
-  /* margin: 0.3em 0; */
+  margin: 0.25em auto 0.45em;
 
   display: flex;
   justify-content: space-between;
@@ -190,7 +189,6 @@ const ProjectLinksAndInfo = styled.div`
   }
 `;
 
-// eventually this should be consolidated with SingleProject.js
 export default function SingleProject({ id, project }) {
   const [isExpanded, setExpanded] = React.useState(false);
 
@@ -198,11 +196,6 @@ export default function SingleProject({ id, project }) {
     <ExpandedContainer>
       <div className="single-project-header">
         <h2>{project.title}</h2>
-        {/* {project.solo ? (
-        <FaUserAlt size={16} className="solo-team-icon" />
-      ) : (
-        <FaUserFriends size={23} className="solo-team-icon" />
-      )} */}
         {images[id].icon && (
           <img
             src={images[id].icon}
@@ -216,17 +209,7 @@ export default function SingleProject({ id, project }) {
         )}
       </div>
 
-      {/* might want to scrap the tags if there's no search/sort/filtering type of system */}
-      {/* <TagContainer>
-        {project.tags.map((tag, i) => (
-          <p key={i} className="tag">
-            {tag}
-          </p>
-        ))}
-      </TagContainer> */}
-
       <TechnologiesContainer>
-        {/* <h3 id="tech-header">Technologies used</h3> */}
         <div id="tech-list">
           {project.technologies.map((tech, i) => (
             <p className="tag" key={i}>
@@ -322,13 +305,6 @@ export default function SingleProject({ id, project }) {
             </a>
           )}
         </div>
-
-        {/* <p
-          className="collapse-details"
-          onClick={() => setExpanded(!isExpanded)}
-        >
-          {isExpanded ? "Collapse details" : "Read more"}
-        </p> */}
       </ProjectLinksAndInfo>
     </ExpandedContainer>
   );

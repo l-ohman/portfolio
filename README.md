@@ -1,6 +1,6 @@
 ## l-ohman's portfolio
 
-_currently a work in progress..._
+_currently a work in progress. primary goal is to get a working portfolio to begin the job search, and slowly enhance / redesign over time._
 
 ### todo
 
@@ -8,23 +8,19 @@ _currently a work in progress..._
 <summary>primary</summary>
 
 * force scroll when expanding/collapsing SingleProject
-* ~~extra 'collapse' button to close project~~ (removed)
-* ~~display whether project was solo / with a team~~ (removed)
-* ~~handle 'other contributions'~~ (removed)
-* ~~update description formatting + content~~ (completed)
+* ~~update description formatting + content~~
 * reformat skills content (in progress)
+* header: add scroll functionality, keep on top
+* footer: move links to some 'Contact' container
 
 </details>
 
 <details>
 <summary>secondary</summary>
 
-* ~~more image formatting~~ (completed)
 * add links ~~+ logos~~ (for next, react, redux, etc)
 * create favicon
 * create some sort of 'Hero'
-* header: add scroll functionality, keep on top
-* footer: move links to some 'Contact' container
-* remove unused images
+* ~~remove unused images~~
 
 </details>
