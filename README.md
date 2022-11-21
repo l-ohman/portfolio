@@ -7,6 +7,8 @@ _currently a work in progress. primary goal is to get a working portfolio to beg
 <details>
 <summary>primary</summary>
 
+* update bio with info removed from skills/projects
+* shouldn't have to expand projects to see images - should redesign
 * force scroll when expanding/collapsing SingleProject
 * ~~update description formatting + content~~
 * reformat skills content (in progress)

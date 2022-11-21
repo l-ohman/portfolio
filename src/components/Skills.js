@@ -11,42 +11,33 @@ const SkillsContainer = styled.div`
     margin-bottom: 0.5em;
   }
   .tech-list {
-    margin: 0.3em auto 1em;
+    margin: 0.3em auto 0;
     padding: 0;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-flow: row wrap;
 
-    .tech-logo {
+    .stack-logo {
       width: ${logoSize + "px"};
       height: ${logoSize + "px"};
-      /* max-height: ${logoSize + "px"}; */
+      margin: 0 ${logoSize * 0.15 + "px"} ${logoSize * 0.09 + "px"};
 
       object-fit: contain;
       object-position: 50% 0;
     }
-
-    &#technologies {
-      .tech-logo {
-        max-height: ${logoSize * 0.9 + "px"};
-        max-width: ${logoSize * 0.9 + "px"};
-        object-position: 50% 0;
-        padding: ${logoSize * 0.05 + "px"};
-      }
+    .technologies {
+      max-height: ${logoSize * 0.9 + "px"};
+      max-width: ${logoSize * 0.9 + "px"};
+      object-position: 50% 0;
+      padding: ${logoSize * 0.05 + "px"};
     }
-
-    &#languages {
-      .tech-logo {
-        object-fit: cover;
-      }
-      .adjusted-logo {
-        max-height: ${logoSize * 0.9 + "px"};
-        max-width: ${logoSize * 0.9 + "px"};
-        object-position: 50% 0;
-        padding: ${logoSize * 0.05 + "px"};
-      }
+    .language-adjusted {
+      max-height: ${logoSize * 0.93 + "px"};
+      max-width: ${logoSize * 0.93 + "px"};
+      object-position: 50% 0;
+      padding: ${logoSize * 0.05 + "px"};
     }
   }
 `;
@@ -58,44 +49,36 @@ export default function Skills() {
 
       <div>
         <div>
-          {/* <h3>Technologies</h3> */}
-          <ul className="tech-list" id="technologies">
+          <div className="tech-list">
             {technologies.map((itm, i) => (
-              <>
+              <img
+                key={i}
+                src={images.skills[itm]}
+                alt={`${itm} Logo`}
+                className="stack-logo technologies"
+              />
+            ))}
+          </div>
+
+          <div className="tech-list">
+            {languages.map((itm, i) =>
+              itm === "HTML" || itm === "CSS" ? (
                 <img
+                  key={i}
                   src={images.skills[itm]}
                   alt={`${itm} Logo`}
-                  className="tech-logo"
+                  className="stack-logo"
                 />
-              </>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          {/* <h3>Languages</h3> */}
-          <ul className="tech-list" id="languages">
-            {languages.map((itm, i) => (
-              <>
-                {/* have to do specific styling for html/css due to 'off' proportions */}
-                {itm === "HTML" || itm === "CSS" ? (
-                  <img
-                    key={i}
-                    src={images.skills[itm]}
-                    alt={`${itm} Logo`}
-                    className="tech-logo"
-                  />
-                ) : (
-                  <img
-                    key={i}
-                    src={images.skills[itm]}
-                    alt={`${itm} Logo`}
-                    className="tech-logo adjusted-logo"
-                  />
-                )}
-              </>
-            ))}
-          </ul>
+              ) : (
+                <img
+                  key={i}
+                  src={images.skills[itm]}
+                  alt={`${itm} Logo`}
+                  className="stack-logo language-adjusted"
+                />
+              )
+            )}
+          </div>
         </div>
       </div>
     </SkillsContainer>
