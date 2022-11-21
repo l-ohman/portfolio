@@ -26,37 +26,46 @@ const ExpandedContainer = styled.div`
     }
   }
 
+  hr {
+    margin: 0.3em 0 3.5em;
+  }
+  @media screen and (min-width: 650px) {
+    padding: 0.8em 1.2em 0.2em;
+  }
+`;
+
+// const TagContainer = styled.div`
+//   border: 2px solid purple;
+//   text-align: center;
+//   display: flex;
+//   /* justify-content: center; */
+//   align-items: center;
+// `;
+
+const TechnologiesContainer = styled.div`
+  border: 1px solid purple;
+  #tech-list {
+    width: fit-content;
+    margin: 0.2em 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  /* have moved tag class here bc removing TagContainer */
   .tag {
     border: 1px solid blue;
     width: fit-content;
     font-size: 0.97em;
     padding: 0.2em 0.55em;
     border-radius: 0.9em;
-
-    margin-left: 0.5em;
-    &:first-child {
-      margin-left: 0;
-    }
+    margin-right: 0.5em;
   }
-  @media screen and (min-width: 650px) {
-    padding: 1.2em;
-  }
-`;
-
-const TagContainer = styled.div`
-  border: 2px solid purple;
-  text-align: center;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
 `;
 
 const DescriptionContainer = styled.div`
   /* border: 1px solid purple; */
-  #extended-description {
-    .paragraph {
-      margin: 0.3em 0;
-    }
+  .paragraph {
+    margin: 0.3em 0;
   }
 `;
 
@@ -108,52 +117,67 @@ const ImageContainer = styled.div`
   }
 `;
 
-const TechnologiesContainer = styled.div`
-  border: 1px solid purple;
-
-  #tech-header {
-    margin-top: 0.7em;
+const ExpandInfo = styled.div`
+  .expand-txt {
+    color: black;
+    font-size: 0.94em;
+    font-style: italic;
+    text-decoration: underline;
     text-align: center;
-  }
-  #tech-list {
-    width: fit-content;
-    margin: 0.5em auto;
-    display: flex;
+    margin: 0.2em auto 0.6em;
   }
 `;
 
 const ProjectLinksAndInfo = styled.div`
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 
-  position: relative;
-  bottom: 0;
-  left: 0;
+  position: absolute;
+  bottom: 0.5em;
+  right: 1.2em;
   height: 3em;
-  width: 100%;
-  margin-top: 0.3em;
-  padding: 0 0.63em;
+  width: fit-content;
+  /* margin: 0.3em 0; */
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .links {
-    padding-top: 2px;
+    padding-top: 3px;
+    margin-left: 0;
+    display: flex;
     > * {
       /* border: 1px solid red; */
       &:nth-child(2) {
         margin-left: 14px;
       }
     }
-  }
-  .collapse-details {
-    border: 1px solid blue;
 
-    width: fit-content;
-    font-size: 0.96em;
-    font-style: italic;
-    padding: 0.43em 1.3em 0.31em 1.15em;
-    border-radius: 35% 10% 35% 10%;
+    .single-link {
+      border: solid 1px blue;
+      padding: 0.3em 0.7em;
+      border-radius: 1.1em;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      p {
+        margin-right: 0.4em;
+        padding-top: 0.2em;
+        color: black;
+      }
+    }
+    @media screen and (max-width: 370px) {
+      .single-link {
+        width: 45px;
+        height: 45px;
+        border-radius: 38%;
+
+        p {
+          display: none;
+        }
+      }
+    }
   }
 `;
 
@@ -183,41 +207,33 @@ export default function SingleProject({ id, project }) {
         )}
       </div>
 
-      <TagContainer>
+      {/* might want to scrap the tags if there's no search/sort/filtering type of system */}
+      {/* <TagContainer>
         {project.tags.map((tag, i) => (
           <p key={i} className="tag">
             {tag}
           </p>
         ))}
-      </TagContainer>
+      </TagContainer> */}
+
+      <TechnologiesContainer>
+        {/* <h3 id="tech-header">Technologies used</h3> */}
+        <div id="tech-list">
+          {project.technologies.map((tech, i) => (
+            <p className="tag" key={i}>
+              {tech}
+            </p>
+          ))}
+        </div>
+      </TechnologiesContainer>
 
       <DescriptionContainer>
-        <div id="extended-description">
-          {isExpanded ? (
-            project.full.map((paragraph, i) => (
-              <p key={i} className="paragraph">
-                {paragraph}
-              </p>
-            ))
-          ) : (
-            <p className="paragraph">{project.short}</p>
-          )}
-        </div>
+        <p className="paragraph">{project.full[0]}</p>
+        {isExpanded && <p className="paragraph">{project.full[1]}</p>}
       </DescriptionContainer>
 
       {isExpanded && (
         <>
-          <TechnologiesContainer>
-            <h3 id="tech-header">Technologies used</h3>
-            <div id="tech-list">
-              {project.technologies.map((tech, i) => (
-                <p className="tag" key={i}>
-                  {tech}
-                </p>
-              ))}
-            </div>
-          </TechnologiesContainer>
-
           {/*
         probably should have hard-coded most of this, esp. for image formatting; each itm
         should have a somewhat unique design. (lesson learned for next portfolio, i guess.)
@@ -254,6 +270,20 @@ export default function SingleProject({ id, project }) {
         </>
       )}
 
+      <ExpandInfo>
+        {isExpanded ? (
+          <p onClick={() => setExpanded(false)} className="expand-txt">
+            Collapse details
+          </p>
+        ) : (
+          <p onClick={() => setExpanded(true)} className="expand-txt">
+            Read more...
+          </p>
+        )}
+      </ExpandInfo>
+
+      <hr />
+
       <ProjectLinksAndInfo>
         <div className="links">
           {project.links.deployed && (
@@ -261,8 +291,10 @@ export default function SingleProject({ id, project }) {
               href={project.links.deployed}
               target="_blank"
               rel="noopener noreferrer"
+              className="single-link"
             >
-              <FaExternalLinkAlt color="black" size={28} />
+              <p>View Site</p>
+              <FaExternalLinkAlt color="black" size={20} />
             </a>
           )}
           {project.links.github && (
@@ -270,18 +302,20 @@ export default function SingleProject({ id, project }) {
               href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
+              className="single-link"
             >
-              <FaGithub color="black" size={31} />
+              <p>View on Github</p>
+              <FaGithub color="black" size={24} />
             </a>
           )}
         </div>
 
-        <p
+        {/* <p
           className="collapse-details"
           onClick={() => setExpanded(!isExpanded)}
         >
           {isExpanded ? "Collapse details" : "Read more"}
-        </p>
+        </p> */}
       </ProjectLinksAndInfo>
     </ExpandedContainer>
   );
