@@ -10,9 +10,8 @@ const ContentContainer = styled.div`
   border: 1px solid blue;
   > h1 {
     text-align: center;
-    margin-bottom: 0.25em;
+    /* margin-bottom: 0.25em; */
   }
-  /* padding: 0.2em 0.5em; */
 
   #project-list {
     padding: 0;

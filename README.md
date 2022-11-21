@@ -12,7 +12,7 @@ _currently a work in progress..._
 * ~~display whether project was solo / with a team~~ (removed)
 * ~~handle 'other contributions'~~ (removed)
 * ~~update description formatting + content~~ (completed)
-* reformat skills content
+* reformat skills content (in progress)
 
 </details>
 
@@ -20,6 +20,11 @@ _currently a work in progress..._
 <summary>secondary</summary>
 
 * ~~more image formatting~~ (completed)
-* add links + logos (next, react, redux, etc)
+* add links ~~+ logos~~ (for next, react, redux, etc)
+* create favicon
+* create some sort of 'Hero'
+* header: add scroll functionality, keep on top
+* footer: move links to some 'Contact' container
+* remove unused images
 
 </details>
