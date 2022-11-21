@@ -7,16 +7,19 @@ _currently a work in progress..._
 <details>
 <summary>primary</summary>
 
-[ ] force scroll when expanding/collapsing SingleProject
-[ ] extra 'collapse' button to close project
-[ ] display whether project was solo / with a team
-[ ] handle 'other contributions' (may remove)
+* force scroll when expanding/collapsing SingleProject
+* ~~extra 'collapse' button to close project~~ (removed)
+* ~~display whether project was solo / with a team~~ (removed)
+* ~~handle 'other contributions'~~ (removed)
+* ~~update description formatting + content~~ (completed)
+* reformat skills content
+
 </details>
 
 <details>
 <summary>secondary</summary>
 
-[ ] more image formatting
-[ ] reformat skills content
-[ ] add links/logos (next, react, redux, etc)
+* ~~more image formatting~~ (completed)
+* add links + logos (next, react, redux, etc)
+
 </details>
