@@ -9,15 +9,11 @@ const ContentContainer = styled.div`
     margin: 1em 0;
     border: 1px solid red;
   }
-  h1 {
-    text-align: center;
-  }
 `;
 
 export default function Bio() {
   return (
     <ContentContainer>
-      <h1>Hi, I'm Jake.</h1>
       <p>
         I am a Fullstack Software Engineer from Texas. As a recent graduate of
         Fullstack Academy, I am very curious and excited to work on new projects

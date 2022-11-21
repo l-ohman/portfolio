@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Bio, Skills, ProjectList, Contact } from "./";
+import { Hero, Bio, Skills, ProjectList, Contact } from "./";
 
 const maxWidth = 750;
 const ContentContainer = styled.div`
@@ -17,9 +17,10 @@ const ContentContainer = styled.div`
 export default function MainPage() {
   return(
     <ContentContainer>
+      <Hero />
       <Bio />
-      <Skills />
       <ProjectList />
+      <Skills />
       <Contact />
     </ContentContainer>
   )
