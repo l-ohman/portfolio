@@ -2,9 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { technologies, languages } from "../data/skills.json";
 import images from "../images";
+import colors from "../colors.json";
 
 const SkillsContainer = styled.div`
-  border: solid 1px blue;
+  padding: 0.5em 0 1em;
+  border-radius: 1.5em;
+  background: ${colors.secondary};
+  
   > h1 {
     text-align: center;
   }
@@ -26,13 +30,12 @@ const SkillsContainer = styled.div`
 const logoSize = 100;
 const containerSize = 132;
 const SingleSkill = styled.div`
-  border: 1px solid green;
   width: ${containerSize + "px"};
   height: ${containerSize + "px"};
-
-  margin: 3px;
+  border-radius: 1em;
+  background: ${colors.primary};
+  margin: 6px;
   padding: 8px 5px 7px;
-
   .stack-logo {
     width: ${logoSize + "px"};
     height: ${logoSize + "px"};
@@ -58,8 +61,6 @@ const SingleSkill = styled.div`
     max-height: ${logoSize * 0.93 + "px"};
     width: ${logoSize * 0.93 + "px"};
     margin: 0 0 0 13px;
-    
-    /* max-width: 122px; */
     object-position: 50% 0;
     padding: ${logoSize * 0.015 + "px"} 0;
   }
@@ -75,6 +76,8 @@ export default function Skills() {
       <h1>technical skills</h1>
       <hr />
 
+      {/* for next portfolio — should absolutely take the time to resize every image to have the same
+        resolution and internal padding. i did not think it would be worth it but i was incorrect. */}
       <div>
         <div>
           <div className="tech-list">
@@ -88,9 +91,7 @@ export default function Skills() {
                 <p className="tech-txt">{itm}</p>
               </SingleSkill>
             ))}
-          {/* </div>
 
-          <div className="tech-list"> */}
             {languages.map((itm, i) => (
               <SingleSkill key={i}>
                 {itm === "HTML" || itm === "CSS" ? (

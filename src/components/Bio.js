@@ -1,19 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import colors from "../colors.json";
 
 const ContentContainer = styled.div`
   text-align: justify;
-  border: 1px solid blue;
-  padding: 0 0.7em;
-  * {
-    margin: 1em 0;
-    border: 1px solid red;
+  background: ${colors.secondary};
+  border-radius: 1em;
+  padding: 1.1em 0 0.2em;
+  p {
+    padding: 0.3em 2em 1.2em;
+  }
+  h1 {
+    font-size: 150%;
+    margin: 0.3em;
+    padding: 0 0.7em;
+    text-align: center;
   }
 `;
 
 export default function Bio() {
   return (
     <ContentContainer>
+      {/* <h1>about me</h1> */}
       <p>
         I am a Fullstack Software Engineer from Texas. As a recent graduate of
         Fullstack Academy, I am very curious and excited to work on new projects

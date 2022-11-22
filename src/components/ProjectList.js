@@ -1,24 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-// import { useSelector } from "react-redux";
-
-// a json array of project-objects
-import projects from "../data/projects.json";
 import SingleProject from "./SingleProject";
+import projects from "../data/projects.json";
+import colors from "../colors.json";
 
 const ContentContainer = styled.div`
-  border: 1px solid blue;
-  > h1 {
-    /* text-align: center; */
-    /* margin-bottom: 0.25em; */
-  }
-
+  background: ${colors.secondary};
+  border-radius: 1.5em;
+  
   @media screen and (min-width: 650px) {
     > h1 {
       margin: 0;
       padding: 0.5em 0.7em 0;
     }
-
     #project-list {
       padding: 0.8em 1em 1em;
       display: flex;

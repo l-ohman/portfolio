@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
+import colors from "../../colors.json";
 
 const footerHeight = 4.5;
 const FooterContainer = styled.div`
@@ -11,8 +12,7 @@ const FooterContainer = styled.div`
   bottom: ${"-" + (footerHeight + 2) + "em"};
   padding: 0.3em 0;
 
-  background: black;
-  color: black;
+  background: ${colors.dark};
   text-align: center;
 
   > div {
@@ -24,8 +24,6 @@ const FooterContainer = styled.div`
     align-items: center;
     a {
       margin: 10px 20px 0;
-      /* border: 1px solid white; */
-      /* height: 32px; */
     }
   }
 `;

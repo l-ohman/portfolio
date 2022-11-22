@@ -3,48 +3,55 @@ import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 // import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 import images from "../images";
+import colors from "../colors.json";
 
 const ExpandedContainer = styled.div`
-  /* border: 2px solid green; */
-  border: 1px solid red;
   width: 100%;
   margin: 0.2em 0 0.9em;
   padding: 0.2em 0.9em;
 
+  background: ${colors.primary};
   border-radius: 0.5em;
-  /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15); */
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
 
   .single-project-header {
     display: flex;
     align-items: center;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.12);
+
+    .project-title {
+      font-size: 160%;
+    }
     .project-icon {
-      width: 22px;
-      max-height: 22px;
-      margin: 0 0 2px 7px;
+      width: 28px;
+      max-height: 28px;
+      margin: 0 0 2px 8px;
       border-radius: 50%;
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
     }
   }
 
   hr {
-    margin: 0.3em 0 /*3.5em*/;
+    width: 97%;
+    margin: 0.3em auto;
   }
   @media screen and (min-width: 650px) {
-    padding: 0.8em 1.2em 0.2em;
+    padding: 0.8em 1em 0.2em;
+    > * {
+      margin-left: 0.2em;
+    }
   }
 `;
 
 const TechnologiesContainer = styled.div`
-  border: 1px solid purple;
   #tech-list {
     width: fit-content;
-    margin: 0.2em 0;
+    margin: 0.5em -0.1em 0.6em;
     display: flex;
     flex-flow: row wrap;
   }
-
-  /* have moved tag class here bc removing TagContainer */
   .tag {
-    border: 1px solid blue;
+    background: ${colors.secondary};
     width: fit-content;
     font-size: 0.97em;
     padding: 0.2em 0.55em;
@@ -70,13 +77,10 @@ const ImageContainer = styled.div`
     max-width: 48%;
     height: fit-content;
     object-fit: contain;
-
-    border: 1px solid #2f2f2f;
     border-radius: 8px;
   }
 
   &#umami-meats {
-    /* justify-content: space-around; */
     max-height: 300px;
     img {
       max-height: 300px;
@@ -112,7 +116,6 @@ const ImageContainer = styled.div`
     }
 
     @media screen and (max-width: 500px) {
-      /* background: blue; */
       #node-graph-img {
         min-width: 42%;
         max-width: 42%;
@@ -127,7 +130,7 @@ const ImageContainer = styled.div`
 
 const ExpandInfo = styled.div`
   .expand-txt {
-    color: black;
+    color: inherit;
     font-size: 0.94em;
     font-style: italic;
     text-decoration: underline;
@@ -137,11 +140,6 @@ const ExpandInfo = styled.div`
 `;
 
 const ProjectLinksAndInfo = styled.div`
-  /* border: 1px solid purple; */
-
-  /* position: absolute;
-  bottom: 0.5em;
-  right: 1.2em; */
   height: 3em;
   width: fit-content;
   margin: 0.25em auto 0.45em;
@@ -155,15 +153,14 @@ const ProjectLinksAndInfo = styled.div`
     margin-left: 0;
     display: flex;
     > * {
-      /* border: 1px solid red; */
       &:nth-child(2) {
         margin-left: 14px;
       }
     }
 
     .single-link {
-      border: solid 1px blue;
-      padding: 0.3em 0.7em;
+      background: ${colors.secondary};
+      padding: 0.3em 0.7em 0.45em;
       border-radius: 1.1em;
       display: flex;
       align-items: center;
@@ -172,7 +169,7 @@ const ProjectLinksAndInfo = styled.div`
       p {
         margin-right: 0.4em;
         padding-top: 0.2em;
-        color: black;
+        color: inherit;
       }
     }
     @media screen and (max-width: 370px) {
@@ -195,7 +192,7 @@ export default function SingleProject({ id, project }) {
   return (
     <ExpandedContainer>
       <div className="single-project-header">
-        <h2>{project.title}</h2>
+        <h2 className="project-title">{project.title}</h2>
         {images[id].icon && (
           <img
             src={images[id].icon}

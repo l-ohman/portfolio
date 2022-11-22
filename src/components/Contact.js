@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { BiCopy } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
+import colors from "../colors.json";
 
 const ContactContainer = styled.div`
-  border: 1px solid blue;
   font-size: 105%;
   max-width: 600px;
   margin: 0 auto;
+  /* background: ${colors.secondary}; */
 
   > div > * {
     text-align: center;
@@ -23,7 +24,7 @@ const ContactContainer = styled.div`
     width: fit-content;
     margin: 0.1em auto 0.7em;
     a {
-      color: black;
+      color: inherit;
     }
     .copy-logo {
       cursor: pointer;
@@ -57,7 +58,6 @@ const ContactContainer = styled.div`
 
 const HalfContainers = styled.div`
   margin: 0.5em auto;
-  border: 1px solid green;
   padding: 0.5em 0.5em 0;
   width: fit-content;
   hr {
@@ -65,8 +65,10 @@ const HalfContainers = styled.div`
     width: 19em;
   }
   &#right {
+    background: ${colors.primary};
     min-height: 5em;
-    padding: 1em 1.3em 0.5em;
+    margin: 1em auto 0;
+    padding: 1.1em 1.3em 0.5em;
     border-radius: 2em;
   }
 `;
@@ -75,7 +77,7 @@ export default function Contact() {
   const copyItem = (item) => {
     navigator.clipboard.writeText(item);
     // should replace alert with toastify
-    alert(`'${item}' copied to clipboard`);
+    alert(`'${item}' copied to clipboard — click the email itself to open your mail app`);
   };
 
   return (
