@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import colors from "../../colors.json";
 
 const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 
   margin: 0;
   padding: 0.5em 0.7em;
   width: 100%;
-  background: #124559;
+  background: ${colors.primaryDark};
   color: white;
   font-size: 1.05em;
 

@@ -5,10 +5,10 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 <details>
 <summary>Primary</summary>
 
-- [ ] Never make a project with CRA ever again :)
+- [ ] Test and fix mobile view
 - [ ] Color palette
 - [ ] Create basic 'hero section' (should be extremely simple — maybe just the bio — to meet deadline; can make a better one later)
-- [ ] Update bio contents with things removed from projects/skills
+- [x] Update bio contents with things removed from projects/skills
 - [ ] Header: Fix scroll functionality and width issues
 - [ ] SingleProject: Force scroll when expanding/collapsing (may need `isExpanded` to simply toggle `hidden` on a div)
 
@@ -17,7 +17,6 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 <details>
 <summary>Secondary</summary>
 
-- [ ] Test and fix mobile view
 - [ ] Contact links on bottom of 'hero'
 - [ ] Find new font
 - [ ] Contact component: styling changes
@@ -40,6 +39,7 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 <!-- <details>
 <summary>Outdated</summary>
 
+- [ ] Never make a project with CRA ever again :)
 - [x] ~~Remove unused images~~
 - [x] ~~Header: add scroll functionality; keep on top~~
 - [x] Reformat skills content (in progress)

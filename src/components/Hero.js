@@ -4,12 +4,12 @@ import colors from "../colors.json";
 // import images from "../images";
 
 const HeroContainer = styled.div`
-  padding: 2em 0.7em 0.7em;
-  /* overflow: hidden; */
+  padding: 2em 0 0.7em;
+
   #page-header {
     width: 100%;
     text-align: center;
-    font-size: 200%;
+    font-size: 235%;
     margin-bottom: 0.4em;
     @media screen and (min-width: 650px) {
       font-size: 250%;
@@ -24,15 +24,14 @@ const HeroContainer = styled.div`
     max-height: 150px;
   }
   #hero-main {
-    #horizontal-img {
-      /* display: none; */
-    }
     #bio {
       width: 100%;
       text-align: justify;
-      background: ${colors.secondary};
+      font-size: 105%;
+      background: ${colors.primary};
       border-radius: 1em;
-      padding: 1em;
+      padding: 1em 1.2em;
+      box-shadow: 1px 1px 8px rgba(0,0,0,0.4);
     }
 
     @media screen and (min-width: 650px) {
