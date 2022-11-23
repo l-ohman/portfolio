@@ -5,7 +5,7 @@ import colors from "../colors.json";
 
 const HeroContainer = styled.div`
   padding: 2em 0 0.7em;
-
+  color: white;
   #page-header {
     width: 100%;
     text-align: center;
@@ -25,11 +25,13 @@ const HeroContainer = styled.div`
   }
   #hero-main {
     #bio {
+      background: ${colors.light};
+      color: black;
+
       width: 100%;
       text-align: justify;
       font-size: 105%;
-      background: ${colors.primary};
-      border-radius: 1em;
+      border-radius: 0.2em;
       padding: 1em 1.2em;
       box-shadow: 1px 1px 8px rgba(0,0,0,0.4);
     }

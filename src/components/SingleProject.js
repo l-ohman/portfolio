@@ -5,29 +5,35 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import images from "../images";
 import colors from "../colors.json";
 
+const iconColor = "white";
+const imageRadius = 8;
+
 const ExpandedContainer = styled.div`
   width: 100%;
-  margin: 0.2em 0 0.9em;
+  margin: 0.2em 0 1.3em;
   padding: 0.2em 0.9em;
 
-  background: ${colors.primary};
-  border-radius: 0.5em;
+  background: ${colors.light};
+  color: black;
+  border-radius: 0.2em;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
 
   .single-project-header {
     display: flex;
     align-items: center;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.12);
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.05);
+    width: fit-content;
+    margin: 0.3em auto 0;
 
     .project-title {
-      font-size: 160%;
+      font-size: 175%;
     }
     .project-icon {
-      width: 28px;
-      max-height: 28px;
+      width: 27px;
+      max-height: 27px;
       margin: 0 0 2px 8px;
       border-radius: 50%;
-      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -35,6 +41,7 @@ const ExpandedContainer = styled.div`
     width: 97%;
     margin: 0.3em auto;
   }
+
   @media screen and (min-width: 650px) {
     padding: 0.8em 1em 0.2em;
     > * {
@@ -46,23 +53,31 @@ const ExpandedContainer = styled.div`
 const TechnologiesContainer = styled.div`
   #tech-list {
     width: fit-content;
-    margin: 0.5em -0.1em 0.6em;
+    margin: 0.2em auto;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
   }
   .tag {
-    background: ${colors.secondary};
+    background: ${colors.accent};
+    color: white;
+
     width: fit-content;
     font-size: 0.97em;
-    padding: 0.2em 0.55em;
+    padding: 0.25em 0.6em;
     border-radius: 0.9em;
-    margin-right: 0.5em;
+    margin: 0.2em 0.45em 0 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    &:first-child {
+      margin-left: 0.45em;
+    }
   }
 `;
 
 const DescriptionContainer = styled.div`
   .paragraph {
-    margin: 0.3em 0 0.9em;
+    margin: 0.6em 0 0.9em;
+    text-align: justify;
   }
 `;
 
@@ -77,7 +92,8 @@ const ImageContainer = styled.div`
     max-width: 48%;
     height: fit-content;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: ${imageRadius + "px"};
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
   }
 
   &#umami-meats {
@@ -105,37 +121,27 @@ const ImageContainer = styled.div`
     }
     #node-graph-img {
       min-width: 58%;
-      border-radius: 8px 0 0 8px;
+      border-radius: ${imageRadius + "px"} 0 0 ${imageRadius + "px"};
       border-right: none;
     }
     #solar-system-img {
       width: 42%;
-      border-radius: 0 8px 8px 0;
+      border-radius: 0 ${imageRadius + "px"} ${imageRadius + "px"} 0;
       object-position: 50%;
       border-left: none;
     }
 
     @media screen and (max-width: 500px) {
+      flex-direction: column;
       #node-graph-img {
-        min-width: 42%;
-        max-width: 42%;
+        min-width: 100%;
+        border-radius: ${imageRadius + "px"} ${imageRadius + "px"} 0 0;
       }
       #solar-system-img {
-        min-width: 58%;
-        max-width: 58%;
+        min-width: 100%;
+        border-radius: 0 0 ${imageRadius + "px"} ${imageRadius + "px"};
       }
     }
-  }
-`;
-
-const ExpandInfo = styled.div`
-  .expand-txt {
-    color: inherit;
-    font-size: 0.94em;
-    font-style: italic;
-    text-decoration: underline;
-    text-align: right;
-    margin: 0em 0.5em 0.6em;
   }
 `;
 
@@ -159,26 +165,33 @@ const ProjectLinksAndInfo = styled.div`
     }
 
     .single-link {
-      background: ${colors.secondary};
-      padding: 0.3em 0.7em 0.45em;
+      background: ${colors.accent};
+      padding: 0.3em 0.75em 0.45em;
       border-radius: 1.1em;
       display: flex;
       align-items: center;
       text-decoration: none;
+      overflow: hidden;
 
       p {
         margin-right: 0.4em;
         padding-top: 0.2em;
-        color: inherit;
+        color: white;
+      }
+      a {
+        color: white;
       }
     }
-    @media screen and (max-width: 370px) {
+    .min-txt {
+      display: none;
+    }
+    @media screen and (max-width: 400px) {
       .single-link {
-        width: 45px;
-        height: 45px;
-        border-radius: 38%;
-
-        p {
+        .min-txt {
+          display: block;
+          margin-right: 9px;
+        }
+        .full-txt {
           display: none;
         }
       }
@@ -221,59 +234,45 @@ export default function SingleProject({ id, project }) {
         {isExpanded && <p className="paragraph">{project.description[1]}</p>}
       </DescriptionContainer>
 
-      {isExpanded && (
-        <>
-          {/*
+      <>
+        {/*
         probably should have hard-coded most of this, esp. for image formatting; each itm
         should have a somewhat unique design. (lesson learned for next portfolio, i guess.)
       */}
-          {id === 1 ? (
-            <ImageContainer id="book-beasts">
-              <img src={images[id].main} alt="Book Beasts Student View" />
-              <img src={images[id].secondary} alt="Book Beasts Book-Editor" />
-            </ImageContainer>
-          ) : id === 2 ? (
-            <ImageContainer id="umami-meats">
-              <img
-                src={images[id].main}
-                alt="Umami Meats Homepage"
-                id="umami-homepage-screenshot"
-              />
-              <img
-                src={images[id].secondary}
-                alt="Umami Meats Cart View"
-                id="umami-cart-view"
-              />
-            </ImageContainer>
-          ) : (
-            <ImageContainer id="solar-sandbox">
-              <img
-                src={images[id].main}
-                alt={`${project.title} Screenshot 1`}
-                id="node-graph-img"
-              />
-              <img
-                src={images[id].secondary}
-                alt={`${project.title} Screenshot 2`}
-                id="solar-system-img"
-              />
-              {/* <img src={images[id].alt} alt={`${project.title} Screenshot 3`} /> */}
-            </ImageContainer>
-          )}
-        </>
-      )}
-
-      <ExpandInfo>
-        {isExpanded ? (
-          <p onClick={() => setExpanded(false)} className="expand-txt">
-            Collapse details
-          </p>
+        {id === 1 ? (
+          <ImageContainer id="book-beasts">
+            <img src={images[id].main} alt="Book Beasts Student View" />
+            <img src={images[id].secondary} alt="Book Beasts Book-Editor" />
+          </ImageContainer>
+        ) : id === 2 ? (
+          <ImageContainer id="umami-meats">
+            <img
+              src={images[id].main}
+              alt="Umami Meats Homepage"
+              id="umami-homepage-screenshot"
+            />
+            <img
+              src={images[id].secondary}
+              alt="Umami Meats Cart View"
+              id="umami-cart-view"
+            />
+          </ImageContainer>
         ) : (
-          <p onClick={() => setExpanded(true)} className="expand-txt">
-            Read more...
-          </p>
+          <ImageContainer id="solar-sandbox">
+            <img
+              src={images[id].main}
+              alt={`${project.title} Screenshot 1`}
+              id="node-graph-img"
+            />
+            <img
+              src={images[id].secondary}
+              alt={`${project.title} Screenshot 2`}
+              id="solar-system-img"
+            />
+            {/* <img src={images[id].alt} alt={`${project.title} Screenshot 3`} /> */}
+          </ImageContainer>
         )}
-      </ExpandInfo>
+      </>
 
       <hr />
 
@@ -286,8 +285,9 @@ export default function SingleProject({ id, project }) {
               rel="noopener noreferrer"
               className="single-link"
             >
-              <p>View Site</p>
-              <FaExternalLinkAlt color="black" size={20} />
+              <p className="full-txt">View Site</p>
+              <p className="min-txt">Deployed</p>
+              <FaExternalLinkAlt color={iconColor} size={20} />
             </a>
           )}
           {project.links.github && (
@@ -297,8 +297,9 @@ export default function SingleProject({ id, project }) {
               rel="noopener noreferrer"
               className="single-link"
             >
-              <p>View on Github</p>
-              <FaGithub color="black" size={24} />
+              <p className="full-txt">View on Github</p>
+              <p className="min-txt">Github</p>
+              <FaGithub color={iconColor} size={24} />
             </a>
           )}
         </div>

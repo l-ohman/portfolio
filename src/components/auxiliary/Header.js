@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
   margin: 0;
   padding: 0.5em 0.7em;
   width: 100%;
-  background: ${colors.primaryDark};
+  background: ${colors.dark};
   color: white;
   font-size: 1.05em;
 
@@ -24,6 +24,7 @@ const HeaderContainer = styled.div`
     width: 100%;
     justify-content: space-around;
     max-width: 610px;
+    opacity: 1;
     :hover {
       cursor: pointer;
       color: #EEEEEE;
