@@ -5,22 +5,20 @@ import images from "../images";
 import colors from "../colors.json";
 
 const SkillsContainer = styled.div`
-  padding: 0.5em 0 1em;
-  border-radius: 1.5em;
-  background: ${colors.secondary};
-  
+  padding: 0.4em 1.2em 0.6em;
   > h1 {
+    font-size: 220%;
     text-align: center;
+    color: black;
   }
-  hr {
-    margin: 0.4em auto 0.65em;
-    width: 25em;
-    max-width: 92%;
-  }
-  .tech-list {
-    margin: 0.3em auto 0;
-    padding: 0;
 
+  .tech-list {
+    /* padding: 0.2em 0 1em; */
+    /* background: ${colors.light};
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.13); */
+
+    margin: 0.3em auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,9 +32,11 @@ const SingleSkill = styled.div`
   width: ${containerSize + "px"};
   height: ${containerSize + "px"};
   border-radius: 1em;
-  background: ${colors.primary};
+  background: ${colors.lighter};
   margin: 6px;
   padding: 8px 5px 7px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.09);
+
   .stack-logo {
     width: ${logoSize + "px"};
     height: ${logoSize + "px"};
@@ -75,46 +75,42 @@ export default function Skills() {
   return (
     <SkillsContainer>
       <h1>technical skills</h1>
-      <hr />
 
       {/* for next portfolio — should absolutely take the time to resize every image to have the same
         resolution and internal padding. i did not think it would be worth it but i was incorrect. */}
-      <div>
-        <div>
-          <div className="tech-list">
-            {technologies.map((itm, i) => (
-              <SingleSkill key={i}>
-                <img
-                  src={images.skills[itm]}
-                  alt={`${itm} Logo`}
-                  className="stack-logo technologies"
-                />
-                <p className="tech-txt">{itm}</p>
-              </SingleSkill>
-            ))}
 
-            {languages.map((itm, i) => (
-              <SingleSkill key={i}>
-                {itm === "HTML" || itm === "CSS" ? (
-                  <img
-                    key={i}
-                    src={images.skills[itm]}
-                    alt={`${itm} Logo`}
-                    className="stack-logo language-adjusted"
-                  />
-                ) : (
-                  <img
-                    key={i}
-                    src={images.skills[itm]}
-                    alt={`${itm} Logo`}
-                    className="stack-logo language"
-                  />
-                )}
-                <p className="tech-txt">{itm}</p>
-              </SingleSkill>
-            ))}
-          </div>
-        </div>
+      <div className="tech-list">
+        {technologies.map((itm, i) => (
+          <SingleSkill key={i}>
+            <img
+              src={images.skills[itm]}
+              alt={`${itm} Logo`}
+              className="stack-logo technologies"
+            />
+            <p className="tech-txt">{itm}</p>
+          </SingleSkill>
+        ))}
+
+        {languages.map((itm, i) => (
+          <SingleSkill key={i}>
+            {itm === "HTML" || itm === "CSS" ? (
+              <img
+                key={i}
+                src={images.skills[itm]}
+                alt={`${itm} Logo`}
+                className="stack-logo language-adjusted"
+              />
+            ) : (
+              <img
+                key={i}
+                src={images.skills[itm]}
+                alt={`${itm} Logo`}
+                className="stack-logo language"
+              />
+            )}
+            <p className="tech-txt">{itm}</p>
+          </SingleSkill>
+        ))}
       </div>
     </SkillsContainer>
   );

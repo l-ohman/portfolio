@@ -4,5 +4,8 @@
   "secondary": "#8051F1",
   "accent": "#44646E",
   "dark": "#2C2E33",
-  "light": "#F0F0F8"
+  "light": "#EDEDF0",
+  "lighter": "#F6F6FC",
+  "backgroundMain": "#d8dfed",
+  "backgroundSecondary": "#c9cfdf"
 }

@@ -1,39 +1,46 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../colors.json";
-// import images from "../images";
+import images from "../images";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 const HeroContainer = styled.div`
-  padding: 2em 0 0.7em;
-  color: white;
+  padding: 3em 1em 1.4em;
+  color: black;
   #page-header {
-    width: 100%;
-    text-align: center;
-    font-size: 235%;
-    margin-bottom: 0.4em;
-    @media screen and (min-width: 650px) {
-      font-size: 250%;
-      margin-bottom: 0;
+    padding: 0 0.5em 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      width: fit-content;
+      text-align: center;
+      font-size: 260%;
+      margin: 0.08em 0 0 0.1em;
+      @media screen and (min-width: 650px) {
+        font-size: 250%;
+        margin-bottom: 0;
+      }
     }
-  }
-  .headshot-picture {
-    display: block;
-    margin: 0 auto;
-    /* border-radius: 1em; */
-    max-width: 150px;
-    max-height: 150px;
+    img {
+      margin: 0 0.3em 0 0;
+      border-radius: 30% 10%;
+      max-height: 4.5em;
+    }
   }
   #hero-main {
     #bio {
-      background: ${colors.light};
+      background: ${colors.lighter};
       color: black;
 
       width: 100%;
       text-align: justify;
-      font-size: 105%;
-      border-radius: 0.2em;
+      font-size: 110%;
+      border-radius: 0.5em;
       padding: 1em 1.2em;
-      box-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
     }
 
     @media screen and (min-width: 650px) {
@@ -50,18 +57,37 @@ const HeroContainer = styled.div`
           padding: 0.3em 2em 1.2em;
         }
       }
-      .headshot-picture {
-        max-width: 230px;
-        max-height: 230px;
-      }
     }
   }
+`;
+
+const iconColor = "black";
+const iconSize = 42;
+const QuickInfoPicture = styled.div`
+  background: ${colors.light};
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 1em 1em;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.02); */
+  
+  width: 85%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0.45em 0 0.1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export default function Hero() {
   return (
     <HeroContainer>
-      <h1 id="page-header">Hi, I'm Jake.</h1>
+      <div id="page-header">
+        <h1>hi, i'm jake.</h1>
+        <img
+          src={images.headshot}
+          alt="My smile when my code runs with no bugs"
+        />
+      </div>
       <div id="hero-main">
         <div id="bio">
           <p>
@@ -74,13 +100,32 @@ export default function Hero() {
             developer.
           </p>
         </div>
-        {/* <img
-          src={images.headshot}
-          alt="My smile when my code runs with no bugs"
-          className="headshot-picture"
-          id="horizontal-img"
-        /> */}
       </div>
+      <QuickInfoPicture>
+        <a
+          href="mailto:jakelohman7@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoMail color={iconColor} size={iconSize} />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jake-lohman/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin color={iconColor} size={iconSize} />
+        </a>
+
+        <a
+          href="https://github.com/l-ohman"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithubSquare color={iconColor} size={iconSize} />
+        </a>
+      </QuickInfoPicture>
     </HeroContainer>
   );
 }

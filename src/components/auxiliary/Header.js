@@ -5,7 +5,7 @@ import colors from "../../colors.json";
 const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
-  z-index: 20;
+  z-index: 100;
 
   margin: 0;
   padding: 0.5em 0.7em;
@@ -36,24 +36,23 @@ export default function Header() {
   const headerLinks = ["about", "projects", "skills", "contact"];
 
   const scroll = (location) => {
-    // might want to restructure how header works to ensure this scrolls to right place
-    // currently i do not think this would work consistently across all devices
-    switch (location) {
-      case "about":
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-        break;
-      case "projects":
-        window.scrollTo({ top: 320, left: 0, behavior: "smooth" });
-        break;
-      case "skills":
-        window.scrollTo({ top: (document.body.scrollHeight - 710), left: 0, behavior: "smooth" });
-        break;
-      case "contact":
-        window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
-        break;
-      default:
-        return;
-    }
+    // must redo
+    // switch (location) {
+    //   case "about":
+    //     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    //     break;
+    //   case "projects":
+    //     window.scrollTo({ top: 320, left: 0, behavior: "smooth" });
+    //     break;
+    //   case "skills":
+    //     window.scrollTo({ top: (document.body.scrollHeight - 710), left: 0, behavior: "smooth" });
+    //     break;
+    //   case "contact":
+    //     window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
+    //     break;
+    //   default:
+    //     return;
+    // }
   };
 
   return (

@@ -9,7 +9,7 @@ const FooterContainer = styled.div`
   position: absolute;
   width: 100%;
   height: ${footerHeight + "em"};
-  bottom: ${"-" + (footerHeight + 2) + "em"};
+  bottom: ${"-" + (footerHeight) + "em"};
   padding: 0.3em 0;
 
   background: ${colors.dark};
@@ -33,11 +33,6 @@ const iconSize = 45;
 export default function Footer() {
   return (
     <FooterContainer>
-      {/* <p>Email</p>
-      <p>LinkedIn</p>
-      <p>Github</p>
-      <p>Resume</p> */}
-
       <div>
         <a
           href="mailto:jakelohman7@gmail.com"

@@ -5,14 +5,21 @@ import { FaLinkedin } from "react-icons/fa";
 import colors from "../colors.json";
 
 const ContactContainer = styled.div`
+  background: ${colors.backgroundSecondary};
+  padding: 0.4em 1.5em 1.35em;
   font-size: 105%;
   max-width: 600px;
   margin: 0 auto;
-  /* background: ${colors.secondary}; */
+  color: black;
 
-  > div > * {
+  > div {
     text-align: center;
-    margin-bottom: 0.3em;
+    p {
+      text-align: justify;
+    }
+    * {
+      margin-bottom: 0.3em;
+    }
   }
   h2 {
     font-size: 150%;
@@ -65,11 +72,13 @@ const HalfContainers = styled.div`
     width: 19em;
   }
   &#right {
-    background: ${colors.primary};
+    background: ${colors.lighter};
+    color: black;
+
     min-height: 5em;
     margin: 1em auto 0;
-    padding: 1.1em 1.3em 0.5em;
-    border-radius: 2em;
+    padding: 1.15em 1.3em 0.5em;
+    border-radius: 1.5em;
   }
 `;
 
@@ -86,7 +95,7 @@ export default function Contact() {
         <h2>let's get in touch</h2>
         <hr />
         <p>
-          I am currently looking for full-time (or part-time) employment and select freelance
+          I am currently looking for full-time (or part-time) employment and am open to select freelance
           opportunities — feel free to contact me here:
         </p>
       </HalfContainers>

@@ -4,16 +4,13 @@ import { Hero, Skills, ProjectList, Contact } from "./";
 
 const maxWidth = 750;
 const ContentContainer = styled.div`
-  position: relative;
-  margin: 1.5em;
   max-width: ${maxWidth + "px"};
-  /* padding-top: 8.4em; /* this makes room for 'Hero' component (might increase num) */
 
   @media screen and (min-width: ${maxWidth + 35 + "px"}) {
-    margin: 1.5em auto;
+    /* margin: 1.5em 0; */
   }
   > div {
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
   }
 `;
 

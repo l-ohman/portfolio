@@ -6,17 +6,17 @@ import images from "../images";
 import colors from "../colors.json";
 
 const iconColor = "white";
-const imageRadius = 8;
+const imageRadius = 5;
 
 const ExpandedContainer = styled.div`
+  background: ${colors.light};
+  color: black;
+
   width: 100%;
   margin: 0.2em 0 1.3em;
   padding: 0.2em 0.9em;
-
-  background: ${colors.light};
-  color: black;
-  border-radius: 0.2em;
-  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.08);
 
   .single-project-header {
     display: flex;
@@ -67,7 +67,7 @@ const TechnologiesContainer = styled.div`
     padding: 0.25em 0.6em;
     border-radius: 0.9em;
     margin: 0.2em 0.45em 0 0;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
     &:first-child {
       margin-left: 0.45em;
     }
@@ -93,22 +93,15 @@ const ImageContainer = styled.div`
     height: fit-content;
     object-fit: contain;
     border-radius: ${imageRadius + "px"};
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.07);
   }
 
   &#umami-meats {
-    max-height: 300px;
-    img {
-      max-height: 300px;
-      object-fit: cover;
-    }
     #umami-homepage-screenshot {
-      min-width: 55%;
-      /* object-fit: cover; */
+      max-height: 560px;
+      object-fit: cover;
+      min-width: 100%;
       object-position: 0 0;
-    }
-    #umami-cart-view {
-      max-width: 45%;
     }
   }
 
@@ -200,8 +193,6 @@ const ProjectLinksAndInfo = styled.div`
 `;
 
 export default function SingleProject({ id, project }) {
-  const [isExpanded, setExpanded] = React.useState(false);
-
   return (
     <ExpandedContainer>
       <div className="single-project-header">
@@ -231,7 +222,6 @@ export default function SingleProject({ id, project }) {
 
       <DescriptionContainer>
         <p className="paragraph">{project.description[0]}</p>
-        {isExpanded && <p className="paragraph">{project.description[1]}</p>}
       </DescriptionContainer>
 
       <>
@@ -250,11 +240,6 @@ export default function SingleProject({ id, project }) {
               src={images[id].main}
               alt="Umami Meats Homepage"
               id="umami-homepage-screenshot"
-            />
-            <img
-              src={images[id].secondary}
-              alt="Umami Meats Cart View"
-              id="umami-cart-view"
             />
           </ImageContainer>
         ) : (
