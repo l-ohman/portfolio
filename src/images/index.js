@@ -20,6 +20,8 @@ import CSS from "./techLogos/CSS.png";
 import Javascript from "./techLogos/Javascript.png";
 import Python from "./techLogos/Python.png";
 
+import headshot from "./headshot.jpg";
+
 export default {
   1: {
     icon: bookBeastsIcon,
@@ -47,4 +49,5 @@ export default {
     Javascript,
     Python,
   },
+  headshot,
 };

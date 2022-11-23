@@ -15,6 +15,7 @@ const SkillsContainer = styled.div`
   hr {
     margin: 0.4em auto 0.65em;
     width: 25em;
+    max-width: 92%;
   }
   .tech-list {
     margin: 0.3em auto 0;
