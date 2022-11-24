@@ -6,30 +6,45 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
 const HeroContainer = styled.div`
-  padding: 3em 1em 1.4em;
+  padding: 3.4em 1em 1.8em;
   color: black;
-  #page-header {
+
+  @media screen and (min-width: 650px) {
+    padding-bottom: 2.7em;
+  }
+
+  #hero-header {
     padding: 0 0.5em 0.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    max-width: 400px;
     h1 {
       width: fit-content;
       text-align: center;
       font-size: 260%;
       margin: 0.08em 0 0 0.1em;
-      @media screen and (min-width: 650px) {
-        font-size: 250%;
-        margin-bottom: 0;
-      }
     }
     img {
       margin: 0 0.3em 0 0;
       border-radius: 30% 10%;
       max-height: 4.5em;
+      box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+    }
+    
+    @media screen and (min-width: 650px) {
+      margin: 0 auto;
+      h1 {
+        font-size: 300%;
+        margin-bottom: 0;
+      }
+      img {
+        margin: 0.2em 0 0 0;
+        max-height: 5.8em;
+      }
     }
   }
+
   #hero-main {
     #bio {
       background: ${colors.lighter};
@@ -45,6 +60,9 @@ const HeroContainer = styled.div`
 
     @media screen and (min-width: 650px) {
       margin: 1.2em 3em 0;
+      #bio {
+        margin: auto;
+      }
     }
     @media screen and (min-width: 550px) {
       display: flex;
@@ -68,7 +86,7 @@ const QuickInfoPicture = styled.div`
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 1em 1em;
   /* border-top: 1px solid rgba(0, 0, 0, 0.02); */
-  
+
   width: 85%;
   max-width: 400px;
   margin: 0 auto;
@@ -81,7 +99,7 @@ const QuickInfoPicture = styled.div`
 export default function Hero() {
   return (
     <HeroContainer>
-      <div id="page-header">
+      <div id="hero-header">
         <h1>hi, i'm jake.</h1>
         <img
           src={images.headshot}

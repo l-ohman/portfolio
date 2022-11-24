@@ -5,7 +5,7 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 <details>
 <summary>Primary</summary>
 
-- [x] ~~Test and fix mobile view~~
+- [ ] Test and fix mobile view (post-desktop fixes)
 - [ ] Make adjustments for desktop (and tablet) view (all sections — especially hero)
 - [x] ~~Color palette~~ (good enough for now, but needs tweaking)
 - [x] ~~Create basic 'hero section' (should be extremely simple — maybe just the bio — to meet deadline; can make a better one later)~~
@@ -34,6 +34,8 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 
 - [ ] Create new, improved 'hero section'; ideally using `@react-three/fiber`
 - [ ] Add links ~~and logos~~ for technologies
+- [ ] Image carousel for projects (can toggle through)
+- [ ] Hide header when scrolling down, but reveal when scrolling back up
 
 </details>
 

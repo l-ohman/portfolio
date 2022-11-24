@@ -7,9 +7,14 @@ import colors from "../colors.json";
 const SkillsContainer = styled.div`
   padding: 0.4em 1.2em 0.6em;
   > h1 {
-    font-size: 220%;
+    font-size: 260%;
     text-align: center;
     color: black;
+  }
+  @media screen and (min-width: 650px) {
+    > h1 {
+      font-size: 285%;
+    }
   }
 
   .tech-list {
