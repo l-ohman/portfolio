@@ -6,24 +6,21 @@ import colors from "../colors.json";
 
 const ContactContainer = styled.div`
   background: ${colors.backgroundSecondary};
-  padding: 0.4em 1.5em 1.35em;
+  padding: 0.1em 1.5em 1.35em;
   font-size: 105%;
-  max-width: 600px;
   margin: 0 auto;
   color: black;
 
   > div {
+    max-width: 630px;
     text-align: center;
-    p {
-      text-align: justify;
-    }
     * {
       margin-bottom: 0.3em;
     }
   }
   h2 {
-    font-size: 150%;
-    margin-bottom: 0;
+    margin: 0.3em auto 0;
+    font-size: 180%;
   }
   #link-list {
     display: flex;

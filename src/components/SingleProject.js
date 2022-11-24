@@ -14,10 +14,10 @@ const ExpandedContainer = styled.div`
   width: 100%;
   max-width: 1000px;
 
-  margin: 0.2em auto 1.3em;
+  margin: 0.2em auto 2em;
   padding: 0.2em 0.9em;
   border-radius: 0.5em;
-  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.09);
 
   .single-project-header {
     display: flex;
@@ -137,28 +137,48 @@ const DescriptionImagesContainer = styled.div`
   }
 
   &#umami-meats {
+    img {
+      object-fit: cover;
+      object-position: 0 0;
+    }
     #umami-description-container {
       width: 100%;
     }
-    #umami-homepage-screenshot {
-      max-height: 560px;
-      object-fit: cover;
-      min-width: 100%;
-      object-position: 0 0;
+    @media screen and (max-width: 649px) {
+      #umami-image-container {
+        display: block;
+        width: 320px;
+        max-width: 320px;
+        margin: 0.9em auto;
+        padding-right: 0.4em;
+        #umami-homepage-screenshot {
+          display: block;
+          margin: 0 auto;
+          max-width: 320px;
+          max-height: 500px;
+        }
+      }
+      #umami-homepage-screenshot-main {
+        display: none;
+      }
     }
     @media screen and (min-width: 650px) {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
 
       #umami-description-container {
-        margin: 0 1.5em 0 0.4em;
+        max-width: 410px;
+        margin: 0 1.5em 0 0;
       }
-      #umami-homepage-screenshot {
+      #umami-homepage-screenshot-main {
+        display: block;
         margin: 0.8em 1.3em 0.5em 0;
         min-width: 35%;
         max-height: 400px;
-        /* max-width: 40%; */
+      }
+      #umami-image-container {
+        display: none;
       }
     }
   }
@@ -318,10 +338,17 @@ export default function SingleProject({ id, project }) {
             <p className="description">{project.description[1]}</p>
           </div>
 
+          <div id="umami-image-container">
+            <img
+              src={images[id].main}
+              alt="Umami Meats Homepage"
+              id="umami-homepage-screenshot"
+            />
+          </div>
           <img
             src={images[id].main}
             alt="Umami Meats Homepage"
-            id="umami-homepage-screenshot"
+            id="umami-homepage-screenshot-main"
           />
         </DescriptionImagesContainer>
       ) : (

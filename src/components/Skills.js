@@ -5,29 +5,27 @@ import images from "../images";
 import colors from "../colors.json";
 
 const SkillsContainer = styled.div`
-  padding: 0.4em 1.2em 0.6em;
+  padding: 0.4em 1.2em 0.9em;
   > h1 {
     font-size: 260%;
     text-align: center;
     color: black;
   }
-  @media screen and (min-width: 650px) {
-    > h1 {
-      font-size: 285%;
-    }
-  }
-
   .tech-list {
-    /* padding: 0.2em 0 1em; */
-    /* background: ${colors.light};
-    border-radius: 0.5em;
-    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.13); */
-
     margin: 0.3em auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 650px) {
+    padding: 1.65em 1.2em 2.4em;
+    > h1 {
+      font-size: 285%;
+      margin-bottom: 0.5em;
+    }
   }
 `;
 

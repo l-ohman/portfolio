@@ -8,12 +8,12 @@ import { IoMail } from "react-icons/io5";
 const HeroContainer = styled.div`
   padding: 3.4em 1em 1.8em;
   color: black;
-
   @media screen and (min-width: 650px) {
-    padding-bottom: 2.7em;
+    padding-bottom: 2.8em;
   }
 
   #hero-header {
+    margin: 0 auto;
     padding: 0 0.5em 0.5em;
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,6 @@ const HeroContainer = styled.div`
     }
     
     @media screen and (min-width: 650px) {
-      margin: 0 auto;
       h1 {
         font-size: 300%;
         margin-bottom: 0;
@@ -46,20 +45,22 @@ const HeroContainer = styled.div`
   }
 
   #hero-main {
+    width: 100%;
     #bio {
+      width: 100%;
+      margin: 0 auto;
       background: ${colors.lighter};
       color: black;
 
-      width: 100%;
       text-align: justify;
-      font-size: 110%;
+      font-size: 120%;
       border-radius: 0.5em;
       padding: 1em 1.2em;
       box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
     }
 
     @media screen and (min-width: 650px) {
-      margin: 1.2em 3em 0;
+      margin: 1.2em auto 0;
       #bio {
         margin: auto;
       }
@@ -69,7 +70,7 @@ const HeroContainer = styled.div`
       justify-content: space-between;
       align-items: center;
       #bio {
-        width: 60%;
+        max-width: 600px;
         padding: 0.9em 0 0;
         p {
           padding: 0.3em 2em 1.2em;
@@ -81,7 +82,7 @@ const HeroContainer = styled.div`
 
 const iconColor = "black";
 const iconSize = 42;
-const QuickInfoPicture = styled.div`
+const LogoLinks = styled.div`
   background: ${colors.light};
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 1em 1em;
@@ -119,7 +120,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <QuickInfoPicture>
+      <LogoLinks>
         <a
           href="mailto:jakelohman7@gmail.com"
           target="_blank"
@@ -143,7 +144,7 @@ export default function Hero() {
         >
           <FaGithubSquare color={iconColor} size={iconSize} />
         </a>
-      </QuickInfoPicture>
+      </LogoLinks>
     </HeroContainer>
   );
 }
