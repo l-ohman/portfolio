@@ -6,10 +6,10 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 <summary>Primary</summary>
 
 - [ ] Test and fix mobile view (final test)
-- [x] Make adjustments for desktop (and tablet) view (all sections — especially hero)
+- [x] ~~Make adjustments for desktop (and tablet) view (all sections — especially hero)~~
 - [x] ~~Color palette~~ (good enough for now, but needs tweaking)
 - [x] ~~Create basic 'hero section' (should be extremely simple — maybe just the bio — to meet deadline; can make a better one later)~~
-- [x] ~~Update bio contents with things removed from projects/skills~~
+- [ ] Update bio contents with things removed from projects/skills
 - [ ] Header: Fix scroll functionality ~~and width issues~~
 - [x] ~~User must expand projects to see images — this needs to be redesigned asap~~
 

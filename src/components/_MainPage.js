@@ -1,28 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-import { Hero, Skills, ProjectList, Contact } from "./";
+import { Header, Hero, Skills, ProjectList, Contact } from "./";
 
-// 260/300
 const ContentContainer = styled.div`
   width: 100%;
-  /* max-width: ${750 + "px"};
-  @media screen and (min-width: ${750 + 35 + "px"}) {
-    margin: 1.5em 0;
-  }
-  > div {
-    margin-bottom: 2em;
-  } */
 `;
 
 export default function MainPage() {
+  const links = {
+    hero: React.useRef(null),
+    projects: React.useRef(null),
+    skills: React.useRef(null),
+    contact: React.useRef(null),
+  };
+
   return (
     <>
-      {/* should import header here to target containers with scroll */}
+      <Header {...links} />
       <ContentContainer>
-        <Hero />
-        <ProjectList />
-        <Skills />
-        <Contact />
+        <div ref={links.hero}>
+          <Hero />
+        </div>
+
+        <div ref={links.projects}>
+          <ProjectList />
+        </div>
+
+        <div ref={links.skills}>
+          <Skills />
+        </div>
+
+        <div ref={links.contact}>
+          <Contact />
+        </div>
       </ContentContainer>
     </>
   );

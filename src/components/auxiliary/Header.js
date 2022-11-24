@@ -32,27 +32,28 @@ const HeaderContainer = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header({ hero, projects, skills, contact }) {
   const headerLinks = ["about", "projects", "skills", "contact"];
 
+  // const [hideHeader, setHideHeader] = React.useEffect(false);
+
   const scroll = (location) => {
-    // must redo
-    // switch (location) {
-    //   case "about":
-    //     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    //     break;
-    //   case "projects":
-    //     window.scrollTo({ top: 320, left: 0, behavior: "smooth" });
-    //     break;
-    //   case "skills":
-    //     window.scrollTo({ top: (document.body.scrollHeight - 710), left: 0, behavior: "smooth" });
-    //     break;
-    //   case "contact":
-    //     window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
-    //     break;
-    //   default:
-    //     return;
-    // }
+    switch (location) {
+      case "about":
+        window.scrollTo({ top: hero.current.offsetTop, behavior: "smooth" });
+        break;
+      case "projects":
+        window.scrollTo({ top: (projects.current.offsetTop - 30), behavior: "smooth" });
+        break;
+      case "skills":
+        window.scrollTo({ top: (skills.current.offsetTop - 30), left: 0, behavior: "smooth" });
+        break;
+      case "contact":
+        window.scrollTo({ top: (contact.current.offsetTop - 30), left: 0, behavior: "smooth" });
+        break;
+      default:
+        return;
+    }
   };
 
   return (
