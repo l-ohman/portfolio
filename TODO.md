@@ -7,11 +7,13 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 
 - [ ] Test and fix mobile view (final test)
 - [x] ~~Make adjustments for desktop (and tablet) view (all sections — especially hero)~~
+- [ ] Add flair to make page less static (hover, colors, subtle animations, etc.)
 - [x] ~~Color palette~~ (good enough for now, but needs tweaking)
 - [x] ~~Create basic 'hero section' (should be extremely simple — maybe just the bio — to meet deadline; can make a better one later)~~
-- [ ] Update bio contents with things removed from projects/skills
-- [ ] Header: Fix scroll functionality ~~and width issues~~
+- [x] ~~Update bio contents with things removed from projects/skills~~
+- [x] ~~Header: Fix scroll functionality and width issues~~
 - [x] ~~User must expand projects to see images — this needs to be redesigned asap~~
+- [ ] Update project descriptions/contributions to account for formatting changes
 
 </details>
 
@@ -23,11 +25,9 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [x] ~~Contact links on bottom of 'hero'~~
 - [x] ~~Find new font(s)~~
 - [x] ~~Contact component: styling changes~~
-- [ ] Create favicon.ico
-- [ ] Add favicon/title to header
-- [ ] Update project descriptions/contributions to account for formatting changes
+- [ ] Create favicon.ico (and add to header if possible)
 - [ ] Replace that one alert with `toastify` notification
-- [ ] Animations and hover effects — currently the site is too static
+- [ ] Fix box-shadow on bio container
 
 </details>
 
@@ -54,5 +54,6 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [ ] ~~Gradient to lighter color at bottom of page (maybe)~~
 - [x] Add hero image to mobile view somehow (such as bar with contact links)
 - [ ] ~~Slider/carousel-type component for technologies (possibly)~~
+- [ ] ~~Add favicon/title to header~~
 
 </details> -->
