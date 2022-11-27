@@ -246,14 +246,15 @@ const ProjectLinksAndInfo = styled.div`
     }
 
     .single-link {
-      background: ${colors.accent};
+      transition: background-color 0.07s linear 0s;
+
+      background-color: ${colors.accent};
       padding: 0.3em 0.75em 0.45em;
       border-radius: 1.1em;
       display: flex;
       align-items: center;
       text-decoration: none;
       overflow: hidden;
-
       p {
         margin-right: 0.4em;
         padding-top: 0.2em;
@@ -261,6 +262,10 @@ const ProjectLinksAndInfo = styled.div`
       }
       a {
         color: white;
+      }
+
+      &:hover {
+        background-color: ${colors.accent2};
       }
     }
     .min-txt {

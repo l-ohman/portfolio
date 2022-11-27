@@ -4,6 +4,14 @@ import { Header, Hero, Skills, ProjectList, Contact } from "./";
 
 const ContentContainer = styled.div`
   width: 100%;
+  
+  .icon-link {
+    transition: color 0.1s linear 0s;
+    color: black;
+    &:hover {
+      color: #373737;
+    }
+  }
 `;
 
 export default function MainPage() {

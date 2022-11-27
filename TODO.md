@@ -1,6 +1,6 @@
 ## Todo-list
 
-Main goal is to have this portfolio sufficient enough to be shared on LinkedIn by 11/25/22 (Friday)
+Main goal is to have this portfolio sufficient enough to be shared on LinkedIn by 11/28/22 (Monday)
 
 <details>
 <summary>Primary</summary>
@@ -20,8 +20,7 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 <details>
 <summary>Secondary</summary>
 
-
-- [ ] Hover shows alt text (or some helpful info)
+- [ ] Hover images shows alt text (or some helpful info)
 - [x] ~~Contact links on bottom of 'hero'~~
 - [x] ~~Find new font(s)~~
 - [x] ~~Contact component: styling changes~~
@@ -39,20 +38,27 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [ ] Add links ~~and logos~~ for technologies
 - [ ] Image carousel for projects (can toggle through)
 - [ ] Hide header when scrolling down, but reveal when scrolling back up
+- [ ] Hovering over skills shows brief description of the tech and a link
 
 </details>
 
 <!-- <details>
-<summary>Outdated</summary>
+<summary>Completed</summary>
 
-- [ ] Never make a project with CRA ever again :)
 - [x] ~~Remove unused images~~
 - [x] ~~Header: add scroll functionality; keep on top~~
-- [x] Reformat skills content (in progress)
+- [x] ~~Reformat skills content~~
 - [x] ~~Update project description formatting and content~~
-- [ ] ~~SingleProject: Force scroll when expanding/collapsing (removing 'isExpanded' concept entirely)~~
-- [ ] ~~Gradient to lighter color at bottom of page (maybe)~~
 - [x] Add hero image to mobile view somehow (such as bar with contact links)
+
+</details> -->
+
+<!-- <details>
+<summary>Deprecated / unnecessary / etc</summary>
+
+- [ ] Never make a project with CRA ever again :)
+- [ ] ~~SingleProject: Force scroll when expanding/collapsing~~ (removing 'isExpanded' concept entirely)
+- [ ] ~~Gradient to lighter color at bottom of page (maybe)~~
 - [ ] ~~Slider/carousel-type component for technologies (possibly)~~
 - [ ] ~~Add favicon/title to header~~
 

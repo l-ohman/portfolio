@@ -80,7 +80,6 @@ const HeroContainer = styled.div`
   }
 `;
 
-const iconColor = "black";
 const iconSize = 42;
 const LogoLinks = styled.div`
   background: ${colors.light};
@@ -126,7 +125,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <IoMail color={iconColor} size={iconSize} />
+          <IoMail size={iconSize} className="icon-link"/>
         </a>
 
         <a
@@ -134,7 +133,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin color={iconColor} size={iconSize} />
+          <FaLinkedin size={iconSize} className="icon-link"/>
         </a>
 
         <a
@@ -142,7 +141,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithubSquare color={iconColor} size={iconSize} />
+          <FaGithubSquare size={iconSize} className="icon-link"/>
         </a>
       </LogoLinks>
     </HeroContainer>

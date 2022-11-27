@@ -9,7 +9,7 @@ const FooterContainer = styled.div`
   position: absolute;
   width: 100%;
   height: ${footerHeight + "em"};
-  bottom: ${"-" + (footerHeight) + "em"};
+  bottom: ${"-" + footerHeight + "em"};
   padding: 0.3em 0;
 
   background: ${colors.dark};
@@ -26,8 +26,15 @@ const FooterContainer = styled.div`
       margin: 10px 20px 0;
     }
   }
+
+  .icon-link-inverted {
+    transition: color 0.1s linear 0s;
+    color: white;
+    &:hover {
+      color: #e7e7e7;
+    }
+  }
 `;
-const iconColor = "white";
 const iconSize = 45;
 
 export default function Footer() {
@@ -39,7 +46,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <IoMail color={iconColor} size={iconSize} />
+          <IoMail size={iconSize} className="icon-link-inverted" />
         </a>
 
         <a
@@ -47,7 +54,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin color={iconColor} size={iconSize} />
+          <FaLinkedin size={iconSize} className="icon-link-inverted" />
         </a>
 
         <a
@@ -55,7 +62,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithubSquare color={iconColor} size={iconSize} />
+          <FaGithubSquare size={iconSize} className="icon-link-inverted" />
         </a>
 
         <a
@@ -63,7 +70,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <IoDocumentTextSharp color={iconColor} size={iconSize} />
+          <IoDocumentTextSharp size={iconSize} className="icon-link-inverted" />
         </a>
       </div>
     </FooterContainer>
