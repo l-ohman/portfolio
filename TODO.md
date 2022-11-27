@@ -7,6 +7,7 @@
 - [x] ~~Make adjustments for desktop (and tablet) view (all sections — especially hero)~~
 - [x] ~~Add flair to make page less static~~ (should still add animations later)
 - [x] ~~Header: Fix scroll functionality and width issues~~
+- [ ] Remove `react-scripts` and setup webpack
 
 
 </details>
@@ -14,10 +15,9 @@
 <details>
 <summary>Secondary</summary>
 
-- [ ] Create favicon.ico (and add to header if possible)
+- [x] ~~Create favicon.ico~~ (should create a cleaner one, but the current one is sufficient for now)
 - [x] ~~Contact links on bottom of 'hero'~~
 - [x] ~~Contact component: styling changes~~
-- [ ] Replace that one alert with `toastify` notification
 - [x] ~~Fix box-shadow on bio container~~
 
 </details>
@@ -25,7 +25,7 @@
 <details>
 <summary>Backburner</summary>
 
-
+- [ ] Replace the "copied email" alert with `toastify` notification (impossible with CRA 😂😂😂)
 - [ ] Update project descriptions/contributions to account for formatting changes
 - [ ] Clicking images expands with popup
 - [ ] Add links ~~and logos~~ for technologies
@@ -55,7 +55,7 @@
 <!-- <details>
 <summary>Deprecated / etc</summary>
 
-- [ ] Never make a project with CRA ever again :)
+- [ ] Never make a project with CRA ever again :))
 - [ ] ~~SingleProject: Force scroll when expanding/collapsing~~ (removing 'isExpanded' concept entirely)
 - [ ] ~~Gradient to lighter color at bottom of page (maybe)~~
 - [ ] ~~Slider/carousel-type component for technologies (possibly)~~
