@@ -2,9 +2,8 @@
   {
     "title": "Book Beasts",
     "description": [
-      "For our final project at Fullstack Academy, my team and I wanted to build an educational and interactive experience — so we built Book Beasts. This project had two main goals: the first was to enable students’ creativity by giving them a platform to create, and the second was to provide instructors with the tools necessary to monitor and manage their students’ works."
+      "For our final project at Fullstack Academy, my team and I wanted to build an educational and interactive experience for children — so we built Book Beasts. This project had two main goals: the first was to enable students’ creativity by giving them a platform to create, and the second was to provide instructors with the tools necessary to monitor and manage their students’ works."
     ],
-    "tags": ["Content Management", "Education"],
     "technologies": [
       "Node.js",
       "Express",
@@ -12,14 +11,6 @@
       "React",
       "Redux",
       "Mocha"
-    ],
-    "solo": false,
-    "contributions": [
-      "Book/page editor",
-      "Database structure and tests",
-      "Login/Signup process",
-      "User security and authentication",
-      "Various improvements to the developer experience (documentation and scripts)"
     ],
     "links": {
       "deployed": "https://book-beasts.herokuapp.com/",
@@ -32,14 +23,7 @@
       "Umami Meats is an ecommerce site that sells a small variety of high-quality steak and sushi. This project was built in roughly 10 days for the 'Grace Shopper' project at Fullstack Academy.",
       "The vast majority of my time on this project was spent designing and building the frontend. At the very beginning of the project, I drew the wireframes for nearly every page; these proved to be invaluable, as they greatly sped up our process and ensured visual consistency throughout the entire application. Once we had built the foundation for each page, I revised much of the styling and added subtle animations to construct a user experience that is both aesthetically pleasing and extremely clear."
     ],
-    "tags": ["Ecommerce", "UI/UX Design"],
     "technologies": ["Node.js", "Next.js", "React", "Redux", "PostgreSQL"],
-    "solo": false,
-    "contributions": [
-      "UI/UX Design",
-      "Login/Signup process",
-      "User security and authentication"
-    ],
     "links": {
       "github": "https://github.com/dexters-lab-fsa-2208/umami-meats"
     }
@@ -50,13 +34,7 @@
       "Solar Sandbox is an interactive application where users can design their own solar system from scratch. Users can build their own system of planets and moons with a 3D view that updates in realtime.",
       "This project was built in about 4 days for our 'Async Week' project at Fullstack Academy. When I occasionally have time, I enjoy returning to this project to make small tweaks, such as minor bug fixes and UI/UX improvements."
     ],
-    "tags": ["Entertainment", "UI/UX Design", "Science"],
     "technologies": ["React", "React Flow", "Three.js", "Zustand"],
-    "solo": true,
-    "contributions": [
-      "Procedurally generated star system",
-      "In progress: Ability for users to share their creation"
-    ],
     "links": {
       "deployed": "https://solar-sandbox.vercel.app/",
       "github": "https://github.com/l-ohman/solar-sandbox"
