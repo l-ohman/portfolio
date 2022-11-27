@@ -7,38 +7,35 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 
 - [ ] Test and fix mobile view (final test)
 - [x] ~~Make adjustments for desktop (and tablet) view (all sections — especially hero)~~
-- [ ] Add flair to make page less static (hover, colors, subtle animations, etc.)
-- [x] ~~Color palette~~ (good enough for now, but needs tweaking)
-- [x] ~~Create basic 'hero section' (should be extremely simple — maybe just the bio — to meet deadline; can make a better one later)~~
-- [x] ~~Update bio contents with things removed from projects/skills~~
+- [x] ~~Add flair to make page less static~~ (should still add animations later)
 - [x] ~~Header: Fix scroll functionality and width issues~~
-- [x] ~~User must expand projects to see images — this needs to be redesigned asap~~
-- [ ] Update project descriptions/contributions to account for formatting changes
+
 
 </details>
 
 <details>
 <summary>Secondary</summary>
 
-- [ ] Hover images shows alt text (or some helpful info)
-- [x] ~~Contact links on bottom of 'hero'~~
-- [x] ~~Find new font(s)~~
-- [x] ~~Contact component: styling changes~~
 - [ ] Create favicon.ico (and add to header if possible)
+- [x] ~~Contact links on bottom of 'hero'~~
+- [x] ~~Contact component: styling changes~~
 - [ ] Replace that one alert with `toastify` notification
-- [ ] Fix box-shadow on bio container
+- [x] ~~Fix box-shadow on bio container~~
 
 </details>
 
 <details>
 <summary>Backburner</summary>
 
+
+- [ ] Update project descriptions/contributions to account for formatting changes
 - [ ] Clicking images expands with popup
-- [ ] Create new, improved 'hero section'; ideally using `@react-three/fiber`
 - [ ] Add links ~~and logos~~ for technologies
 - [ ] Image carousel for projects (can toggle through)
 - [ ] Hide header when scrolling down, but reveal when scrolling back up
 - [ ] Hovering over skills shows brief description of the tech and a link
+- [ ] Tweak/update color palette
+- [ ] Hover images shows alt text (or some helpful info)
 
 </details>
 
@@ -50,6 +47,11 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [x] ~~Reformat skills content~~
 - [x] ~~Update project description formatting and content~~
 - [x] Add hero image to mobile view somehow (such as bar with contact links)
+- [x] ~~Find new font(s)~~
+- [x] ~~Color palette~~
+- [x] ~~Create basic 'hero section' (should be extremely simple — maybe just the bio — to meet deadline; can make a better one later)~~
+- [x] ~~Update bio contents with things removed from projects/skills~~
+- [x] ~~User must expand projects to see images — this needs to be redesigned asap~~
 
 </details> -->
 
@@ -61,5 +63,6 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [ ] ~~Gradient to lighter color at bottom of page (maybe)~~
 - [ ] ~~Slider/carousel-type component for technologies (possibly)~~
 - [ ] ~~Add favicon/title to header~~
+- [ ] ~~Create new, improved 'hero section'; ideally using `@react-three/fiber`~~ (this should be saved for building a new portfolio from scratch)
 
 </details> -->

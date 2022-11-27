@@ -29,9 +29,9 @@ const HeroContainer = styled.div`
       margin: 0 0.3em 0 0;
       border-radius: 30% 10%;
       max-height: 4.5em;
-      box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
     }
-    
+
     @media screen and (min-width: 650px) {
       h1 {
         font-size: 300%;
@@ -56,7 +56,7 @@ const HeroContainer = styled.div`
       font-size: 120%;
       border-radius: 0.5em;
       padding: 1em 1.2em;
-      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.12);
     }
 
     @media screen and (min-width: 650px) {
@@ -80,12 +80,13 @@ const HeroContainer = styled.div`
   }
 `;
 
-const iconSize = 42;
+const shadowColor = "rgba(0, 0, 0, 0.05)";
 const LogoLinks = styled.div`
   background: ${colors.light};
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.03),
+    -7px 4px 7px ${shadowColor},
+    7px 4px 7px ${shadowColor};
   border-radius: 0 0 1em 1em;
-  /* border-top: 1px solid rgba(0, 0, 0, 0.02); */
 
   width: 85%;
   max-width: 400px;
@@ -95,6 +96,7 @@ const LogoLinks = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
+const iconSize = 42;
 
 export default function Hero() {
   return (
@@ -125,7 +127,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <IoMail size={iconSize} className="icon-link"/>
+          <IoMail size={iconSize} className="icon-link" />
         </a>
 
         <a
@@ -133,7 +135,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin size={iconSize} className="icon-link"/>
+          <FaLinkedin size={iconSize} className="icon-link" />
         </a>
 
         <a
@@ -141,7 +143,7 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithubSquare size={iconSize} className="icon-link"/>
+          <FaGithubSquare size={iconSize} className="icon-link" />
         </a>
       </LogoLinks>
     </HeroContainer>
