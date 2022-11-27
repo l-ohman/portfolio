@@ -30,7 +30,7 @@ const FooterContainer = styled.div`
   .icon-link-inverted {
     transition: color 0.1s linear 0s;
     color: white;
-    &:hover {
+    &:hover, &:active {
       color: #e7e7e7;
     }
   }

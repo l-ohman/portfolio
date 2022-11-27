@@ -6,10 +6,10 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
 const HeroContainer = styled.div`
-  padding: 3.4em 1em 1.8em;
+  padding: 3.4em 1em 2.45em;
   color: black;
   @media screen and (min-width: 650px) {
-    padding-bottom: 2.8em;
+    padding-bottom: 3.1em;
   }
 
   #hero-header {

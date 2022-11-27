@@ -25,9 +25,11 @@ const HeaderContainer = styled.div`
     justify-content: space-around;
     max-width: 610px;
     opacity: 1;
-    :hover {
+
+    .single-link:hover {
       cursor: pointer;
-      color: #EEEEEE;
+      transition: color 0.08s linear 0s;
+      color: #E9E9E9;
     }
   }
 `;
@@ -60,7 +62,7 @@ export default function Header({ hero, projects, skills, contact }) {
     <HeaderContainer>
       <div id="header-links">
         {headerLinks.map((route, i) => (
-          <div key={i} onClick={(e) => scroll(route)}>
+          <div key={i} onClick={(e) => scroll(route)} className="single-link">
             <p>{route}</p>
           </div>
         ))}

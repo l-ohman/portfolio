@@ -5,7 +5,7 @@ import images from "../images";
 import colors from "../colors.json";
 
 const SkillsContainer = styled.div`
-  padding: 0.4em 1.2em 0.9em;
+  padding: 1.2em 1.2em 1.9em;
   > h1 {
     font-size: 260%;
     text-align: center;
@@ -21,7 +21,7 @@ const SkillsContainer = styled.div`
   }
 
   @media screen and (min-width: 650px) {
-    padding: 1.65em 1.2em 2.4em;
+    padding: 1.65em 1.2em 2.5em;
     > h1 {
       font-size: 285%;
       margin-bottom: 0.5em;

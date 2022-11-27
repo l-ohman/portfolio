@@ -5,7 +5,7 @@ import projects from "../data/projects.json";
 import colors from "../colors.json";
 
 const ContentContainer = styled.div`
-  padding: 0.4em 1em 0.2em;
+  padding: 1.1em 1em 0.6em;
   background: ${colors.backgroundSecondary};
   color: black;
 
@@ -15,7 +15,7 @@ const ContentContainer = styled.div`
     margin-bottom: 0.3em;
   }
   @media screen and (min-width: 650px) {
-    padding-top: 0em;
+    padding: 0.6em 1em 0.1em;
     > h1 {
       font-size: 285%;
       margin: 0;

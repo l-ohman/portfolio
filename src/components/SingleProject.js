@@ -264,7 +264,7 @@ const ProjectLinksAndInfo = styled.div`
         color: white;
       }
 
-      &:hover {
+      &:hover, &:active {
         background-color: ${colors.accent2};
       }
     }

@@ -8,7 +8,7 @@ const ContentContainer = styled.div`
   .icon-link {
     transition: color 0.1s linear 0s;
     color: black;
-    &:hover {
+    &:hover, &:active {
       color: #373737;
     }
   }

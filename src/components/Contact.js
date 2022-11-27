@@ -6,10 +6,14 @@ import colors from "../colors.json";
 
 const ContactContainer = styled.div`
   background: ${colors.backgroundSecondary};
-  padding: 0.1em 1.5em 1.35em;
+  padding: 0.3em 1.5em 1.5em;
   font-size: 105%;
   margin: 0 auto;
   color: black;
+
+  @media screen and (min-width: 650px) {
+    padding: 0.5em 1.5em 1.7em;
+  }
 
   > div {
     max-width: 630px;
@@ -83,7 +87,9 @@ export default function Contact() {
   const copyItem = (item) => {
     navigator.clipboard.writeText(item);
     // should replace alert with toastify
-    alert(`'${item}' copied to clipboard — click the email itself to open your mail app`);
+    alert(
+      `'${item}' copied to clipboard — click the email itself to open your mail app`
+    );
   };
 
   return (
@@ -92,8 +98,8 @@ export default function Contact() {
         <h2>let's get in touch</h2>
         <hr />
         <p>
-          I am currently looking for full-time (or part-time) employment and am open to select freelance
-          opportunities — feel free to contact me here:
+          I am currently looking for full-time (or part-time) employment and am
+          open to select freelance opportunities — feel free to contact me here:
         </p>
       </HalfContainers>
 

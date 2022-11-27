@@ -1,11 +1,9 @@
 ## Todo-list
 
-Main goal is to have this portfolio sufficient enough to be shared on LinkedIn by 11/28/22 (Monday)
-
 <details>
 <summary>Primary</summary>
 
-- [ ] Test and fix mobile view (final test)
+- [x] ~~Test and fix mobile view~~
 - [x] ~~Make adjustments for desktop (and tablet) view (all sections — especially hero)~~
 - [x] ~~Add flair to make page less static~~ (should still add animations later)
 - [x] ~~Header: Fix scroll functionality and width issues~~
@@ -31,7 +29,6 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [ ] Update project descriptions/contributions to account for formatting changes
 - [ ] Clicking images expands with popup
 - [ ] Add links ~~and logos~~ for technologies
-- [ ] Image carousel for projects (can toggle through)
 - [ ] Hide header when scrolling down, but reveal when scrolling back up
 - [ ] Hovering over skills shows brief description of the tech and a link
 - [ ] Tweak/update color palette
@@ -56,7 +53,7 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 </details> -->
 
 <!-- <details>
-<summary>Deprecated / unnecessary / etc</summary>
+<summary>Deprecated / etc</summary>
 
 - [ ] Never make a project with CRA ever again :)
 - [ ] ~~SingleProject: Force scroll when expanding/collapsing~~ (removing 'isExpanded' concept entirely)
@@ -64,5 +61,6 @@ Main goal is to have this portfolio sufficient enough to be shared on LinkedIn b
 - [ ] ~~Slider/carousel-type component for technologies (possibly)~~
 - [ ] ~~Add favicon/title to header~~
 - [ ] ~~Create new, improved 'hero section'; ideally using `@react-three/fiber`~~ (this should be saved for building a new portfolio from scratch)
+- [ ] ~~Image carousel for projects (can toggle through)~~ (this should be saved for building a new portfolio from scratch)
 
 </details> -->
