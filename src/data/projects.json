@@ -25,6 +25,7 @@
     ],
     "technologies": ["Node.js", "Next.js", "React", "Redux", "PostgreSQL"],
     "links": {
+      "deployed": "https://umamimeats.vercel.app/",
       "github": "https://github.com/dexters-lab-fsa-2208/umami-meats"
     }
   },
