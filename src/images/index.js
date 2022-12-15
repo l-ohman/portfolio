@@ -9,6 +9,7 @@ import umamiMeatsIcon from "./icons/umami-meats-favicon.ico";
 import solarSandbox1a from "./screenshots/solar-sandbox-1a.jpg";
 import solarSandbox1b from "./screenshots/solar-sandbox-1b.jpg";
 
+// should just grab all of these images from https://github.com/l-ohman/l-ohman/tree/main/icons
 import Nodejs from "./techLogos/Node.js.png";
 import PostgreSQL from "./techLogos/PostgreSQL.png";
 import Express from "./techLogos/Express.png";
@@ -41,13 +42,18 @@ export default {
     "Node.js": Nodejs,
     PostgreSQL,
     Express,
-    "React.js": Reactjs,
+    React: Reactjs,
     "Next.js": Nextjs,
     Redux,
     HTML,
     CSS,
     Javascript,
     Python,
+    Sequelize: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Sequelize.png",
+    Mocha: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Mocha.png",
+    Chai: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Chai.png",
+    "Less CSS": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Less.png",
+    "Three.js": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Three.png"
   },
   headshot,
 };
