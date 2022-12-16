@@ -13,7 +13,6 @@
       "Mocha"
     ],
     "links": {
-      "deployed": "https://book-beasts.herokuapp.com/",
       "github": "https://github.com/fsa-2208-mspiggy/Book-Beasts"
     }
   },
