@@ -17,11 +17,11 @@ const SkillsContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    max-width: 900px;
+    max-width: 750px;
     padding: 0 10px;
   }
   #tech-language-divider {
-    width: 920px;
+    width: 820px;
     max-width: 90%;
     margin: 20px auto 16px;
   }
@@ -41,6 +41,12 @@ const SkillsContainer = styled.div`
     > h1 {
       font-size: 285%;
       margin-bottom: 0.5em;
+    }
+  }
+
+  #languages {
+    @media screen and (max-width: 634px) {
+      max-width: 450px;
     }
   }
 `;
@@ -113,7 +119,7 @@ export default function Skills() {
 
       <hr id="tech-language-divider"/>
 
-      <div className="tech-list">
+      <div className="tech-list" id="languages">
         {languages.map((itm, i) => (
           <SingleSkill key={i}>
             {itm === "HTML" || itm === "CSS" ? (

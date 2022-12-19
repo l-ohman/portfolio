@@ -1,16 +1,13 @@
 {
   "technologies": [
     "Node.js",
-    "Express",
     "PostgreSQL",
-    "Sequelize",
+    "Express",
     "React",
     "Next.js",
     "Redux",
     "Mocha",
-    "Chai",
-    "Less CSS",
-    "Three.js"
+    "Django"
   ],
   "languages": ["HTML", "CSS", "Javascript", "Python"]
 }

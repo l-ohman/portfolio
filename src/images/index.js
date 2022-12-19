@@ -16,6 +16,7 @@ import Express from "./techLogos/Express.png";
 import Reactjs from "./techLogos/React.js.png";
 import Nextjs from "./techLogos/Next.js.png";
 import Redux from "./techLogos/Redux.png";
+import Django from "./techLogos/Django.png";
 import HTML from "./techLogos/HTML.png";
 import CSS from "./techLogos/CSS.png";
 import Javascript from "./techLogos/Javascript.png";
@@ -53,7 +54,8 @@ export default {
     Mocha: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Mocha.png",
     Chai: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Chai.png",
     "Less CSS": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Less.png",
-    "Three.js": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Three.png"
+    "Three.js": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Three.png",
+    Django,
   },
   headshot,
 };
