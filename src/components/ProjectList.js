@@ -36,7 +36,7 @@ export default function ProjectList() {
       <h1>recent work</h1>
       <div id="project-list">
         {projects.map((project, i) => (
-          <SingleProject project={project} id={i + 1} key={i} />
+          <SingleProject project={project} key={i} />
         ))}
       </div>
     </ContentContainer>

@@ -285,19 +285,19 @@ const ProjectLinksAndInfo = styled.div`
   }
 `;
 
-export default function SingleProject({ id, project }) {
+export default function SingleProject({ project }) {
   return (
     <ExpandedContainer>
       <div className="single-project-header">
         <h2 className="project-title">{project.title}</h2>
-        {images[id].icon && (
+        {images[project.id].icon && (
           <img
-            src={images[id].icon}
+            src={images[project.id].icon}
             className="project-icon"
             alt={`${project.title} Icon`}
             style={{
-              backgroundColor: id === 2 ? "#000000" : "none",
-              padding: id === 2 ? "2px" : "0",
+              backgroundColor: project.id === 2 ? "#000000" : "none",
+              padding: project.id === 2 ? "2px" : "0",
             }}
           />
         )}
@@ -318,25 +318,25 @@ export default function SingleProject({ id, project }) {
           probably should have hard-coded most of this, esp. for image formatting; each itm
           should have a somewhat unique design. (lesson learned for next portfolio, i guess.)
         */}
-      {id === 1 ? (
+      {project.id === 1 ? (
         <DescriptionImagesContainer id="book-beasts">
           <p className="description">{project.description[0]}</p>
           {/* <p className="description">{project.description[1]}</p> */}
 
           <div id="book-beasts-image-container">
             <img
-              src={images[id].main}
+              src={images[project.id].main}
               alt="Book Beasts Student View"
               id="book-beasts-student"
             />
             <img
-              src={images[id].secondary}
+              src={images[project.id].secondary}
               alt="Book Beasts Book-Editor"
               id="book-beasts-editor"
             />
           </div>
         </DescriptionImagesContainer>
-      ) : id === 2 ? (
+      ) : project.id === 2 ? (
         <DescriptionImagesContainer id="umami-meats">
           <div id="umami-description-container">
             <p className="description">{project.description[0]}</p>
@@ -345,13 +345,13 @@ export default function SingleProject({ id, project }) {
 
           <div id="umami-image-container">
             <img
-              src={images[id].main}
+              src={images[project.id].main}
               alt="Umami Meats Homepage"
               id="umami-homepage-screenshot"
             />
           </div>
           <img
-            src={images[id].main}
+            src={images[project.id].main}
             alt="Umami Meats Homepage"
             id="umami-homepage-screenshot-main"
           />
@@ -363,12 +363,12 @@ export default function SingleProject({ id, project }) {
 
           <div id="solar-sandbox-image-container">
             <img
-              src={images[id].main}
+              src={images[project.id].main}
               alt={`${project.title} Screenshot 1`}
               id="node-graph-img"
             />
             <img
-              src={images[id].secondary}
+              src={images[project.id].secondary}
               alt={`${project.title} Screenshot 2`}
               id="solar-system-img"
             />
