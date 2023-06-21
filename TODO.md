@@ -9,10 +9,13 @@
 - [ ] Rewrite bio
 - [ ] Rewrite projects (short version and long version)
 - [ ] Write details for skills
+- [ ] Accessibility testing
 
 
 #### Secondary
 
+- [ ] New screenshots/icons (ensure proper icon resolutions!)
+- [ ] Unique components for each project
 - [ ] New font (maybe)
 - [ ] New color palette (probably)
 - [ ] Update favicon.ico (use an svg-type image)
@@ -22,11 +25,12 @@
 - [ ] Hovering over skills shows brief description of the tech and a link
 - [ ] Tweak/update color palette
 - [ ] Hover images shows alt text (or some helpful info)
+- [ ] Some basic frontend tests (Playwright)
 
 
 #### Misc ideas
 
-- Expandable "skills" items that show where I used/learned the skill
+- Expandable "skills" items (can show where I used/learned the skill)
 - Header stays on top when scrolling down
 - Generally needs more polish (mostly in the form of gradients and animations)
-- Slider/carousel component, most likely for skills (unlikely)
+- Slider/carousel component somewhere, maybe for skills (unlikely)
