@@ -1,10 +1,13 @@
 # dependencies
 .github
 node_modules
+.vscode
 # production
 /build
 */assets
 bundle.js*
+main.css*
+tsconfig.tsbuildinfo
 # misc
 .DS_Store
 .env.local
@@ -14,6 +17,3 @@ bundle.js*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-# tmp
-*bundle*
-*assets

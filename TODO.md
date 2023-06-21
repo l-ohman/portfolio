@@ -4,8 +4,8 @@
 
 - [ ] An actually good "hero"
 - [ ] Full redesign
-- [ ] Setup Typescript
-- [ ] Setup yarn
+- [x] Setup Typescript
+- [x] Setup yarn
 - [ ] Rewrite bio
 - [ ] Rewrite projects (short version and long version)
 - [ ] Write details for skills
@@ -16,7 +16,7 @@
 - [ ] New font (maybe)
 - [ ] New color palette (probably)
 - [ ] Update favicon.ico (use an svg-type image)
-- [ ] Replace the "copied email" alert with `toastify` notification
+- [ ] Replace the "copied email" alert with a snackbar notification
 - [ ] Add links (?) and logos for technologies
 - [ ] Hide header when scrolling down, but reveal when scrolling back up
 - [ ] Hovering over skills shows brief description of the tech and a link

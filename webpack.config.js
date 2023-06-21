@@ -1,10 +1,13 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = false//process.env.NODE_ENV !== "production";
+console.log("\ndevmode:", devMode, "\n");
+
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: __dirname + "/public",
     filename: "bundle.js",
-    assetModuleFilename: "./assets/[name].[hash].[ext]",
   },
   context: __dirname,
   devtool: "source-map",
@@ -14,27 +17,33 @@ module.exports = {
     },
     port: 3000,
   },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  plugins: devMode ? [] : [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        options: {
-          presets: ["@babel/preset-env", "@babel/preset-react"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
+            ],
+          },
         },
       },
       {
         test: /\.css$/,
-        use: ["css-loader"],
-      },
-      {
-        test: /\.(png|jpe?g|svg|ico)$/,
-        type: "asset/resource",
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+        ],
       },
     ],
   },
-  // optimization: {
-  //   runtimeChunk: "single",
-  // },
 };
