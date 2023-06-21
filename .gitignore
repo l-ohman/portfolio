@@ -3,7 +3,8 @@
 node_modules
 # production
 /build
-.firebase
+*/assets
+bundle.js*
 # misc
 .DS_Store
 .env.local
