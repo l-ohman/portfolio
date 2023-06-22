@@ -9,7 +9,7 @@ the figma design (also a wip) can be found [here](https://www.figma.com/file/EZY
 
 [Charles Bruyerre](https://itssharl.ee/) — ok yeah, this is one of the best portfolios i've ever seen. even the loading animation is beautiful. (also, the cursor does something cool on mobile. when you click something that isn't a link, the cursor bulges a bit then jumps over to where you clicked.)
 
-[Michael Kolesidis](https://michaelkolesidis.com/) — you know when i first saw charles bruyerre's design, i said "this is the best i've ever seen." but honestly, i think _this_ one wins. not because it's necessarily better, but it suits my tastes more. very strong personality with some humor as well. (also, pay close attention to the header while you scroll through.)
+[Michael Kolesidis](https://michaelkolesidis.com/) — you know when i first saw charles bruyerre's design, i said "this is the best i've ever seen." but honestly, i think _this_ one wins. not because it's necessarily better, but it suits my tastes more. very strong personality with some humor as well. (also, pay close attention to the header while you scroll through.) (also #2, it has a "minimal" version for accessibility.)
 
 [Patrick David](https://bepatrickdavid.com/) — LOTS of personality. fluid animations with a nice scrolling experience.
 

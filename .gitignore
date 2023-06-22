@@ -5,7 +5,7 @@ node_modules
 # production
 /build
 bundle.js*
-main.css*
+# main.css*
 tsconfig.tsbuildinfo
 # misc
 .DS_Store
