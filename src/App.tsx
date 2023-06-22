@@ -1,14 +1,15 @@
 import React from "react";
-import { Header, Footer, Box } from "./components";
+import { Car } from "./components";
 import { Canvas } from "@react-three/fiber";
+import { OrthographicCamera, OrbitControls } from "@react-three/drei";
 
 export default function App() {
   return (
-    <Canvas id="canvas">
+    <Canvas camera={{ position: [-4, 2.5, 4] }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <Box position={[-2, 0, 0]} />
-      <Box position={[2, 0, 0]} />
+      <Car />
+      <OrbitControls />
     </Canvas>
   );
 }
