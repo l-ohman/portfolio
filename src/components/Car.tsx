@@ -4,55 +4,65 @@ import {
   CylinderGeometry,
   Mesh,
   MeshStandardMaterial,
+  Vector3,
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils";
-import {
-  Geometry,
-  Base,
-  Addition,
-  Subtraction,
-  Intersection,
-  Difference,
-} from "@react-three/csg";
+import { Geometry, Base, Subtraction } from "@react-three/csg";
+import { useControls } from "leva";
 
-function CarBody() {
-  const bodyGeometry = React.useMemo(() => {
-    const roof = new BoxGeometry(2.8, 0.8, 2);
-    const core = new BoxGeometry(3.5, 0.65, 2);
+interface CarBodyProps {
+  carWidth: number;
+  carLength: number;
+  carHeight: number;
+  clearance: number;
+}
 
-    roof.translate(0.35, 0.35, 0);
+function CarBody({ carWidth, carLength, carHeight, clearance }: CarBodyProps) {
+  const body = React.useMemo(() => {
+    const width = 2 * carWidth;
+    const length = carLength * 3.5;
+
+    const roof = new BoxGeometry(length * 0.8, carHeight * 0.8, width);
+    const core = new BoxGeometry(length, carHeight * 0.65, width);
+
+    roof.translate(0.35 * carLength, 0.35 * carHeight, 0);
     core.translate(0, 0, 0);
 
     const body = mergeGeometries([roof, core]);
     return body;
-  }, []);
+  }, [carWidth, carLength, carHeight]);
 
-  const subtractiveCylinder = React.useMemo(() => {
-    const cylinder = new CylinderGeometry(0.57, 0.57, 3, 16);
-    cylinder.rotateX(Math.PI / 2);
-    return cylinder;
-  }, []);
+  const height = React.useMemo(() => {
+    const height = carHeight / 2 - 0.5;
+    return height + (clearance - 0.6);
+  }, [carHeight, clearance]);
 
   return (
-    <mesh position={[0, 0.4, 0]}>
+    <mesh position={[0, height, 0]}>
       <meshStandardMaterial color="red" />
-      <Geometry>
-        <Base geometry={bodyGeometry} />
-
-        <Subtraction position={[-1, -0.4, 0]}>
-          <primitive object={subtractiveCylinder} />
-        </Subtraction>
-        <Subtraction position={[1, -0.4, 0]}>
-          <primitive object={subtractiveCylinder} />
-        </Subtraction>
-      </Geometry>
+      <primitive object={body} />
     </mesh>
   );
 }
 
-function CarWheels<Mesh>() {
+interface CarWheelsProps {
+  tireWidth: number;
+  tireSize: number;
+  carWidth: number;
+  carLength: number;
+}
+
+function CarWheels({
+  tireWidth,
+  tireSize,
+  carWidth,
+  carLength,
+}: CarWheelsProps) {
   const wheels = React.useMemo(() => {
-    const wheelGeometry = new CylinderGeometry(0.5, 0.5, 0.45, 16);
+    const width = 0.45 * tireWidth;
+    const size = 0.5 * tireSize;
+
+    const wheelGeometry = new CylinderGeometry(size, size, width, 16);
     wheelGeometry.rotateX(Math.PI / 2);
 
     const createWheelMesh = () => {
@@ -66,26 +76,82 @@ function CarWheels<Mesh>() {
       createWheelMesh(),
       createWheelMesh(),
     ];
-  }, []);
+  }, [tireWidth, tireSize]);
 
-  const xOffset = 1;
-  const zOffset = 0.9;
+  const positions = React.useMemo(() => {
+    const xOffset = 1 * carLength;
+    const zOffset = 0.9 * carWidth;
+
+    return [
+      new Vector3(xOffset, 0, zOffset),
+      new Vector3(xOffset, 0, -zOffset),
+      new Vector3(-xOffset, 0, zOffset),
+      new Vector3(-xOffset, 0, -zOffset),
+    ];
+  }, [carLength, carWidth]);
 
   return (
     <>
-      <primitive object={wheels[0]} position={[-xOffset, 0, zOffset]} />
-      <primitive object={wheels[1]} position={[xOffset, 0, zOffset]} />
-      <primitive object={wheels[2]} position={[-xOffset, 0, -zOffset]} />
-      <primitive object={wheels[3]} position={[xOffset, 0, -zOffset]} />
+      <primitive object={wheels[0]} position={positions[0]} />
+      <primitive object={wheels[1]} position={positions[1]} />
+      <primitive object={wheels[2]} position={positions[2]} />
+      <primitive object={wheels[3]} position={positions[3]} />
     </>
   );
 }
 
 export default function Car() {
+  const defaultValue = {
+    value: 1,
+    min: 0.1,
+    max: 3,
+  };
+
+  const { tireWidth, tireSize, carWidth, carLength, carHeight, clearance } =
+    useControls({
+      tireWidth: {
+        value: 1,
+        min: 0.1,
+        max: 2.5,
+      },
+      tireSize: {
+        value: 1,
+        min: 0.5,
+        max: 1.5,
+      },
+      carWidth: {
+        value: 1,
+        min: 0.3,
+        max: 2,
+      },
+      carLength: {
+        value: 1,
+        min: 0.5,
+        max: 2,
+      },
+      carHeight: defaultValue,
+      // yeah, this needs a suspension system i think
+      clearance: {
+        value: 1,
+        min: 0.7,
+        max: 1.5,
+      },
+    });
+
   return (
     <>
-      <CarBody />
-      <CarWheels />
+      <CarBody
+        carWidth={carWidth}
+        carLength={carLength}
+        carHeight={carHeight}
+        clearance={clearance}
+      />
+      <CarWheels
+        tireWidth={tireWidth}
+        tireSize={tireSize}
+        carWidth={carWidth}
+        carLength={carLength}
+      />
     </>
   );
 }
