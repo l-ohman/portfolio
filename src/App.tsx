@@ -5,11 +5,12 @@ import { OrthographicCamera, OrbitControls } from "@react-three/drei";
 
 export default function App() {
   return (
-    <Canvas camera={{ position: [-4, 2.5, 4] }}>
+    <Canvas camera={{ position: [-4, 1.85, 3.8] }}>
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+      <pointLight position={[10, 10, 10]} intensity={0.8}/>
       <Car />
       <OrbitControls />
+      {/* <OrthographicCamera /> */}
     </Canvas>
   );
 }
