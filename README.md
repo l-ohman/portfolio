@@ -2,6 +2,8 @@
 
 currently being redesigned from scratch. i still want to keep the focus on building something unique and personal, but it needs to be much more dynamic and engaging.
 
+the figma design (also a wip) can be found [here](https://www.figma.com/file/EZYSUcVOoLsQkn7nridQHE/portfolio-design-%E2%80%94-wireframe-%2F-ideas-%2F-sketches?type=design&node-id=0%3A1&mode=design&t=RZ6wKUXY4wfQnjjz-1).
+
 # portfolio references
 
 [the craftsmen](https://www.thecraftsmen.tech/) — seems to be a contract/freelance typa team of developers. great looking landing page, everything is extremely fluid and clean.
