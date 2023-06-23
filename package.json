@@ -1,13 +1,12 @@
 {
+  "homepage": "https://l-ohman.github.io/portfolio/",
   "name": "lohman-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts --openssl-legacy-provider test",
-    "eject": "react-scripts --openssl-legacy-provider eject",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -28,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
