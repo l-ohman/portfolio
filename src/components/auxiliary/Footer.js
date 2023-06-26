@@ -30,7 +30,8 @@ const FooterContainer = styled.div`
   .icon-link-inverted {
     transition: color 0.1s linear 0s;
     color: white;
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: #e7e7e7;
     }
   }
@@ -45,6 +46,7 @@ export default function Footer() {
           href="mailto:jakelohman7@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          title="Email"
         >
           <IoMail size={iconSize} className="icon-link-inverted" />
         </a>
@@ -53,6 +55,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/jake-lohman/"
           target="_blank"
           rel="noopener noreferrer"
+          title="LinkedIn"
         >
           <FaLinkedin size={iconSize} className="icon-link-inverted" />
         </a>
@@ -61,6 +64,7 @@ export default function Footer() {
           href="https://github.com/l-ohman"
           target="_blank"
           rel="noopener noreferrer"
+          title="Github"
         >
           <FaGithubSquare size={iconSize} className="icon-link-inverted" />
         </a>
@@ -69,6 +73,7 @@ export default function Footer() {
           href="https://drive.google.com/file/d/1F6mGYq4p8Sav0lKuy63OLPQsX7_gbisU/view"
           target="_blank"
           rel="noopener noreferrer"
+          title="Resume"
         >
           <IoDocumentTextSharp size={iconSize} className="icon-link-inverted" />
         </a>
