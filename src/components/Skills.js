@@ -17,23 +17,23 @@ const SkillsContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    max-width: 750px;
+    max-width: 715px;
     padding: 0 10px;
   }
   #tech-language-divider {
-    width: 820px;
+    width: 690px;
     max-width: 90%;
     margin: 20px auto 16px;
   }
 
   /* for nicer better formatting in icon flexbox*/
   @media screen and (max-width: 922px) {
-      .tech-list {
-        max-width: 715px;
-      }
-      #tech-language-divider {
-        width: 680px;
-      }
+    .tech-list {
+      max-width: 715px;
+    }
+    #tech-language-divider {
+      width: 680px;
+    }
   }
 
   @media screen and (min-width: 650px) {
@@ -77,18 +77,17 @@ const SingleSkill = styled.div`
     object-position: 50% 0;
     padding: ${logoSize * 0.05 + "px"};
   }
+  #react-logo {
+    margin-left: ${logoSize * 0.168 + "px"};
+    padding-top: 0.6rem;
+    object-fit: scale-down;
+    object-position: 50% 0;
+  }
   .language {
     max-height: ${logoSize * 0.93 + "px"};
     max-width: ${logoSize * 0.93 + "px"};
     object-position: 50% 0;
     padding: ${logoSize * 0.05 + "px"};
-  }
-  .language-adjusted {
-    max-height: ${logoSize * 0.93 + "px"};
-    width: ${logoSize * 0.93 + "px"};
-    margin: 0 0 0 13px;
-    object-position: 50% 0;
-    padding: ${logoSize * 0.015 + "px"} 0;
   }
   .tech-txt {
     text-align: center;
@@ -101,42 +100,31 @@ export default function Skills() {
     <SkillsContainer>
       <h1>technical skills</h1>
 
-      {/* for next portfolio — should absolutely take the time to resize every image to have the same
-        resolution and internal padding. i did not think it would be worth it but i was incorrect. */}
-
       <div className="tech-list">
-        {technologies.map((itm, i) => (
-          <SingleSkill key={i}>
+        {technologies.map((itm) => (
+          <SingleSkill key={itm}>
             <img
               src={images.skills[itm]}
               alt={`${itm} Logo`}
+              id={itm === "React" ? "react-logo" : ""}
               className="stack-logo technologies"
+              title={`${itm} Logo`}
             />
             <p className="tech-txt">{itm}</p>
           </SingleSkill>
         ))}
       </div>
 
-      <hr id="tech-language-divider"/>
+      <hr id="tech-language-divider" />
 
       <div className="tech-list" id="languages">
-        {languages.map((itm, i) => (
-          <SingleSkill key={i}>
-            {itm === "HTML" || itm === "CSS" ? (
-              <img
-                key={i}
-                src={images.skills[itm]}
-                alt={`${itm} Logo`}
-                className="stack-logo language-adjusted"
-              />
-            ) : (
-              <img
-                key={i}
-                src={images.skills[itm]}
-                alt={`${itm} Logo`}
-                className="stack-logo language"
-              />
-            )}
+        {languages.map((itm) => (
+          <SingleSkill key={itm}>
+            <img
+              src={images.skills[itm]}
+              alt={`${itm} Logo`}
+              className="stack-logo language"
+            />
             <p className="tech-txt">{itm}</p>
           </SingleSkill>
         ))}

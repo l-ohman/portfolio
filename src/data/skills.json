@@ -1,13 +1,13 @@
 {
   "technologies": [
+    "Git",
+    "React",
+    "Redux",
+    "Next.js",
     "Node.js",
     "PostgreSQL",
     "Express",
-    "React",
-    "Next.js",
-    "Redux",
-    "Mocha",
     "Three.js"
   ],
-  "languages": ["HTML", "CSS", "Javascript", "Python"]
+  "languages": ["Typescript", "Javascript", "Python"]
 }

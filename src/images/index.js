@@ -1,3 +1,5 @@
+// im not sure what compelled me to do it this way, but i hope i never have to do it again
+
 import bookBeasts1 from "./screenshots/book-beasts-1.png";
 import bookBeasts2 from "./screenshots/book-beasts-2.png";
 import bookBeastsIcon from "./icons/book-beasts-favicon.png";
@@ -21,6 +23,8 @@ import HTML from "./techLogos/HTML.png";
 import CSS from "./techLogos/CSS.png";
 import Javascript from "./techLogos/Javascript.png";
 import Python from "./techLogos/Python.png";
+import Git from "./techLogos/Git.png";
+import Typescript from "./techLogos/Typescript.svg";
 
 import headshot from "./headshot.jpg";
 
@@ -50,12 +54,19 @@ export default {
     CSS,
     Javascript,
     Python,
-    Sequelize: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Sequelize.png",
-    Mocha: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Mocha.png",
-    Chai: "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Chai.png",
-    "Less CSS": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Less.png",
-    "Three.js": "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Three.png",
+    Sequelize:
+      "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Sequelize.png",
+    Mocha:
+      "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Mocha.png",
+    Chai:
+      "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Chai.png",
+    "Less CSS":
+      "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Less.png",
+    "Three.js":
+      "https://raw.githubusercontent.com/l-ohman/l-ohman/main/icons/Three.png",
     Django,
+    Git,
+    Typescript,
   },
   headshot,
 };
