@@ -85,6 +85,10 @@ const DescriptionImagesContainer = styled.div`
       }
     }
   }
+
+  a {
+    color: black;
+  }
 `;
 
 const ProjectLinksAndInfo = styled.div`
@@ -174,7 +178,19 @@ export default function Tusk() {
       <hr id="header-divider" />
 
       <DescriptionImagesContainer>
-        <p className="description">{`Proident ea velit nulla laborum amet minim commodo labore nostrud. Esse laboris fugiat occaecat eu irure quis nulla qui consectetur. Do aliqua ad eiusmod irure exercitation ad fugiat nulla magna. Elit enim ad irure proident qui fugiat consectetur consectetur aute. Laboris excepteur culpa consequat dolor nisi do officia cillum commodo. Minim nisi eu ut commodo deserunt exercitation nisi do deserunt.`}</p>
+        <p className="description">
+          Tusk is a tool to analyze complex hero matchups in Dota 2. Users can
+          pick and ban heroes for either team and view detailed information
+          about the matchups between them. All data used for this project comes
+          from the free{" "}
+          <a
+            href="https://stratz.com/api"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Stratz GraphQL API.
+          </a>
+        </p>
 
         <div id="tusk-image-container">
           <img src={images.tusk.main} alt={`Tusk Screenshot 1`} />
