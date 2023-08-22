@@ -164,17 +164,6 @@ export default function SolarSandbox() {
     <>
       <div className="single-project-header">
         <h2 className="project-title">Solar Sandbox</h2>
-        {images.solarSandbox.icon && (
-          <img
-            src={images.solarSandbox.icon}
-            className="project-icon"
-            alt={`Solar Sandbox Icon`}
-            style={{
-              backgroundColor: "#000000",
-              padding: "2px",
-            }}
-          />
-        )}
       </div>
 
       <TechnologiesContainer>
