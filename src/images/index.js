@@ -10,7 +10,7 @@ import solarSandbox1a from "./screenshots/solar-sandbox-1a.jpg";
 import solarSandbox1b from "./screenshots/solar-sandbox-1b.jpg";
 import tusk01 from "./screenshots/tusk-01.png";
 import tusk03 from "./screenshots/tusk-03.png";
-import rd2l01 from "./screenshots/rd2l-01-tmp.png";
+import rd2l01 from "./screenshots/rd2l-01.png";
 
 // in the future, should just grab all of these images from https://github.com/l-ohman/l-ohman/tree/main/icons
 import Nodejs from "./techLogos/Node.js.png";
