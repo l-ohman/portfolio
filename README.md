@@ -1,6 +1,6 @@
 ## portfolio
 
-originally built in december 2022 / january 2023. currently being resdesigned on branch `dev`.
+originally built in december 2022 / january 2023. currently being rebuilt from scratch in another repo.
 
 https://l-ohman.com/
 

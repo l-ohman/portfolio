@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { technologies, languages } from "../data/skills.json";
 import images from "../images";
 import colors from "../colors.json";
 
@@ -96,6 +95,18 @@ const SingleSkill = styled.div`
 `;
 
 export default function Skills() {
+  const technologies = [
+    "Git",
+    "Node.js",
+    "PostgreSQL",
+    "Express",
+    "React",
+    "Redux",
+    "Next.js",
+    "Three.js",
+  ];
+  const languages = ["Typescript", "Javascript", "Python"];
+
   return (
     <SkillsContainer>
       <h1>technical skills</h1>

@@ -29,7 +29,7 @@ import Typescript from "./techLogos/Typescript.svg";
 import headshot from "./headshot.jpg";
 
 export default {
-  1: {
+  bookBeasts: {
     icon: bookBeastsIcon,
     main: bookBeasts1,
     secondary: bookBeasts2,
