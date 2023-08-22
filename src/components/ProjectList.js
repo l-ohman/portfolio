@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BookBeasts } from "./projects";
+import { BookBeasts, SolarSandbox } from "./projects";
 import colors from "../colors.json";
 
 const ContentContainer = styled.div`
@@ -96,6 +96,10 @@ export default function ProjectList() {
       <div id="project-list">
         <ProjectContainer>
           <BookBeasts />
+        </ProjectContainer>
+
+        <ProjectContainer>
+          <SolarSandbox />
         </ProjectContainer>
       </div>
     </ContentContainer>

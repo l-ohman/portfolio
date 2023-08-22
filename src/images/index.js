@@ -34,12 +34,12 @@ export default {
     main: bookBeasts1,
     secondary: bookBeasts2,
   },
-  2: {
+  umamiMeats: {
     icon: umamiMeatsIcon,
     main: umamiMeats0,
     secondary: umamiMeats1,
   },
-  3: {
+  solarSandbox: {
     main: solarSandbox1a,
     secondary: solarSandbox1b,
   },

@@ -89,9 +89,7 @@ const ProjectLinksAndInfo = styled.div`
     display: flex;
     justify-content: center;
     > * {
-      &:nth-child(2) {
-        margin-left: 14px;
-      }
+      margin: 0 7px;
     }
 
     .single-link {
