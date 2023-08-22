@@ -172,7 +172,7 @@ export default function BookBeasts() {
       <hr id="header-divider" />
 
       <DescriptionImagesContainer>
-        <p className="description">{`For our final project at Fullstack Academy, my team and I wanted to build an educational and interactive experience for children — so we built Book Beasts. This project had two main goals: the first was to enable students’ creativity by giving them a platform to create, and the second was to provide instructors with the tools necessary to monitor and manage their students’ works.`}</p>
+        <p className="description">{`For our final project at Fullstack Academy, my team and I wanted to build an educational and interactive experience for children - so we built Book Beasts. This project had two main goals: the first was to enable students’ creativity by giving them a platform to create, and the second was to provide instructors with the tools necessary to monitor and manage their students’ works.`}</p>
 
         <div id="book-beasts-image-container">
           <img

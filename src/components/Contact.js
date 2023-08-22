@@ -12,7 +12,7 @@ const ContactContainer = styled.div`
   color: black;
 
   @media screen and (min-width: 650px) {
-    padding: 0.5em 1.5em 1.7em;
+    padding: 0.6em 1.5em 2.7em;
   }
 
   > div {
@@ -95,11 +95,11 @@ export default function Contact() {
   return (
     <ContactContainer>
       <HalfContainers id="left">
-        <h2>let's get in touch</h2>
+        <h2>let's get in touch!</h2>
         <hr />
         <p>
-          I am currently looking for full-time (or part-time) employment and am
-          open to select freelance opportunities — feel free to contact me here:
+          I am currently looking for full-time employment and am open to select
+          freelance opportunities - feel free to contact me here:
         </p>
       </HalfContainers>
 

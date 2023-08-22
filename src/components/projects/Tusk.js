@@ -181,7 +181,7 @@ export default function Tusk() {
         <p className="description">
           Tusk is a tool to analyze complex hero matchups in Dota 2. Users can
           pick and ban heroes for either team and view detailed information
-          about the matchups between them. All data used for this project comes
+          about the matchups between them. All data used in this project comes
           from the free{" "}
           <a
             href="https://stratz.com/api"
