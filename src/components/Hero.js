@@ -7,8 +7,25 @@ import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
 const HeroContainer = styled.div`
   padding: 3.5em 1em 2.45em;
   color: black;
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+  }
+
   @media screen and (min-width: 650px) {
-    padding-bottom: 3.1em;
+    padding-top: calc(3.5em + 50px);
+    padding-bottom: calc(3.1em + 55px);
+    h1 {
+      font-size: 3.75rem;
+    }
+    h2 {
+      font-size: 2.1rem;
+      margin-bottom: 2px;
+    }
   }
 
   #hero-header {
@@ -21,14 +38,12 @@ const HeroContainer = styled.div`
     h1 {
       width: fit-content;
       text-align: center;
-      font-size: 260%;
       margin: 0 auto 0.5rem;
     }
 
     @media screen and (min-width: 650px) {
       h1 {
-        font-size: 300%;
-        margin-bottom: 0;
+        margin-bottom: 0.25rem;
       }
     }
   }
@@ -94,7 +109,7 @@ export default function Hero() {
       </div>
       <div id="hero-main">
         <div id="bio">
-          <p>
+          {/* <p>
             I am a fullstack developer currently based in Texas, where I was
             born and raised. As a recent graduate of Fullstack Academy, I am
             very curious and excited to work on new projects — especially those
@@ -102,6 +117,17 @@ export default function Hero() {
             moment is to learn as much as possible, so I am looking for any
             employment opportunities where I can work on a team and grow as a
             developer.
+          </p> */}
+          <h2>welcome to my portfolio!</h2>
+          <p>
+            I am a fullstack web developer with a focus on building intuitive,
+            accessible user experiences and writing clean, maintainable code.
+            I'm always looking to pick up new technologies and learn as much as
+            possible from others. My projects and tech stack can be found below,
+            along with my contact information. Currently I am looking for
+            full-time roles and am open to select freelance opportunities—so
+            feel free to reach out if you think I'd be a good fit for your
+            project!
           </p>
         </div>
       </div>

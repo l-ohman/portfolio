@@ -1,5 +1,0 @@
-- write description for tusk
-- write description for RD2L auction
-- new images for RD2L auction (take some during the auction 8/22)
-- test desktop/mobile views
-- proofread and test links

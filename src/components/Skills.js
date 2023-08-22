@@ -5,11 +5,6 @@ import colors from "../colors.json";
 
 const SkillsContainer = styled.div`
   padding: 1.2em 1.2em 1.9em;
-  > h1 {
-    font-size: 260%;
-    text-align: center;
-    color: black;
-  }
   .tech-list {
     margin: 0.3em auto 0;
     display: flex;
@@ -35,11 +30,18 @@ const SkillsContainer = styled.div`
     }
   }
 
+  h1 {
+    text-align: center;
+    font-size: 2.9rem;
+    margin: 0;
+    padding: 0.1em 0.2rem 0.3em;
+  }
   @media screen and (min-width: 650px) {
     padding: 1.65em 1.2em 2.5em;
     > h1 {
-      font-size: 285%;
-      margin-bottom: 0.5em;
+      font-size: 3.5rem;
+      margin: 0;
+      padding: 0.2em 0.25rem 0.45em;
     }
   }
 

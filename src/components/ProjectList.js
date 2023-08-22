@@ -15,16 +15,17 @@ const ContentContainer = styled.div`
   color: black;
 
   h1 {
-    font-size: 260%;
     text-align: center;
-    margin-bottom: 0.3em;
+    font-size: 2.9rem;
+    margin: 0;
+    padding: 0.1em 0.2rem 0.55em;
   }
   @media screen and (min-width: 650px) {
     padding: 0.6em 1em 0.1em;
     > h1 {
-      font-size: 285%;
+      font-size: 3.5rem;
       margin: 0;
-      padding: 0.4em 0.7em 0.2em;
+      padding: 0.6em 0.25rem 0.6em;
     }
     #project-list {
       padding: 0.8em 1em 1em;
