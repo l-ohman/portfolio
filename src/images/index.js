@@ -1,17 +1,18 @@
-// im not sure what compelled me to do it this way, but i hope i never have to do it again
+// im not sure what compelled me to do it this way, but i hope i never have to do it again.......
 
 import bookBeasts1 from "./screenshots/book-beasts-1.png";
 import bookBeasts2 from "./screenshots/book-beasts-2.png";
 import bookBeastsIcon from "./icons/book-beasts-favicon.png";
-
 import umamiMeats0 from "./screenshots/umami-meats-0.png";
 import umamiMeats1 from "./screenshots/umami-meats-1.png";
 import umamiMeatsIcon from "./icons/umami-meats-favicon.ico";
-
 import solarSandbox1a from "./screenshots/solar-sandbox-1a.jpg";
 import solarSandbox1b from "./screenshots/solar-sandbox-1b.jpg";
+import tusk01 from "./screenshots/tusk-01.png";
+import tusk03 from "./screenshots/tusk-03.png";
+import rd2l01 from "./screenshots/rd2l-01-tmp.png";
 
-// should just grab all of these images from https://github.com/l-ohman/l-ohman/tree/main/icons
+// in the future, should just grab all of these images from https://github.com/l-ohman/l-ohman/tree/main/icons
 import Nodejs from "./techLogos/Node.js.png";
 import PostgreSQL from "./techLogos/PostgreSQL.png";
 import Express from "./techLogos/Express.png";
@@ -42,6 +43,13 @@ export default {
   solarSandbox: {
     main: solarSandbox1a,
     secondary: solarSandbox1b,
+  },
+  tusk: {
+    main: tusk01,
+    secondary: tusk03,
+  },
+  rd2l: {
+    main: rd2l01,
   },
   skills: {
     "Node.js": Nodejs,
