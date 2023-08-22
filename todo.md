@@ -1,0 +1,4 @@
+- write description for tusk
+- write description for RD2L auction
+- new images for RD2L auction
+- test desktop/mobile views

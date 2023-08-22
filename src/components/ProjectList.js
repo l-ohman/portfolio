@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { BookBeasts, SolarSandbox, UmamiMeats, Tusk } from "./projects";
+import {
+  BookBeasts,
+  SolarSandbox,
+  UmamiMeats,
+  Tusk,
+  RD2LAuction,
+} from "./projects";
 import colors from "../colors.json";
 
 const ContentContainer = styled.div`
@@ -94,6 +100,10 @@ export default function ProjectList() {
     <ContentContainer>
       <h1>recent work</h1>
       <div id="project-list">
+        <ProjectContainer>
+          <RD2LAuction />
+        </ProjectContainer>
+
         <ProjectContainer>
           <UmamiMeats />
         </ProjectContainer>
