@@ -13,8 +13,5 @@ https://l-ohman.com/
 -->
 
 <!-- todo:
-- new images for RD2L auction (take some during the auction 8/22)
-- test desktop/mobile views
-- fix images on mobile
 - update favicon
  -->
