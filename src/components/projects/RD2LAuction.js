@@ -63,9 +63,9 @@ const DescriptionImagesContainer = styled.div`
       box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.07);
     }
 
-    img:first-child {
+    img {
       border-radius: ${imageRadius + "px"};
-      object-position: 50% 0px;
+      object-position: 0px 0px;
       max-height: 600px;
     }
     /* img:last-child {
@@ -76,13 +76,14 @@ const DescriptionImagesContainer = styled.div`
     } */
 
     @media screen and (max-width: 600px) {
-      img:first-child {
-        max-height: 395px;
+      img {
+        max-height: 350px;
       }
-      /* img:last-child {
-        object-position: 0% 0%;
-        max-height: 200px;
-      } */
+    }
+    @media screen and (min-width: 930px) {
+      img {
+        object-position: 50% 0px;
+      }
     }
   }
 `;
@@ -175,7 +176,7 @@ export default function RD2LAuction() {
       <hr id="header-divider" />
 
       <DescriptionImagesContainer>
-        <p className="description">{`In RD2L, an amateur Dota 2 League, every season begins with a auction draft. I, alongside two very experienced engineers, built a web application that utilizes web sockets to run a live auction directly in the browser. Over the course of 2-3 hours, team captains can bid on players and slowly build up their rosters for the upcoming season. So far, we have successfully run 2 auctions with this application and filled 39 teams in the process. (There are 5 players per team, so this comes out to 195 players in total.)`}</p>
+        <p className="description">{`In RD2L, an amateur Dota 2 League, every season begins with an auction draft. Alongside two very experienced engineers, I built a web application that utilizes web sockets to run a live auction directly in the browser. Over the course of 1-3 hours, team captains can bid on players and slowly build up their rosters for the upcoming season. So far, we have successfully run 4 auctions with this application and filled 71 teams in the process. (There are 5 players per team, so this comes out to 355 players in total!)`}</p>
 
         <p className="description">{`I was the lead UI/UX designer and frontend engineer on this project. When beginning this process, I understood that the functionality our clients were looking for necessitated an extremely complex UI in order to display a wide variety of information. However, it also needed to be straightforward so users could easily navigate and use the wealth of data provided to them. After many rounds of experimentation, feedback, and iteration, I had created an intricate but intuitive interface that was extremely well received by the users.`}</p>
 

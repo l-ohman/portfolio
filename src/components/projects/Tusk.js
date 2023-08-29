@@ -84,6 +84,12 @@ const DescriptionImagesContainer = styled.div`
         max-height: 200px;
       }
     }
+
+    @media screen and (max-width: 900px) {
+      img:first-child {
+        object-position: 50% 0px;
+      }
+    }
   }
 
   a {
