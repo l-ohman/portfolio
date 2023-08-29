@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "76c301ebb2ac78a0260a",
+    "revision": "3c9f0517eb9ba2de9309",
     "url": "/static/css/main.7bed77d9.chunk.css"
   },
   {
-    "revision": "76c301ebb2ac78a0260a",
-    "url": "/static/js/main.76c301eb.chunk.js"
+    "revision": "3c9f0517eb9ba2de9309",
+    "url": "/static/js/main.3c9f0517.chunk.js"
   },
   {
-    "revision": "5228753f8cbbaa7e68e1",
-    "url": "/static/js/1.5228753f.chunk.js"
+    "revision": "d6ce358d2c1107d077b4",
+    "url": "/static/js/1.d6ce358d.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -42,6 +42,18 @@ self.__precacheManifest = [
   {
     "revision": "17392b14a0f87eadfcdfd636a0d77d48",
     "url": "/static/media/solar-sandbox-1b.17392b14.jpg"
+  },
+  {
+    "revision": "281b545353e1002c4bd7e12b26744982",
+    "url": "/static/media/tusk-01.281b5453.png"
+  },
+  {
+    "revision": "55d8f6b270bb0c5ed850399e54175690",
+    "url": "/static/media/tusk-03.55d8f6b2.png"
+  },
+  {
+    "revision": "48e882fdeeb6414a97353296fbe0e3a0",
+    "url": "/static/media/rd2l-01.48e882fd.png"
   },
   {
     "revision": "84464e7aa42b4f5d31d5ca5958651b2d",
@@ -84,7 +96,7 @@ self.__precacheManifest = [
     "url": "/static/media/headshot.e7043908.jpg"
   },
   {
-    "revision": "ef7594b8714dd8201a5f7627fec7ee86",
+    "revision": "357554bad25e6c6c91b7d71cbd1b914d",
     "url": "/index.html"
   }
 ];
