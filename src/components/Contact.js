@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { BiCopy } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 import colors from "../colors.json";
 
@@ -84,14 +83,6 @@ const HalfContainers = styled.div`
 `;
 
 export default function Contact() {
-  const copyItem = (item) => {
-    navigator.clipboard.writeText(item);
-    // should replace alert with toastify
-    alert(
-      `'${item}' copied to clipboard — click the email itself to open your mail app`
-    );
-  };
-
   return (
     <ContactContainer>
       <HalfContainers id="left">
@@ -109,11 +100,6 @@ export default function Contact() {
             email me at{" "}
             <a href="mailto:jakelohman7@gmail.com">jakelohman7@gmail</a>
           </p>
-          <BiCopy
-            size={22}
-            onClick={(e) => copyItem("jakelohman7@gmail.com")}
-            className="copy-logo email-copier"
-          />
         </div>
         <div id="link-list">
           <p>
@@ -123,7 +109,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin
+              LinkedIn
             </a>
           </p>
           <a

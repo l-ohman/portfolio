@@ -110,15 +110,15 @@ export default function ProjectList() {
         </ProjectContainer>
 
         <ProjectContainer>
-          <SolarSandbox />
-        </ProjectContainer>
-
-        <ProjectContainer>
           <BookBeasts />
         </ProjectContainer>
 
         <ProjectContainer>
           <Tusk />
+        </ProjectContainer>
+
+        <ProjectContainer>
+          <SolarSandbox />
         </ProjectContainer>
       </div>
     </ContentContainer>
