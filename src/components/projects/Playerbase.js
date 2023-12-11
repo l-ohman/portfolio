@@ -161,7 +161,7 @@ export default function RD2LAuction() {
   return (
     <>
       <div className="single-project-header">
-        <h2 className="project-title">RD2L Auction</h2>
+        <h2 className="project-title">Playerbase</h2>
       </div>
 
       <TechnologiesContainer>
@@ -176,14 +176,28 @@ export default function RD2LAuction() {
       <hr id="header-divider" />
 
       <DescriptionImagesContainer>
-        <p className="description">{`In RD2L, an amateur Dota 2 League, every season begins with an auction draft. Alongside two very experienced engineers, I built a web application that utilizes web sockets to run a live auction directly in the browser. Over the course of 1-3 hours, team captains can bid on players and slowly build up their rosters for the upcoming season. So far, we have successfully run 4 auctions with this application and filled 71 teams in the process. (There are 5 players per team, so this comes out to 355 players in total!)`}</p>
-
-        <p className="description">{`I was the lead UI/UX designer and frontend engineer on this project. When beginning this process, I understood that the functionality our clients were looking for necessitated an extremely complex UI in order to display a wide variety of information. However, it also needed to be straightforward so users could easily navigate and use the wealth of data provided to them. After many rounds of experimentation, feedback, and iteration, I had created an intricate but intuitive interface that was very well received by the users.`}</p>
+        <p className="description">
+          Playerbase is a large project that I am building alongside 2 very
+          experienced engineers to support the needs of amateur Dota 2 leagues.
+          We have created an application that, using web sockets, runs live
+          auction drafts where team captains can bid on players to build their
+          rosters for the upcoming season. So far we have run 5 auctions in
+          total: 4 for{" "}
+          <a href="https://rd2l.gg/" target="_blank" rel="noopener noreferrer">
+            RD2L (Reddit Dota 2 League)
+          </a>
+          , and 1 for{" "}
+          <a href="https://nadcl.us/" target="_blank" rel="noopener noreferrer">
+            NADCL (North American Dota 2 Challenger's League)
+          </a>
+          . Currently, we are still expanding this project to support more
+          unique features and host other amateur leagues.
+        </p>
 
         {/* <p className="description">{`Any data that a captain would need is accessible easily in the interface—whether it's a specific piece of data about remaining players, the gold that their competitors have left to draft with, or even the average rating of their own roster, all can easily be found in the dense but intuitive menu.`}</p> */}
 
         <div id="rd2l-image-container">
-          <img src={images.rd2l.main} alt={`RD2L Auction screenshot`} />
+          <img src={images.rd2l.main} alt={`Playerbase Auction screenshot`} />
           {/* <img src={images.rd2l.secondary} alt={`rd2l screenshot`} /> */}
         </div>
       </DescriptionImagesContainer>
@@ -193,7 +207,7 @@ export default function RD2LAuction() {
       <ProjectLinksAndInfo>
         <div className="links">
           <a
-            href="https://used-vessel-production.up.railway.app/auction/3"
+            href="https://nadcl.playerbase.fun/auction/9"
             target="_blank"
             rel="noopener noreferrer"
             className="single-link"
@@ -201,16 +215,6 @@ export default function RD2LAuction() {
             <p className="full-txt">View Site</p>
             <p className="min-txt">Deployed</p>
             <FaExternalLinkAlt color={iconColor} size={20} />
-          </a>
-          <a
-            href="https://github.com/cadenforrest/DotaLeagueSite"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="single-link"
-          >
-            <p className="full-txt">View on Github</p>
-            <p className="min-txt">Github</p>
-            <FaGithub color={iconColor} size={24} />
           </a>
         </div>
       </ProjectLinksAndInfo>

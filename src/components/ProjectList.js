@@ -5,7 +5,7 @@ import {
   SolarSandbox,
   UmamiMeats,
   Tusk,
-  RD2LAuction,
+  Playerbase,
 } from "./projects";
 import colors from "../colors.json";
 
@@ -30,7 +30,7 @@ const ContentContainer = styled.div`
     #project-list {
       padding: 0.8em 1em 1em;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column nowrap;
       justify-content: space-between;
     }
   }
@@ -102,7 +102,7 @@ export default function ProjectList() {
       <h1>recent work</h1>
       <div id="project-list">
         <ProjectContainer>
-          <RD2LAuction />
+          <Playerbase />
         </ProjectContainer>
 
         <ProjectContainer>
