@@ -181,12 +181,12 @@ export default function RD2LAuction() {
           experienced engineers to support the needs of amateur Dota 2 leagues.
           We have created an application that, using web sockets, runs live
           auction drafts where team captains can bid on players to build their
-          rosters for the upcoming season. So far we have run 5 auctions in
-          total: 4 for{" "}
+          rosters for upcoming seasons. So far we have run 6 auctions in total:
+          4 for{" "}
           <a href="https://rd2l.gg/" target="_blank" rel="noopener noreferrer">
             RD2L (Reddit Dota 2 League)
           </a>
-          , and 1 for{" "}
+          , and 2 for{" "}
           <a href="https://nadcl.us/" target="_blank" rel="noopener noreferrer">
             NADCL (North American Dota 2 Challenger's League)
           </a>
