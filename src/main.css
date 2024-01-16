@@ -1,5 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Noto+Sans&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Orienta&family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
   /* background: #212324; */
@@ -7,9 +8,7 @@ body {
 }
 
 * {
-  /* font-family: "Carrois Gothic SC", sans-serif;
-  font-family: "Noto Sans", sans-serif; */
-  font-family: "Orienta", sans-serif;
+  font-family: "Lexend", Orienta, Arial, sans-serif;
   box-sizing: border-box;
   margin: 0;
   position: relative;
@@ -18,5 +17,5 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Krona One", Arial, sans-serif;
 }

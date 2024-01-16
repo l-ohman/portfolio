@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Header, Hero, Skills, ProjectList, Contact } from "./";
+import { Header, HeroNew, Skills, ProjectList, Contact } from "./";
 
 const ContentContainer = styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ export default function MainPage() {
       <Header {...links} />
       <ContentContainer>
         <div ref={links.hero}>
-          <Hero />
+          <HeroNew />
         </div>
 
         <div ref={links.projects}>
