@@ -6,7 +6,9 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "fix-paths": "python3 deploy.py",
+    "build-and-deploy": "npm run build && npm run fix-paths && npm run deploy"
   },
   "eslintConfig": {
     "extends": [

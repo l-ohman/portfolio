@@ -5,11 +5,11 @@ originally built in december 2022 / january 2023. updated in august 2023.
 https://l-ohman.com/
 
 <!--
-  to deploy to github pages:
-  - run `npm run build` to create create the build
-  - updates paths in `/build/asset-manifest.json` and `/build/index.html`
-    - `react-scripts` writes the paths as have "/path/to/file" instead of "./path/to/file"
-  - run `npm run deploy` to deploy
+To deploy to Github Pages:
+npm run build-and-deploy
+
+Sometimes there will be issues with the domain, they can be resolved here:
+https://github.com/l-ohman/portfolio/settings/pages
 -->
 
 <!-- todo:
