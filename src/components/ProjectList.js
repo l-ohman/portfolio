@@ -14,19 +14,8 @@ const ContentContainer = styled.div`
   background: ${colors.backgroundSecondary};
   color: black;
 
-  h1 {
-    text-align: center;
-    font-size: 2.9rem;
-    margin: 0;
-    padding: 0.1em 0.2rem 0.55em;
-  }
   @media screen and (min-width: 650px) {
     padding: 0.6em 1em 0.1em;
-    > h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      padding: 0.6em 0.25rem 0.6em;
-    }
     #project-list {
       padding: 0.8em 1em 1em;
       display: flex;
@@ -96,10 +85,22 @@ const ProjectContainer = styled.div`
   }
 `;
 
+const ListHeader = styled.h1`
+  text-align: right;
+  font-size: 2.5rem;
+  margin: 1rem auto;
+`;
+
+const ListHeaderDivider = styled.hr`
+  margin-top: -1.41rem;
+`;
+
 export default function ProjectList() {
   return (
     <ContentContainer>
-      <h1>recent work</h1>
+      <ListHeader>FEATURED PROJECTS</ListHeader>
+      <ListHeaderDivider />
+
       <div id="project-list">
         <ProjectContainer>
           <Playerbase />

@@ -19,3 +19,8 @@ h2,
 h3 {
   font-family: "Krona One", Arial, sans-serif;
 }
+
+hr {
+  background: black;
+  border: 2px solid black;
+}

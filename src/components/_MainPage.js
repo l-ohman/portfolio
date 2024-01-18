@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Header, HeroNew, Skills, ProjectList, Contact } from "./";
+import { Header, Hero, Skills, ProjectList, Contact } from "./";
 
 const ContentContainer = styled.div`
   width: 100%;
-  
+
   .icon-link {
     transition: color 0.1s linear 0s;
     color: black;
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: #373737;
     }
   }
@@ -27,7 +28,7 @@ export default function MainPage() {
       <Header {...links} />
       <ContentContainer>
         <div ref={links.hero}>
-          <HeroNew />
+          <Hero />
         </div>
 
         <div ref={links.projects}>
