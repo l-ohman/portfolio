@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
 

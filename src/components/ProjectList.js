@@ -36,45 +36,13 @@ const ProjectContainer = styled.div`
   border-radius: 0.5em;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.09);
 
-  .single-project-header {
-    display: flex;
-    align-items: center;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.05);
-    width: fit-content;
-    margin: 0.3em auto 0.15em;
-
-    .project-title {
-      font-size: 190%;
-    }
-    .project-icon {
-      width: 29px;
-      max-height: 29px;
-      margin: 0 0 0 8px;
-      border-radius: 50%;
-      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
-    }
-
-    @media screen and (min-width: 650px) {
-      margin: 0.3em auto 0.25em;
-      .project-title {
-        font-size: 210%;
-      }
-      .project-icon {
-        width: 34px;
-        max-height: 34px;
-        margin: 0 0 0px 9px;
-      }
-    }
+  @media screen and (min-width: 650px) {
+    margin: 0.3em auto 0.25em;
   }
 
   hr {
     width: 97%;
     margin: 0.3em auto;
-    &#header-divider {
-      width: 100%;
-      margin: 0.9em auto 0;
-      /* max-width: 700px; */
-    }
   }
 
   @media screen and (min-width: 650px) {

@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
 
@@ -18,15 +16,6 @@ export default function UmamiMeats() {
         high-quality steak and sushi. This project was built in roughly 10 days
         for the 'Grace Shopper' project at Fullstack Academy.
       </p>
-      {/* <p>
-        The vast majority of my time on this project was spent designing and
-        building the frontend. At the very beginning of the project, I drew the
-        wireframes for nearly every page; these proved to be invaluable, as they
-        greatly sped up our process and ensured visual consistency throughout
-        the entire application. Once we had built the foundation for each page,
-        I revised much of the styling and added subtle animations to construct a
-        user experience that is both aesthetically pleasing and extremely clear.
-      </p> */}
     </ProjectContainer>
   );
 }

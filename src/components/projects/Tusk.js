@@ -1,12 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
 
 export default function Tusk() {
-  // <img src={images.tusk.main} alt={`Tusk Screenshot 1`} />
-
   return (
     <ProjectContainer
       title="Tusk"
