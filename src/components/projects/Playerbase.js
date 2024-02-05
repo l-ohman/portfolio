@@ -4,29 +4,25 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
 
-const iconColor = "white";
-
 export default function Playerbase() {
   return (
     <ProjectContainer
       title="Playerbase"
+      images={[{ src: images.rd2l.main, alt: "Playerbase Auction screenshot" }]}
       technologies={[
         "Typescript",
+        "Python",
         "Next.js",
-        "Material UI",
-        "socket.io",
-        "Redis",
         "Django",
+        "Web Sockets",
+        "Material UI",
+        "Redis",
         "Docker",
       ]}
       dateStart="May 2023"
       dateEnd="Present"
+      deploymentLink="https://playerbase.fun/"
     >
-      <div>
-        <img src={images.rd2l.main} alt={`Playerbase Auction screenshot`} />
-        {/* <img src={images.rd2l.secondary} alt={`rd2l screenshot`} /> */}
-      </div>
-
       <p>
         Playerbase is a large project that I am building alongside 2 very
         experienced engineers to support the needs of amateur Dota 2 leagues. We

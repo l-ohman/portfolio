@@ -106,21 +106,21 @@ export default function ProjectList() {
           <Playerbase />
         </ProjectContainer>
 
-        {/* <ProjectContainer>
+        <ProjectContainer>
           <UmamiMeats />
-        </ProjectContainer> */}
+        </ProjectContainer>
 
-        {/* <ProjectContainer>
+        <ProjectContainer>
           <BookBeasts />
-        </ProjectContainer> */}
+        </ProjectContainer>
 
-        {/* <ProjectContainer>
+        <ProjectContainer>
           <Tusk />
-        </ProjectContainer> */}
+        </ProjectContainer>
 
-        {/* <ProjectContainer>
+        <ProjectContainer>
           <SolarSandbox />
-        </ProjectContainer> */}
+        </ProjectContainer>
       </div>
     </ContentContainer>
   );
