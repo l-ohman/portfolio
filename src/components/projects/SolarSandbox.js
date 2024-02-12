@@ -30,8 +30,8 @@ export default function SolarSandbox() {
         Solar Sandbox is an interactive application where users can design their
         own solar system from scratch. Users can build their own system of
         planets and moons with a 3D view that updates in realtime. This project
-        was built in about 4 days for our 'Async Week' project at Fullstack
-        Academy.
+        was built in roughly 4 days for our solo 'Async Week' project at
+        Fullstack Academy.
       </p>
       <ImageContainer>
         <img
