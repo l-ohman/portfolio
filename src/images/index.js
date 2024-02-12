@@ -26,6 +26,7 @@ import Javascript from "./techLogos/Javascript.png";
 import Python from "./techLogos/Python.png";
 import Git from "./techLogos/Git.png";
 import Typescript from "./techLogos/Typescript.svg";
+import Ruby from "./techLogos/Ruby.png";
 
 import headshot from "./headshot.jpg";
 
@@ -75,6 +76,7 @@ export default {
     Django,
     Git,
     Typescript,
+    Ruby,
   },
   headshot,
 };

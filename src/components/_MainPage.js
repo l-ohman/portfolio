@@ -13,12 +13,6 @@ const ContentContainer = styled.div`
   }
 `;
 
-// bad practice, but CRAs don't deserve good practice 👍
-const Spacer = styled.div`
-  height: 100px;
-  /* border: 2px solid yellow; */
-`;
-
 export default function MainPage() {
   const links = {
     hero: React.useRef(null),
@@ -39,17 +33,9 @@ export default function MainPage() {
           <ProjectList />
         </div>
 
-        {/* <Spacer />
-
-        <div ref={links.skills}>
-          <Skills />
-        </div>
-
-        <Spacer />
-
         <div ref={links.contact}>
           <Contact />
-        </div> */}
+        </div>
       </ContentContainer>
     </>
   );

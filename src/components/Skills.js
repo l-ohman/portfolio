@@ -3,8 +3,25 @@ import styled from "styled-components";
 import images from "../images";
 import colors from "../colors.json";
 
+const ListHeader = styled.h1`
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  font-family: "Lexend", Orienta, Arial, sans-serif;
+  font-weight: 500;
+`;
+
+const sidePadding = 12;
 const SkillsContainer = styled.div`
-  padding: 1.2em 1.2em 1.9em;
+  max-width: 100vw;
+  min-width: ${375 - sidePadding * 2}px;
+  padding: 0 ${sidePadding}px 3rem;
+
+  hr {
+    min-width: 100%;
+    border: 1px solid black;
+    margin-bottom: 0.85rem;
+  }
+
   .tech-list {
     margin: 0.3em auto 0;
     display: flex;
@@ -18,37 +35,6 @@ const SkillsContainer = styled.div`
     width: 690px;
     max-width: 90%;
     margin: 20px auto 16px;
-  }
-
-  /* for nicer better formatting in icon flexbox*/
-  @media screen and (max-width: 922px) {
-    .tech-list {
-      max-width: 715px;
-    }
-    #tech-language-divider {
-      width: 680px;
-    }
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 2.9rem;
-    margin: 0;
-    padding: 0.1em 0.2rem 0.3em;
-  }
-  @media screen and (min-width: 650px) {
-    padding: 1.65em 1.2em 2.5em;
-    > h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      padding: 0.2em 0.25rem 0.45em;
-    }
-  }
-
-  #languages {
-    @media screen and (max-width: 634px) {
-      max-width: 450px;
-    }
   }
 `;
 
@@ -107,11 +93,12 @@ export default function Skills() {
     "Next.js",
     "Three.js",
   ];
-  const languages = ["Typescript", "Javascript", "Python"];
+  const languages = ["Typescript", "Javascript", "Python", "Ruby"];
 
   return (
     <SkillsContainer>
-      <h1>technical skills</h1>
+      <ListHeader>Technical Skills</ListHeader>
+      <hr />
 
       <div className="tech-list">
         {technologies.map((itm) => (
@@ -128,7 +115,7 @@ export default function Skills() {
         ))}
       </div>
 
-      <hr id="tech-language-divider" />
+      <hr />
 
       <div className="tech-list" id="languages">
         {languages.map((itm) => (
