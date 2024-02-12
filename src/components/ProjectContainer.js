@@ -4,12 +4,8 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectContainer = styled.div`
   max-width: 100vw;
-  min-width: 375px;
-`;
-
-const Divider = styled.hr`
-  min-width: 100%;
-  border: 1px solid black;
+  min-width: 359px;
+  padding: 0 8px 30px;
 `;
 
 const ProjectHeader = styled.div`
@@ -17,52 +13,56 @@ const ProjectHeader = styled.div`
   justify-content: space-between;
   * {
     font-family: "Krona One", Arial, sans-serif;
-    /* centered for mobile view */
-    text-align: center;
-    margin: 0 auto;
   }
 `;
 
 const ProjectName = styled.h2`
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 `;
 
-const DateRange = styled.p``;
-const Descriptions = styled.div``;
+const DateRange = styled.p`
+  font-size: 1rem;
+  margin-bottom: 1rem;
+`;
+const Descriptions = styled.div`
+  margin: 1.75rem auto;
+`;
+// todo
+const ReadMore = styled.p`
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0.5rem 0 0.25rem;
+`;
 
 const TechnologyList = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
 `;
 const SingleTechnology = styled.p`
+  font-size: 0.9rem;
+  font-weight: 300;
   background: #44646e;
   width: fit-content;
   color: white;
-  padding: 5px 10px;
-  border-radius: calc(1rem + 4px);
+  padding: 3px 6px;
   margin: 1px 2px 2px;
 `;
 
 const ProjectLinksContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  margin: 1rem 0 1rem;
 `;
 
 const ProjectLink = styled.a`
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 7px;
   p {
     font-family: "Krona One", Arial, sans-serif;
   }
-
-  padding: 0.3rem 0.75rem;
 `;
 
 // should be in a separate file probably, if adding carousel?
@@ -84,6 +84,7 @@ export default function SingleProject({
 }) {
   return (
     <ProjectContainer>
+      <hr />
       {/* PROJECT TITLE AND DATE */}
       <ProjectHeader>
         <div>
@@ -94,7 +95,20 @@ export default function SingleProject({
         </div>
       </ProjectHeader>
 
-      <hr />
+      {/* TECHNOLOGY LIST */}
+      <TechnologyList>
+        {technologies.map((tech, idx) => (
+          <SingleTechnology key={tech + idx}>{tech}</SingleTechnology>
+        ))}
+      </TechnologyList>
+
+      {/* PROJECT DESCRIPTION */}
+      <Descriptions>
+        {children}
+
+        {/* todo: make "readmore" conditional if app has more info */}
+        <ReadMore>Read more</ReadMore>
+      </Descriptions>
 
       {/* PROJECT IMAGES */}
       <ImageContainer>
@@ -102,19 +116,6 @@ export default function SingleProject({
           <SingleImage key={idx} src={src} alt={alt} />
         ))}
       </ImageContainer>
-
-      {/* PROJECT DESCRIPTION */}
-      <Descriptions>{children}</Descriptions>
-
-      <Divider />
-
-      {/*       
-      <TechnologyList>
-        {technologies.map((tech, idx) => (
-          <SingleTechnology key={tech + idx}>{tech}</SingleTechnology>
-        ))}
-      </TechnologyList> */}
-      {/* from a design perspective -- might be easier to display techs with logos */}
 
       {/* PROJECT LINKS */}
       <ProjectLinksContainer>
@@ -124,7 +125,7 @@ export default function SingleProject({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>site</p>
+            <p>open site</p>
             <FaExternalLinkAlt size={20} />
           </ProjectLink>
         )}
@@ -134,7 +135,7 @@ export default function SingleProject({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>github</p>
+            <p>view on github</p>
             <FaGithub size={23} />
           </ProjectLink>
         )}
