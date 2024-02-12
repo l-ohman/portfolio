@@ -8,28 +8,27 @@ const HeaderContainer = styled.div`
   z-index: 100;
 
   margin: 0;
-  padding: 0.5em 0.7em;
-  width: 100%;
+  width: min(100vw, 375px);
   background: ${colors.dark};
   color: white;
-  font-size: 1.05em;
+  font-size: 0.95rem;
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 
   #header-links {
     margin: 0 auto;
     display: flex;
-    width: 100%;
+    width: min(100%, 610px);
     justify-content: space-around;
-    max-width: 610px;
     opacity: 1;
+    padding: 0.3rem 0;
 
     .single-link:hover {
       cursor: pointer;
       transition: color 0.08s linear 0s;
-      color: #E9E9E9;
+      color: #e9e9e9;
     }
   }
 `;
@@ -45,13 +44,24 @@ export default function Header({ hero, projects, skills, contact }) {
         window.scrollTo({ top: hero.current.offsetTop, behavior: "smooth" });
         break;
       case "projects":
-        window.scrollTo({ top: (projects.current.offsetTop - 30), behavior: "smooth" });
+        window.scrollTo({
+          top: projects.current.offsetTop - 30,
+          behavior: "smooth",
+        });
         break;
       case "skills":
-        window.scrollTo({ top: (skills.current.offsetTop - 30), left: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: skills.current.offsetTop - 30,
+          left: 0,
+          behavior: "smooth",
+        });
         break;
       case "contact":
-        window.scrollTo({ top: (contact.current.offsetTop - 30), left: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: contact.current.offsetTop - 30,
+          left: 0,
+          behavior: "smooth",
+        });
         break;
       default:
         return;

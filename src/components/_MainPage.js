@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Header, Hero, Skills, ProjectList, Contact } from "./";
 
 const ContentContainer = styled.div`
-  width: 100%;
-
   .icon-link {
     transition: color 0.1s linear 0s;
     color: black;
@@ -13,6 +11,12 @@ const ContentContainer = styled.div`
       color: #373737;
     }
   }
+`;
+
+// bad practice, but CRAs don't deserve good practice 👍
+const Spacer = styled.div`
+  height: 100px;
+  /* border: 2px solid yellow; */
 `;
 
 export default function MainPage() {
@@ -35,13 +39,17 @@ export default function MainPage() {
           <ProjectList />
         </div>
 
+        {/* <Spacer />
+
         <div ref={links.skills}>
           <Skills />
         </div>
 
+        <Spacer />
+
         <div ref={links.contact}>
           <Contact />
-        </div>
+        </div> */}
       </ContentContainer>
     </>
   );

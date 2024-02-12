@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectContainer = styled.div`
-  padding: 2px;
+  max-width: 100vw;
+  min-width: 375px;
 `;
 
 const Divider = styled.hr`
@@ -62,11 +63,6 @@ const ProjectLink = styled.a`
   }
 
   padding: 0.3rem 0.75rem;
-  /* background: #44646e;
-  width: fit-content;
-  color: white;
-  border-radius: calc(1rem + 4px);
-  margin: 1px 2px 2px; */
 `;
 
 // should be in a separate file probably, if adding carousel?
