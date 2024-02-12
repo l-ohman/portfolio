@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Header, Hero, Skills, ProjectList, Contact } from "./";
+import { Header, Hero, ProjectList, Contact } from "./";
 
 const ContentContainer = styled.div`
   .icon-link {

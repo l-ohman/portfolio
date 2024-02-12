@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../../colors.json";
+import colors from "../colors.json";
 
 const HeaderContainer = styled.div`
   position: fixed;
@@ -33,10 +33,8 @@ const HeaderContainer = styled.div`
   }
 `;
 
-export default function Header({ hero, projects, skills, contact }) {
-  const headerLinks = ["about", "projects", "skills", "contact"];
-
-  // const [hideHeader, setHideHeader] = React.useEffect(false);
+export default function Header({ hero, projects, contact }) {
+  const headerLinks = ["about", "projects", "contact"];
 
   const scroll = (location) => {
     switch (location) {
@@ -46,13 +44,6 @@ export default function Header({ hero, projects, skills, contact }) {
       case "projects":
         window.scrollTo({
           top: projects.current.offsetTop - 30,
-          behavior: "smooth",
-        });
-        break;
-      case "skills":
-        window.scrollTo({
-          top: skills.current.offsetTop - 30,
-          left: 0,
           behavior: "smooth",
         });
         break;

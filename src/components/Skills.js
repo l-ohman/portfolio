@@ -1,3 +1,4 @@
+//** Not currently in use, might delete soon **//
 import React from "react";
 import styled from "styled-components";
 import images from "../images";

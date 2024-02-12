@@ -1,126 +1,108 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLinkedin } from "react-icons/fa";
-import colors from "../colors.json";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
 
+const sidePadding = 16;
 const ContactContainer = styled.div`
-  background: ${colors.backgroundSecondary};
-  padding: 0.3em 1.5em 1.5em;
-  font-size: 105%;
-  margin: 0 auto;
-  color: black;
-
-  @media screen and (min-width: 650px) {
-    padding: 0.6em 1.5em 2.7em;
+  max-width: 100vw;
+  min-width: ${375 - sidePadding * 2}px;
+  padding: 10vh ${sidePadding}px 0;
+  background: rgb(36, 32, 129);
+  * {
+    color: white;
+    border-color: white;
   }
 
-  > div {
-    max-width: 630px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+`;
+
+const HeaderText = styled.h1`
+  font-size: 2rem;
+`;
+
+const DescriptionText = styled.p`
+  font-size: 1.15rem;
+  padding-bottom: 7vh;
+`;
+
+const BottomLinks = styled.div`
+  max-width: ${375 - sidePadding * 2}px;
+  margin: 0 auto 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    margin: 10px 20px 0;
     text-align: center;
-    * {
-      margin-bottom: 0.3em;
-    }
-  }
-  h2 {
-    margin: 0.3em auto 0;
-    font-size: 180%;
-  }
-  #link-list {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0.1em auto 0.7em;
-    a {
-      color: inherit;
-    }
-    .copy-logo {
-      cursor: pointer;
-      @media screen and (max-width: 378px) {
-        &.email-copier {
-          display: none;
-        }
-      }
-      @media screen and (max-width: 317px) {
-        &.linkedin-copier {
-          display: none;
-        }
-      }
-    }
-    * {
-      margin: 0 0.15em;
-    }
-  }
-  #contact-info-icons {
-    max-width: 400px;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    a {
-      margin: 10px 20px 0;
+    font-size: 0.9rem;
+    svg {
+      display: block;
+      margin: 0 auto 5px;
     }
   }
 `;
 
-const HalfContainers = styled.div`
-  margin: 0.5em auto;
-  padding: 0.5em 0.5em 0;
-  width: fit-content;
-  hr {
-    margin: 0.6em auto;
-    width: 19em;
-  }
-  &#right {
-    background: ${colors.lighter};
-    color: black;
-
-    min-height: 5em;
-    margin: 1em auto 0;
-    padding: 1.15em 1.3em 0.5em;
-    border-radius: 1.5em;
-  }
-`;
-
+const iconSize = 45;
 export default function Contact() {
   return (
     <ContactContainer>
-      <HalfContainers id="left">
-        <h2>let's get in touch!</h2>
-        <hr />
-        <p>
-          I am currently looking for full-time employment and am open to select
-          freelance opportunities - feel free to contact me here:
-        </p>
-      </HalfContainers>
+      <HeaderText>Let's get in touch</HeaderText>
 
-      <HalfContainers id="right">
-        <div id="link-list">
-          <p>
-            email me at{" "}
-            <a href="mailto:jakelohman7@gmail.com">jakelohman7@gmail</a>
-          </p>
-        </div>
-        <div id="link-list">
-          <p>
-            or reach out via{" "}
-            <a
-              href="https://www.linkedin.com/in/jake-lohman/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </p>
-          <a
-            href="https://www.linkedin.com/in/jake-lohman/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={22} className="copy-logo linkedin-copier" />
-          </a>
-        </div>
-      </HalfContainers>
+      <DescriptionText>
+        I am currently looking for full-time employment and I am open to
+        relocation. Feel free to email me at{" "}
+        <b>
+          <a href="mailto:jakelohman7@gmail.com">jakelohman7@gmail.com</a>
+        </b>
+        !
+      </DescriptionText>
+
+      <BottomLinks>
+        <a
+          href="mailto:jakelohman7@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+        >
+          <IoMail size={iconSize} className="icon-link-inverted" />
+          <p>Email</p>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jake-lohman/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
+          <FaLinkedin size={iconSize} className="icon-link-inverted" />
+          <p>LinkedIn</p>
+        </a>
+
+        <a
+          href="https://github.com/l-ohman"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Github"
+        >
+          <FaGithubSquare size={iconSize} className="icon-link-inverted" />
+          <p>Github</p>
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1F6mGYq4p8Sav0lKuy63OLPQsX7_gbisU/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Resume"
+        >
+          <IoDocumentTextSharp size={iconSize} className="icon-link-inverted" />
+          <p>Resume</p>
+        </a>
+      </BottomLinks>
     </ContactContainer>
   );
 }

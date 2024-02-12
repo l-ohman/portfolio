@@ -24,3 +24,5 @@ npm run deploy
 
 Redeploying usually causes DNS issues, which can easily be resolved here:
 https://github.com/l-ohman/portfolio/settings/pages
+
+<!-- misc idea -- a "workshop" subpage, where i can show test projects and things that are currently in flight -->
