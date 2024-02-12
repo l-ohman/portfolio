@@ -28,11 +28,11 @@ export default function BookBeasts() {
       githubLink="https://github.com/fsa-2208-mspiggy/Book-Beasts"
     >
       <p>
-        Book Beasts, my capstone project at Fullstack Academy, is a uniquely
-        educational and highly interactive platform where children and students
-        can write their own story books. Additionally, it provides parents and
-        instructors with the necessary tools to monitor and manage their
-        students' works.
+        Book Beasts, my team's capstone project at Fullstack Academy, is a
+        uniquely educational and highly interactive platform where children and
+        students can write their own story books. Additionally, it provides
+        parents and instructors with the necessary tools to monitor and manage
+        their students' works.
       </p>
       <ImageContainer>
         <img

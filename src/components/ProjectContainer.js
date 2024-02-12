@@ -26,21 +26,31 @@ const ProjectName = styled.h2`
   font-size: 2.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+  a {
+    text-decoration: none;
+    &:active, &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (min-width: 650px) {
+    font-size: min(3vw, 52px);
+  }
 `;
 
 const DateRange = styled.p`
   font-size: 1rem;
   margin-bottom: 1rem;
+  @media screen and (min-width: 650px) {
+    font-size: min(1.5vw, 1.3rem);
+  }
 `;
 const Descriptions = styled.div`
   margin: 0 auto;
-
-  .read-more {
-    /* currently unused */
-    text-decoration: underline;
-    font-style: italic;
-    font-weight: 300;
-    margin: 0.5rem 0 0.25rem;
+  @media screen and (min-width: 650px) {
+    font-size: min(1.25vw, 1.1rem);
+    img {
+      margin-bottom: 15px;
+    }
   }
 `;
 
@@ -56,7 +66,13 @@ const SingleTechnology = styled.p`
   width: fit-content;
   color: white;
   padding: 3px 6px;
+  border-radius: 2px;
   margin: 1px 2px 2px;
+  @media screen and (min-width: 650px) {
+    font-size: 1rem;
+    padding: 5px 9px;
+    border-radius: 3px;
+  }
 `;
 
 const ProjectLinksContainer = styled.div`
@@ -71,6 +87,10 @@ const ProjectLink = styled.a`
   .github-link {
     margin-left: -2px;
   }
+  @media screen and (min-width: 650px) {
+    font-size: 1.3rem;
+    margin-bottom: 7px;
+  }
 `;
 
 export default function SingleProject({
@@ -82,6 +102,7 @@ export default function SingleProject({
   deploymentLink = "",
   children,
 }) {
+  const titleLink = deploymentLink || githubLink;
   return (
     <FadeIn>
       <ProjectContainer>
@@ -89,7 +110,15 @@ export default function SingleProject({
         {/* PROJECT TITLE AND DATE */}
         <ProjectHeader>
           <div>
-            <ProjectName>{title}</ProjectName>
+            <ProjectName>
+              {titleLink ? (
+                <a href={titleLink} target="_blank" rel="noopener noreferrer">
+                  {title}
+                </a>
+              ) : (
+                title
+              )}
+            </ProjectName>
             <DateRange>
               {dateEnd ? `${dateStart}—${dateEnd}` : dateStart}
             </DateRange>

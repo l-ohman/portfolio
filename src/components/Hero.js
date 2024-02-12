@@ -4,12 +4,11 @@ import FadeIn from "./FadeIn";
 
 const HeroContainer = styled.div`
   height: 100vh;
-  padding: 3.5em 1em 2.45em;
   color: black;
 
   @media screen and (min-width: 650px) {
     padding-top: calc(3.5em + 50px);
-    padding-bottom: calc(3.1em + 55px);
+    margin-bottom: min(75px, 20vh);
     h2 {
       font-size: 2.1rem;
       margin-bottom: 2px;

@@ -17,26 +17,19 @@ const ListHeader = styled.h1`
 `;
 
 const ContentContainer = styled.div`
-  max-width: 100vw;
+  max-width: min(1000px, 100vw);
+  margin: 0 auto;
   min-width: 375px;
   color: black;
 
-  /* all hrs in projects */
   hr {
     min-width: 100%;
     border: 1px solid black;
     margin-bottom: 0.85rem;
   }
-
-  @media screen and (min-width: 650px) {
-    #project-list {
-      padding: 0.8em 1em 1em;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
-    }
-  }
 `;
+
+const ProjectListContainer = styled.div``;
 
 export default function ProjectList() {
   return (
@@ -44,13 +37,13 @@ export default function ProjectList() {
       <ContentContainer>
         <ListHeader>FEATURED PROJECTS</ListHeader>
 
-        <div id="project-list">
+        <ProjectListContainer>
           <Playerbase />
           <UmamiMeats />
           <BookBeasts />
           <Tusk />
           <SolarSandbox />
-        </div>
+        </ProjectListContainer>
       </ContentContainer>
     </FadeIn>
   );

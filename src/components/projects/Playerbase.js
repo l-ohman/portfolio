@@ -35,7 +35,9 @@ export default function Playerbase() {
           Playerbase is an application that runs seasonal auction drafts for
           various amateur and professional Dota 2 leagues, directly in the
           browser via web sockets. So far we have run 15 auctions for 3
-          different clients, resulting in over 150 unique teams.
+          different clients, resulting in over 150 unique teams. Currently, we
+          are still expanding this project to support more unique features, such
+          as league management and fantasy.
         </p>
         <ImageContainer>
           <img
