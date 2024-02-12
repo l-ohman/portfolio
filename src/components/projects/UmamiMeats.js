@@ -2,15 +2,19 @@ import React from "react";
 import ProjectContainer from "../ProjectContainer";
 import styled from "styled-components";
 
-// todo: crop images to be same height
 const ImageContainer = styled.div`
   margin-top: 1.5rem;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   img {
-    width: 49%;
     object-fit: cover;
+  }
+  img:first-child {
+    width: 34%;
+  }
+  img:nth-child(2) {
+    width: 64%;
   }
 `;
 

@@ -1,17 +1,26 @@
-## portfolio
+# my portfolio
 
-originally built in december 2022 / january 2023. updated in august 2023.
+originally built in december 2022. updated in august 2023, and again in february 2024.
 
 https://l-ohman.com/
 
-<!--
-To deploy to Github Pages:
+---
+
+## Deploying to Github Pages
+
+```
 npm run build-and-deploy
+```
 
-Sometimes there will be issues with the domain, they can be resolved here:
+The command above runs the following:
+
+```
+npm run build
+npm run fix-paths
+npm run deploy
+```
+
+`npm run build` is simply the CRA build command. `npm run fix-paths` runs the python script, `deploy.py`, which updates asset/img paths where necessary. (For whatever reason, the CRA build creates these paths incorrectly.) `npm run deploy` uses the `gh-pages` package to deploy the local `/build` folder directly to Github Pages by placing its contents on a separate branch.
+
+Redeploying usually causes DNS issues, which can easily be resolved here:
 https://github.com/l-ohman/portfolio/settings/pages
--->
-
-<!-- todo:
-- update favicon
- -->
