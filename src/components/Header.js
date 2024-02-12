@@ -8,7 +8,7 @@ const HeaderContainer = styled.div`
   z-index: 100;
 
   margin: 0;
-  width: min(100vw, 375px);
+  width: 100vw;
   background: ${colors.dark};
   color: white;
   font-size: 0.95rem;
@@ -29,6 +29,13 @@ const HeaderContainer = styled.div`
       cursor: pointer;
       transition: color 0.08s linear 0s;
       color: #e9e9e9;
+    }
+  }
+
+  @media screen and (min-width: 650px) {
+    font-size: 1.2rem;
+    #header-links {
+      padding: 0.6rem 0;
     }
   }
 `;

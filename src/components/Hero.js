@@ -20,26 +20,25 @@ const HeroContainer = styled.div`
 const HeroMainText = styled.h1`
   font-size: max(2.5rem, 10vw);
   letter-spacing: 2px;
-  width: min-content;
-  margin: 5vh auto 50px;
+  margin: 10vh auto 50px;
   text-align: center;
 
   @media screen and (min-width: 750px) {
-    font-size: min(max(5rem, 5vw), 90px);
+    font-size: min(max(5rem, 5vw), 80px);
     letter-spacing: 5px;
+    margin: 7vh auto 1vh;
   }
 `;
 
 const BioWrapper = styled.div`
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 `;
 
 const Bio = styled.div`
-  width: 72%;
-  margin-left: auto;
-  p {
-    margin: 30px auto;
+  * {
+    display: block;
+    margin: 8vh auto;
   }
 `;
 
@@ -48,24 +47,29 @@ const BioMain = styled.p`
   @media screen and (max-width: 450px) {
     font-size: 1.25rem;
   }
+  @media screen and (min-width: 750px) {
+    font-size: 1.75rem;
+  }
 `;
 
 const BioAlt = styled.p`
-  font-size: 1rem;
+  font-size: 1.05rem;
+  @media screen and (min-width: 750px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export default function Hero() {
   return (
     <FadeIn>
       <HeroContainer>
-        <HeroMainText>FULLSTACK DEVELOPER</HeroMainText>
+        <HeroMainText>Hi, I'm Jake.</HeroMainText>
 
         <BioWrapper>
           <Bio>
             <BioMain>
-              Hi, I’m Jake - a fullstack web developer with a focus on building
-              intuitive, accessible user experiences and writing clean,
-              maintainable code.
+              I am a fullstack web developer with a focus on building intuitive,
+              accessible user experiences and writing clean, maintainable code.
             </BioMain>
 
             {/* todo: some "story" element should go here */}
