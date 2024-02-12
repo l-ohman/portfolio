@@ -1,12 +1,20 @@
 import React from "react";
-import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
+import styled from "styled-components";
+
+// todo: add new images, and hover system for alt text
+const ImageContainer = styled.div`
+  margin-top: 1.5rem;
+  max-width: 100%;
+  img {
+    width: 100%;
+  }
+`;
 
 export default function Playerbase() {
   return (
     <ProjectContainer
       title="Playerbase"
-      images={[{ src: images.rd2l.main, alt: "Playerbase Auction screenshot" }]}
       technologies={[
         "Typescript",
         "Python",
@@ -20,8 +28,15 @@ export default function Playerbase() {
       dateStart="May 2023"
       dateEnd="Present"
       deploymentLink="https://playerbase.fun/"
+      hasLongVersion={true}
     >
       <ShortDescription />
+      <ImageContainer>
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/rd2l-01.png"
+          alt="Live Playerbase auction from a bidder's perspective"
+        />
+      </ImageContainer>
     </ProjectContainer>
   );
 }
@@ -33,7 +48,8 @@ const ShortDescription = () => {
     <p>
       Playerbase is an application that runs seasonal auction drafts for various
       amateur and professional Dota 2 leagues, directly in the browser via web
-      sockets.
+      sockets. So far, we have run 15 auctions for 3 different clients,
+      resulting in over 150 unique teams.
     </p>
   );
 };

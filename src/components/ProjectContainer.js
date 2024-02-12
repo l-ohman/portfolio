@@ -2,10 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+const sidePadding = 12;
 const ProjectContainer = styled.div`
   max-width: 100vw;
-  min-width: 359px;
-  padding: 0 8px 30px;
+  min-width: ${375 - sidePadding * 2}px;
+  padding: 0 ${sidePadding}px 3rem;
+  img {
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
+  }
 `;
 
 const ProjectHeader = styled.div`
@@ -27,17 +31,19 @@ const DateRange = styled.p`
   margin-bottom: 1rem;
 `;
 const Descriptions = styled.div`
-  margin: 1.75rem auto;
-`;
-// todo
-const ReadMore = styled.p`
-  text-decoration: underline;
-  font-style: italic;
-  font-weight: 300;
-  margin: 0.5rem 0 0.25rem;
+  margin: 0 auto;
+
+  .read-more {
+    /* currently unused */
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0.5rem 0 0.25rem;
+  }
 `;
 
 const TechnologyList = styled.div`
+  margin: 0 auto 1.5rem;
   display: flex;
   flex-flow: row wrap;
 `;
@@ -56,25 +62,17 @@ const ProjectLinksContainer = styled.div`
 `;
 
 const ProjectLink = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 7px;
-  p {
-    font-family: "Krona One", Arial, sans-serif;
+  .github-link {
+    margin-left: -2px;
   }
-`;
-
-// should be in a separate file probably, if adding carousel?
-const ImageContainer = styled.div``;
-const SingleImage = styled.img`
-  overflow: hidden;
-  max-width: 100%;
 `;
 
 export default function SingleProject({
   title = "",
-  images = [],
   technologies = [],
   dateStart = "",
   dateEnd = "",
@@ -102,20 +100,8 @@ export default function SingleProject({
         ))}
       </TechnologyList>
 
-      {/* PROJECT DESCRIPTION */}
-      <Descriptions>
-        {children}
-
-        {/* todo: make "readmore" conditional if app has more info */}
-        <ReadMore>Read more</ReadMore>
-      </Descriptions>
-
-      {/* PROJECT IMAGES */}
-      <ImageContainer>
-        {images.map(({ src, alt }, idx) => (
-          <SingleImage key={idx} src={src} alt={alt} />
-        ))}
-      </ImageContainer>
+      {/* PROJECT DESCRIPTION AND IMAGES */}
+      <Descriptions>{children}</Descriptions>
 
       {/* PROJECT LINKS */}
       <ProjectLinksContainer>
@@ -125,8 +111,8 @@ export default function SingleProject({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>open site</p>
             <FaExternalLinkAlt size={20} />
+            <p>Open site</p>
           </ProjectLink>
         )}
         {githubLink && (
@@ -135,8 +121,8 @@ export default function SingleProject({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>view on github</p>
-            <FaGithub size={23} />
+            <FaGithub size={22} />
+            <p className="github-link">View on Github</p>
           </ProjectLink>
         )}
       </ProjectLinksContainer>

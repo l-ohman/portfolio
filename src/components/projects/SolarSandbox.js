@@ -1,18 +1,19 @@
 import React from "react";
-import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
+import styled from "styled-components";
+
+const ImageContainer = styled.div`
+  margin-top: 1.5rem;
+  max-width: 100%;
+  img {
+    width: 100%;
+  }
+`;
 
 export default function SolarSandbox() {
   return (
     <ProjectContainer
       title="Solar Sandbox"
-      images={[
-        { src: images.solarSandbox.main, alt: "Solar Sandbox screenshot 1" },
-        {
-          src: images.solarSandbox.secondary,
-          alt: "Solar Sandbox screenshot 2",
-        },
-      ]}
       technologies={[
         "React",
         "React Flow",
@@ -32,6 +33,16 @@ export default function SolarSandbox() {
         was built in about 4 days for our 'Async Week' project at Fullstack
         Academy.
       </p>
+      <ImageContainer>
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/solar-sandbox-1a.jpg"
+          alt="Solar Sandbox node graph editor, powered by React Flow"
+        />
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/solar-sandbox-1b.jpg"
+          alt="Solar Sandbox 3d view of solar system"
+        />
+      </ImageContainer>
     </ProjectContainer>
   );
 }

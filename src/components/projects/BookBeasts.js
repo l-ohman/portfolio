@@ -1,14 +1,21 @@
 import React from "react";
-import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
+import styled from "styled-components";
+
+const ImageContainer = styled.div`
+  margin-top: 1.5rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 49%;
+  }
+`;
 
 export default function BookBeasts() {
   return (
     <ProjectContainer
       title="Book Beasts"
-      images={[
-        { src: images.bookBeasts.main, alt: "Book Beasts student view" },
-      ]}
       technologies={[
         "Node.js",
         "Express",
@@ -21,13 +28,22 @@ export default function BookBeasts() {
       githubLink="https://github.com/fsa-2208-mspiggy/Book-Beasts"
     >
       <p>
-        For our final project at Fullstack Academy, my team and I wanted to
-        build an educational and interactive experience for children - so we
-        built Book Beasts. This project had two main goals: the first was to
-        enable students’ creativity by giving them a platform to create, and the
-        second was to provide instructors with the tools necessary to monitor
-        and manage their students’ works.
+        Book Beasts, my capstone project at Fullstack Academy, is a uniquely
+        educational and highly interactive platform where children and students
+        can write their own story books. Additionally, it provides parents and
+        instructors with the necessary tools to monitor and manage their
+        students' works.
       </p>
+      <ImageContainer>
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/book-beasts-1.png"
+          alt="Book Beasts student dashboard"
+        />
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/book-beasts-2.png"
+          alt="Book Beasts book edit view"
+        />
+      </ImageContainer>
     </ProjectContainer>
   );
 }

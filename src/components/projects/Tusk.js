@@ -1,12 +1,19 @@
 import React from "react";
-import images from "../../images";
 import ProjectContainer from "../ProjectContainer";
+import styled from "styled-components";
+
+const ImageContainer = styled.div`
+  margin-top: 1.5rem;
+  max-width: 100%;
+  img {
+    width: 100%;
+  }
+`;
 
 export default function Tusk() {
   return (
     <ProjectContainer
       title="Tusk"
-      images={[{ src: images.tusk.main, alt: "Tusk screenshot" }]}
       technologies={[
         "Node.js",
         "React",
@@ -33,6 +40,16 @@ export default function Tusk() {
           Stratz GraphQL API.
         </a>
       </p>
+      <ImageContainer>
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/tusk-01.png"
+          alt="Tusk hero selection view"
+        />
+        <img
+          src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/tusk-03.png"
+          alt="Tusk matchup analyzer"
+        />
+      </ImageContainer>
     </ProjectContainer>
   );
 }
