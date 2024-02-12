@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import FadeIn from "./FadeIn";
 
 const sidePadding = 12;
 const ProjectContainer = styled.div`
   max-width: 100vw;
   min-width: ${375 - sidePadding * 2}px;
   padding: 0 ${sidePadding}px 3rem;
-  
+
   img {
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
   }
@@ -82,51 +83,53 @@ export default function SingleProject({
   children,
 }) {
   return (
-    <ProjectContainer>
-      <hr />
-      {/* PROJECT TITLE AND DATE */}
-      <ProjectHeader>
-        <div>
-          <ProjectName>{title}</ProjectName>
-          <DateRange>
-            {dateEnd ? `${dateStart}—${dateEnd}` : dateStart}
-          </DateRange>
-        </div>
-      </ProjectHeader>
+    <FadeIn>
+      <ProjectContainer>
+        <hr />
+        {/* PROJECT TITLE AND DATE */}
+        <ProjectHeader>
+          <div>
+            <ProjectName>{title}</ProjectName>
+            <DateRange>
+              {dateEnd ? `${dateStart}—${dateEnd}` : dateStart}
+            </DateRange>
+          </div>
+        </ProjectHeader>
 
-      {/* TECHNOLOGY LIST */}
-      <TechnologyList>
-        {technologies.map((tech, idx) => (
-          <SingleTechnology key={tech + idx}>{tech}</SingleTechnology>
-        ))}
-      </TechnologyList>
+        {/* TECHNOLOGY LIST */}
+        <TechnologyList>
+          {technologies.map((tech, idx) => (
+            <SingleTechnology key={tech + idx}>{tech}</SingleTechnology>
+          ))}
+        </TechnologyList>
 
-      {/* PROJECT DESCRIPTION AND IMAGES */}
-      <Descriptions>{children}</Descriptions>
+        {/* PROJECT DESCRIPTION AND IMAGES */}
+        <Descriptions>{children}</Descriptions>
 
-      {/* PROJECT LINKS */}
-      <ProjectLinksContainer>
-        {deploymentLink && (
-          <ProjectLink
-            href={deploymentLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaExternalLinkAlt size={20} />
-            <p>Open site</p>
-          </ProjectLink>
-        )}
-        {githubLink && (
-          <ProjectLink
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={22} />
-            <p className="github-link">View on Github</p>
-          </ProjectLink>
-        )}
-      </ProjectLinksContainer>
-    </ProjectContainer>
+        {/* PROJECT LINKS */}
+        <ProjectLinksContainer>
+          {deploymentLink && (
+            <ProjectLink
+              href={deploymentLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaExternalLinkAlt size={20} />
+              <p>Open site</p>
+            </ProjectLink>
+          )}
+          {githubLink && (
+            <ProjectLink
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={22} />
+              <p className="github-link">View on Github</p>
+            </ProjectLink>
+          )}
+        </ProjectLinksContainer>
+      </ProjectContainer>
+    </FadeIn>
   );
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import FadeIn from "./FadeIn";
 
 const HeroContainer = styled.div`
+  height: 100vh;
   padding: 3.5em 1em 2.45em;
   color: black;
 
@@ -19,7 +21,7 @@ const HeroMainText = styled.h1`
   font-size: max(2.5rem, 10vw);
   letter-spacing: 2px;
   width: min-content;
-  margin: 0 auto 50px;
+  margin: 5vh auto 50px;
   text-align: center;
 
   @media screen and (min-width: 750px) {
@@ -54,33 +56,35 @@ const BioAlt = styled.p`
 
 export default function Hero() {
   return (
-    <HeroContainer>
-      <HeroMainText>FULLSTACK DEVELOPER</HeroMainText>
+    <FadeIn>
+      <HeroContainer>
+        <HeroMainText>FULLSTACK DEVELOPER</HeroMainText>
 
-      <BioWrapper>
-        <Bio>
-          <BioMain>
-            Hi, I’m Jake - a fullstack web developer with a strong focus on
-            building intuitive, accessible user experiences and writing clean,
-            maintainable code.
-          </BioMain>
+        <BioWrapper>
+          <Bio>
+            <BioMain>
+              Hi, I’m Jake - a fullstack web developer with a focus on building
+              intuitive, accessible user experiences and writing clean,
+              maintainable code.
+            </BioMain>
 
-          <BioAlt>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </BioAlt>
+            {/* todo: some "story" element should go here */}
+            {/* <BioAlt>
+              I used to be automotive mechanic--and while the diagnostics and
+              problem solving were fascinating to me, I couldn't help but feel
+              there was another field that would fulfill me more in this regard.
+              As soon as I started learning to code, I knew that software
+              engineering was precisely the thing I was looking for.
+            </BioAlt> */}
 
-          <BioAlt>
-            Below are my recent projects and my contact information; excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-          </BioAlt>
-        </Bio>
-      </BioWrapper>
-    </HeroContainer>
+            <BioAlt>
+              Below are my recent projects and my contact information; feel free
+              to reach out if you are in need of a developer, or if you have any
+              questions about my projects.
+            </BioAlt>
+          </Bio>
+        </BioWrapper>
+      </HeroContainer>
+    </FadeIn>
   );
 }

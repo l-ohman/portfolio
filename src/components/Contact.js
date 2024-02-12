@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
+import FadeIn from "./FadeIn";
 
 const sidePadding = 16;
 const ContactContainer = styled.div`
@@ -51,16 +52,20 @@ const iconSize = 45;
 export default function Contact() {
   return (
     <ContactContainer>
-      <HeaderText>Let's get in touch</HeaderText>
+      <FadeIn>
+        <HeaderText>Let's get in touch</HeaderText>
+      </FadeIn>
 
-      <DescriptionText>
-        I am currently looking for full-time employment and I am open to
-        relocation. Feel free to email me at{" "}
-        <b>
-          <a href="mailto:jakelohman7@gmail.com">jakelohman7@gmail.com</a>
-        </b>
-        !
-      </DescriptionText>
+      <FadeIn>
+        <DescriptionText>
+          I am currently looking for full-time employment and I am open to
+          relocation. Feel free to email me at{" "}
+          <b>
+            <a href="mailto:jakelohman7@gmail.com">jakelohman7@gmail.com</a>
+          </b>
+          !
+        </DescriptionText>
+      </FadeIn>
 
       <BottomLinks>
         <a

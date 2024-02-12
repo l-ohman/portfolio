@@ -26,3 +26,16 @@ hr {
 a {
   color: black;
 }
+
+/* Fade animations */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 400ms ease-out, transform 500ms ease-out;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+}

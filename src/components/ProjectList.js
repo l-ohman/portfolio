@@ -7,6 +7,7 @@ import {
   Tusk,
   Playerbase,
 } from "./projects";
+import FadeIn from "./FadeIn";
 
 const ListHeader = styled.h1`
   font-size: 1.1rem;
@@ -39,16 +40,18 @@ const ContentContainer = styled.div`
 
 export default function ProjectList() {
   return (
-    <ContentContainer>
-      <ListHeader>FEATURED PROJECTS</ListHeader>
+    <FadeIn>
+      <ContentContainer>
+        <ListHeader>FEATURED PROJECTS</ListHeader>
 
-      <div id="project-list">
-        <Playerbase />
-        <UmamiMeats />
-        <BookBeasts />
-        <Tusk />
-        <SolarSandbox />
-      </div>
-    </ContentContainer>
+        <div id="project-list">
+          <Playerbase />
+          <UmamiMeats />
+          <BookBeasts />
+          <Tusk />
+          <SolarSandbox />
+        </div>
+      </ContentContainer>
+    </FadeIn>
   );
 }
