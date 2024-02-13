@@ -33,6 +33,15 @@ const HeaderContainer = styled.div`
     }
   }
 
+  &.header-animate {
+    transform: none;
+    transition: transform 400ms ease-in-out;
+  }
+
+  &.header-hide {
+    transform: translateY(-75px);
+  }
+
   @media screen and (min-width: 650px) {
     font-size: 1.2rem;
     #header-links {
@@ -44,6 +53,22 @@ const HeaderContainer = styled.div`
 export default function Header({ hero, projects, contact }) {
   const headerLinks = ["about", "projects", "contact"];
 
+  const [isVisible, setIsVisible] = React.useState(true);
+  const [prevScrollPos, setPrevScrollPos] = React.useState(0);
+  const updateHeaderVisibility = () => {
+    const currScrollPos = window.scrollY;
+    if (isVisible && currScrollPos > prevScrollPos) {
+      setIsVisible(false);
+    } else if (!isVisible && currScrollPos < prevScrollPos) {
+      setIsVisible(true);
+    }
+    setPrevScrollPos(currScrollPos);
+  };
+
+  React.useEffect(() => {
+    window.onscroll = updateHeaderVisibility;
+  });
+
   const scroll = (location) => {
     switch (location) {
       case "about":
@@ -51,13 +76,13 @@ export default function Header({ hero, projects, contact }) {
         break;
       case "projects":
         window.scrollTo({
-          top: projects.current.offsetTop - 30,
+          top: projects.current.offsetTop - 75,
           behavior: "smooth",
         });
         break;
       case "contact":
         window.scrollTo({
-          top: contact.current.offsetTop - 30,
+          top: 100000, // nice
           left: 0,
           behavior: "smooth",
         });
@@ -68,7 +93,9 @@ export default function Header({ hero, projects, contact }) {
   };
 
   return (
-    <HeaderContainer>
+    <HeaderContainer
+      className={`header-animate ${!isVisible ? "header-hide" : ""}`}
+    >
       <div id="header-links">
         {headerLinks.map((route, i) => (
           <div key={i} onClick={(e) => scroll(route)} className="single-link">
