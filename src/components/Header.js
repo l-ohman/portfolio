@@ -9,6 +9,7 @@ const HeaderContainer = styled.div`
 
   margin: 0;
   width: 100vw;
+  min-width: 100%;
   background: ${colors.dark};
   color: white;
   font-size: 0.95rem;

@@ -28,7 +28,8 @@ const ProjectName = styled.h2`
   text-transform: uppercase;
   a {
     text-decoration: none;
-    &:active, &:hover {
+    &:active,
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -132,32 +133,34 @@ export default function SingleProject({
           ))}
         </TechnologyList>
 
-        {/* PROJECT DESCRIPTION AND IMAGES */}
-        <Descriptions>{children}</Descriptions>
+        <FadeIn intersectionThreshold={0.1}>
+          {/* PROJECT DESCRIPTION AND IMAGES */}
+          <Descriptions>{children}</Descriptions>
 
-        {/* PROJECT LINKS */}
-        <ProjectLinksContainer>
-          {deploymentLink && (
-            <ProjectLink
-              href={deploymentLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaExternalLinkAlt size={20} />
-              <p>Open site</p>
-            </ProjectLink>
-          )}
-          {githubLink && (
-            <ProjectLink
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={22} />
-              <p className="github-link">View on Github</p>
-            </ProjectLink>
-          )}
-        </ProjectLinksContainer>
+          {/* PROJECT LINKS */}
+          <ProjectLinksContainer>
+            {deploymentLink && (
+              <ProjectLink
+                href={deploymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaExternalLinkAlt size={20} />
+                <p>Open site</p>
+              </ProjectLink>
+            )}
+            {githubLink && (
+              <ProjectLink
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={22} />
+                <p className="github-link">View on Github</p>
+              </ProjectLink>
+            )}
+          </ProjectLinksContainer>
+        </FadeIn>
       </ProjectContainer>
     </FadeIn>
   );

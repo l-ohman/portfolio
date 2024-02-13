@@ -30,11 +30,12 @@ const ContactContainer = styled.div`
 `;
 
 const HeaderText = styled.h1`
+  margin-top: 13vh;
   font-size: 2rem;
   @media screen and (min-width: 600px) {
     font-size: min(3.5vw, 55px);
     text-align: center;
-    margin-top: 8vh;
+    margin-top: 10vh;
   }
 `;
 

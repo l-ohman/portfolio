@@ -19,7 +19,7 @@ const HeroContainer = styled.div`
 const HeroMainText = styled.h1`
   font-size: max(2.5rem, 10vw);
   letter-spacing: 2px;
-  margin: 10vh auto 50px;
+  margin: 16vh auto 2vh;
   text-align: center;
 
   @media screen and (min-width: 750px) {
@@ -37,7 +37,13 @@ const BioWrapper = styled.div`
 const Bio = styled.div`
   * {
     display: block;
-    margin: 8vh auto;
+    margin: 10vh auto;
+    @media screen and (min-width: 650px) {
+      margin: 8vh auto;
+    }
+  }
+  p {
+    padding: 0 2rem;
   }
 `;
 
