@@ -1,6 +1,6 @@
 # my portfolio
 
-originally built in december 2022. updated in august 2023, and again in february 2024.
+originally built in december 2022. updated in august 2023 and again in february 2024.
 
 https://l-ohman.com/
 
@@ -25,9 +25,7 @@ npm run deploy
 Redeploying usually causes DNS issues, which can easily be resolved here:
 https://github.com/l-ohman/portfolio/settings/pages
 
-<!-- todo: hide header on scrolldown, show on scrollup -->
-<!-- todo: color palette (probably via styled-components) -->
-<!-- todo: gradients, differentiated page sections -->
+<!-- todo: color palette - use gradients, make more differentiated page sections -->
 <!-- todo: sections with "vh" as height should have a max value! (hero + contact) -->
 
 <!-- misc idea -- a "workshop" subpage, where i can show test projects and things that are currently in flight -->

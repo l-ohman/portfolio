@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../colors.json";
 
 const HeaderContainer = styled.div`
   position: fixed;
@@ -10,7 +9,8 @@ const HeaderContainer = styled.div`
   margin: 0;
   width: 100vw;
   min-width: 100%;
-  background: ${colors.dark};
+  background: #1d1e21;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
   color: white;
   font-size: 0.95rem;
 
@@ -50,7 +50,7 @@ const HeaderContainer = styled.div`
   }
 `;
 
-export default function Header({ hero, projects, contact }) {
+export default function Header({ hero, projects }) {
   const headerLinks = ["about", "projects", "contact"];
 
   const [isVisible, setIsVisible] = React.useState(true);
@@ -67,7 +67,7 @@ export default function Header({ hero, projects, contact }) {
 
   React.useEffect(() => {
     window.onscroll = updateHeaderVisibility;
-  });
+  }, [isVisible, prevScrollPos]);
 
   const scroll = (location) => {
     switch (location) {

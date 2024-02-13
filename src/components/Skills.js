@@ -2,7 +2,6 @@
 import React from "react";
 import styled from "styled-components";
 import images from "../images";
-import colors from "../colors.json";
 
 const ListHeader = styled.h1`
   font-size: 1.1rem;
@@ -45,7 +44,7 @@ const SingleSkill = styled.div`
   width: ${containerSize + "px"};
   height: ${containerSize + "px"};
   border-radius: 1em;
-  background: ${colors.lighter};
+  background: #f6f6fc;
   margin: 6px;
   padding: 8px 5px 7px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.09);
