@@ -9,7 +9,7 @@ const ContactContainer = styled.div`
   max-width: 100vw;
   min-width: ${375 - sidePadding * 2}px;
   padding: 10vh ${sidePadding}px 0;
-  background: rgb(36, 32, 129);
+  background: ${({ theme }) => theme.colors.originalBlue};
   * {
     color: white;
     border-color: white;

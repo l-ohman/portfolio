@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 
 const HeroContainer = styled.div`
   height: 100vh;
-  background: rgb(36, 32, 129);
+  background: ${({ theme }) => theme.colors.originalBlue};
   color: white;
 
   @media screen and (min-width: 650px) {

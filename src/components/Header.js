@@ -9,7 +9,7 @@ const HeaderContainer = styled.div`
   margin: 0;
   width: 100vw;
   min-width: 100%;
-  background: #1d1e21;
+  background: ${({ theme }) => theme.colors.header};
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
   color: white;
   font-size: 0.95rem;
