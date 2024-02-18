@@ -38,10 +38,12 @@ export default function BookBeasts() {
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/book-beasts-1.png"
           alt="Book Beasts student dashboard"
+          title="Book Beasts student dashboard"
         />
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/book-beasts-2.png"
-          alt="Book Beasts book edit view"
+          alt="Book Beasts edit book view"
+          title="Book Beasts edit book view"
         />
       </ImageContainer>
     </ProjectContainer>

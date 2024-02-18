@@ -44,10 +44,12 @@ export default function Tusk() {
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/tusk-01.png"
           alt="Tusk hero selection view"
+          title="Tusk hero selection view"
         />
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/tusk-03.png"
           alt="Tusk matchup analyzer"
+          title="Tusk matchup analyzer"
         />
       </ImageContainer>
     </ProjectContainer>

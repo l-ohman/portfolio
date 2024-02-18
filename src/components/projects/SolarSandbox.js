@@ -36,11 +36,13 @@ export default function SolarSandbox() {
       <ImageContainer>
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/solar-sandbox-1a.jpg"
-          alt="Solar Sandbox node graph editor, powered by React Flow"
+          alt="Node graph editor in Solar Sandbox"
+          title="Node graph editor in Solar Sandbox"
         />
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/solar-sandbox-1b.jpg"
-          alt="Solar Sandbox 3d view of solar system"
+          alt="3D view of a solar system in Solar Sandbox"
+          title="3D view of a solar system in Solar Sandbox"
         />
       </ImageContainer>
     </ProjectContainer>

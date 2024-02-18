@@ -35,10 +35,12 @@ export default function UmamiMeats() {
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/umami-meats-0.png"
           alt="Umami Meats homepage"
+          title="Umami Meats homepage"
         />
         <img
           src="https://raw.githubusercontent.com/l-ohman/portfolio/main/src/images/screenshots/umami-meats-1.png"
           alt="Umami Meats cart view"
+          title="Umami Meats cart view"
         />
       </ImageContainer>
     </ProjectContainer>
