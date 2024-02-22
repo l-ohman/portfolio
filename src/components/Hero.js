@@ -4,12 +4,13 @@ import FadeIn from "./FadeIn";
 
 const HeroContainer = styled.div`
   height: 100vh;
-  background: ${({ theme }) => theme.colors.originalBlue};
-  color: white;
+  * {
+    color: white;
+  }
 
   @media screen and (min-width: 650px) {
     padding-top: calc(3.5em + 50px);
-    margin-bottom: min(75px, 20vh);
+    padding-bottom: min(100px, 25vh);
     h2 {
       font-size: 2.1rem;
       margin-bottom: 2px;
@@ -36,7 +37,7 @@ const BioWrapper = styled.div`
 `;
 
 const Bio = styled.div`
-  * {
+  p {
     display: block;
     margin: 10vh auto;
     @media screen and (min-width: 650px) {
@@ -82,15 +83,17 @@ export default function Hero() {
             {/* <BioAlt>
               I used to be automotive mechanic--and while the diagnostics and
               problem solving were fascinating to me, I couldn't help but feel
-              there was another field that would fulfill me more in this regard.
+              {blah blah blah}.
               As soon as I started learning to code, I knew that software
               engineering was precisely the thing I was looking for.
             </BioAlt> */}
 
             <BioAlt>
-              Below are my recent projects and my contact information; feel free
-              to reach out if you are in need of a developer, or if you have any
-              questions about my projects.
+              Check out some of my recent projects below, and feel free to reach
+              out to me at{" "}
+              <a href="mailto:jakelohman7@gmail.com">jakelohman7@gmail.com</a>{" "}
+              if you are in need of a developer. (Or if you have any questions
+              about my projects!)
             </BioAlt>
           </Bio>
         </BioWrapper>

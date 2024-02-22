@@ -8,6 +8,7 @@ const ProjectContainer = styled.div`
   max-width: 100vw;
   min-width: ${375 - sidePadding * 2}px;
   padding: 0 ${sidePadding}px 3rem;
+  margin: 10px auto;
 
   img {
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);

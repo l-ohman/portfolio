@@ -8,8 +8,7 @@ const sidePadding = 16;
 const ContactContainer = styled.div`
   max-width: 100vw;
   min-width: ${375 - sidePadding * 2}px;
-  padding: 10vh ${sidePadding}px 0;
-  background: ${({ theme }) => theme.colors.originalBlue};
+  padding: 17vh ${sidePadding}px 0;
   * {
     color: white;
     border-color: white;
@@ -35,7 +34,7 @@ const HeaderText = styled.h1`
   @media screen and (min-width: 600px) {
     font-size: min(3.5vw, 55px);
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
 `;
 

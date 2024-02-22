@@ -2,7 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  background: #d8dfed;
+  background:
+  /* hero circle bg */ radial-gradient(
+      circle at 50% 40vh,
+      rgba(57, 113, 141, 0.4) 0vh,
+      rgba(0, 0, 0, 0) 90vh
+    ),
+    /* hero transition to projects */
+      linear-gradient(
+        rgba(33, 30, 127, 1) 0vh,
+        rgba(33, 30, 127, 0.7) 80vh,
+        rgba(0, 0, 0, 0) 140vh
+      ),
+    /* projects to contact info */
+      linear-gradient(
+        to top,
+        rgba(33, 30, 127, 1) 0vh,
+        rgba(33, 30, 127, 0.8) 90vh,
+        rgba(33, 30, 127, 0.35) 125vh,
+        rgba(0, 0, 0, 0) 200vh
+      ),
+    /* default background */ #d8dfed;
 }
 
 * {

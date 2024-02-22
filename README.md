@@ -27,6 +27,7 @@ https://github.com/l-ohman/portfolio/settings/pages
 
 <!-- todo: color palette - use gradients, make more differentiated page sections -->
 <!-- todo: sections with "vh" as height should have a max value! (hero + contact) -->
+<!-- todo: make links not cross the entire page on projects -->
 
 <!-- misc idea -- a "workshop" subpage, where i can show test projects and things that are currently in flight -->
 <!-- can be "workshop + scraps" or something -- prototypes, ideas, chrome extensions, ML tests, etc -->
