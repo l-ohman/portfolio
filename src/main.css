@@ -19,8 +19,8 @@ body {
         to top,
         rgba(33, 30, 127, 1) 0vh,
         rgba(33, 30, 127, 0.8) 90vh,
-        rgba(33, 30, 127, 0.35) 125vh,
-        rgba(0, 0, 0, 0) 200vh
+        rgba(33, 30, 127, 0.3) 115vh,
+        rgba(0, 0, 0, 0) 165vh
       ),
     /* default background */ #d8dfed;
 }

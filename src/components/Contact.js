@@ -29,11 +29,11 @@ const ContactContainer = styled.div`
 `;
 
 const HeaderText = styled.h1`
-  margin-top: 13vh;
+  margin-top: 22vh;
   font-size: 2rem;
+  text-align: center;
   @media screen and (min-width: 600px) {
     font-size: min(3.5vw, 55px);
-    text-align: center;
     margin-top: 15vh;
   }
 `;
@@ -41,9 +41,9 @@ const HeaderText = styled.h1`
 const DescriptionText = styled.p`
   font-size: 1.15rem;
   padding-bottom: 7vh;
+  text-align: center;
   @media screen and (min-width: 600px) {
     font-size: min(1.5vw, 24px);
-    text-align: center;
   }
 `;
 

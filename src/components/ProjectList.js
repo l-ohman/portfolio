@@ -10,10 +10,10 @@ import {
 import FadeIn from "./FadeIn";
 
 const ListHeader = styled.h1`
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin: 1rem 0 1rem 12px;
   font-family: "Lexend", Orienta, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const ContentContainer = styled.div`
@@ -27,24 +27,28 @@ const ContentContainer = styled.div`
     border: 1px solid black;
     margin-bottom: 0.85rem;
   }
+
+  @media screen and (min-width: 650px) {
+    margin: 15vh auto 0;
+  }
 `;
 
 const ProjectListContainer = styled.div``;
 
 export default function ProjectList() {
   return (
-    <FadeIn>
-      <ContentContainer>
-        <ListHeader>FEATURED PROJECTS</ListHeader>
+    // <FadeIn>
+    <ContentContainer>
+      <ListHeader>FEATURED PROJECTS</ListHeader>
 
-        <ProjectListContainer>
-          <Playerbase />
-          <UmamiMeats />
-          <BookBeasts />
-          <Tusk />
-          <SolarSandbox />
-        </ProjectListContainer>
-      </ContentContainer>
-    </FadeIn>
+      <ProjectListContainer>
+        <Playerbase />
+        <UmamiMeats />
+        <BookBeasts />
+        <Tusk />
+        <SolarSandbox />
+      </ProjectListContainer>
+    </ContentContainer>
+    // </FadeIn>
   );
 }

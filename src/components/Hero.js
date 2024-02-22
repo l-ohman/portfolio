@@ -3,12 +3,13 @@ import styled from "styled-components";
 import FadeIn from "./FadeIn";
 
 const HeroContainer = styled.div`
-  height: 100vh;
+  height: 90vh;
   * {
     color: white;
   }
 
   @media screen and (min-width: 650px) {
+    height: 100vh;
     padding-top: calc(3.5em + 50px);
     padding-bottom: min(100px, 25vh);
     h2 {

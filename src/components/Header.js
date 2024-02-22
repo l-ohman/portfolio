@@ -76,7 +76,7 @@ export default function Header({ hero, projects }) {
         break;
       case "projects":
         window.scrollTo({
-          top: projects.current.offsetTop - 75,
+          top: projects.current.offsetTop - 40,
           behavior: "smooth",
         });
         break;
