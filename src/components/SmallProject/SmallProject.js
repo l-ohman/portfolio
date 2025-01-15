@@ -11,7 +11,7 @@ const Project = styled.div`
   > div {
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.15);
     height: calc(100% - ${projectMb});
-    background: ${colors.lighter};
+    background: ${colors.light};
     border-radius: 12px;
     margin-bottom: ${projectMb};
     padding-bottom: 14px;
