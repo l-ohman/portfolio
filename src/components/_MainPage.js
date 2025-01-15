@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { Header, Hero, Skills, ProjectList, Contact } from "./";
+import SmallProjectsContainer from "./SmallProjectTest";
 
 const ContentContainer = styled.div`
   width: 100%;
-  
+
   .icon-link {
     transition: color 0.1s linear 0s;
     color: black;
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: #373737;
     }
   }
@@ -31,7 +33,8 @@ export default function MainPage() {
         </div>
 
         <div ref={links.projects}>
-          <ProjectList />
+          {/* <ProjectList /> */}
+          <SmallProjectsContainer />
         </div>
 
         <div ref={links.skills}>
