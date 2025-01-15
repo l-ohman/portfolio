@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Header, Hero, Skills, ProjectList, Contact } from "./";
-import SmallProjectsContainer from "./SmallProjectTest";
+import SmallProjectsContainer from "./SmallProject/SmallProjectGrid";
 
 const ContentContainer = styled.div`
   width: 100%;

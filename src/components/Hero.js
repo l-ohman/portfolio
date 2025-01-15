@@ -118,8 +118,14 @@ export default function Hero() {
             employment opportunities where I can work on a team and grow as a
             developer.
           </p> */}
-          <h2>welcome to my portfolio!</h2>
+          {/* <h2>welcome to my portfolio!</h2> */}
+
+          <p>I am a fullstack engineer currently based in Austin, TX.</p>
           <p>
+            Take a look below for my recent projects and contact information.
+          </p>
+
+          {/* <p>
             I am a fullstack web developer with a focus on building intuitive,
             accessible user experiences and writing clean, maintainable code.
             I'm always looking to pick up new technologies and learn as much as
@@ -128,7 +134,7 @@ export default function Hero() {
             full-time roles and am open to select freelance opportunities—so
             feel free to reach out if you think I'd be a good fit for your
             project!
-          </p>
+          </p> */}
         </div>
       </div>
       <LogoLinks>
