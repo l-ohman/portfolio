@@ -1,5 +1,4 @@
-// im not sure what compelled me to do it this way, but i hope i never have to do it again.......
-
+// Not sure why I thought to do it this way...
 import bookBeasts1 from "./screenshots/book-beasts-1.png";
 import bookBeasts2 from "./screenshots/book-beasts-2.png";
 import bookBeastsIcon from "./icons/book-beasts-favicon.png";

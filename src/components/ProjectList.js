@@ -97,29 +97,17 @@ const ProjectContainer = styled.div`
 `;
 
 export default function ProjectList() {
+  const projects = [Playerbase, UmamiMeats, BookBeasts, Tusk, SolarSandbox];
+
   return (
     <ContentContainer>
       <h1>recent work</h1>
       <div id="project-list">
-        <ProjectContainer>
-          <Playerbase />
-        </ProjectContainer>
-
-        <ProjectContainer>
-          <UmamiMeats />
-        </ProjectContainer>
-
-        <ProjectContainer>
-          <BookBeasts />
-        </ProjectContainer>
-
-        <ProjectContainer>
-          <Tusk />
-        </ProjectContainer>
-
-        <ProjectContainer>
-          <SolarSandbox />
-        </ProjectContainer>
+        {projects.map((Project, i) => (
+          <ProjectContainer key={i}>
+            <Project />
+          </ProjectContainer>
+        ))}
       </div>
     </ContentContainer>
   );

@@ -2,34 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import images from "../../images";
-import colors from "../../colors.json";
+import ProjectLinksAndInfo from "./styled/ProjectLinksAndInfo";
+import TechnologiesContainer from "./styled/TechnologiesContainer";
 
 const iconColor = "white";
 const imageRadius = 5;
-
-const TechnologiesContainer = styled.div`
-  #tech-list {
-    width: fit-content;
-    margin: 0.2em auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-  .tag {
-    background: ${colors.accent};
-    color: white;
-
-    width: fit-content;
-    font-size: 0.97em;
-    padding: 0.25em 0.6em;
-    border-radius: 0.9em;
-    margin: 0.2em 0.45em 0 0;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
-    &:first-child {
-      margin-left: 0.45em;
-    }
-  }
-`;
 
 const DescriptionImagesContainer = styled.div`
   .description {
@@ -87,65 +64,6 @@ const DescriptionImagesContainer = styled.div`
         max-width: 100%;
         min-width: 100%;
         border-radius: 0 0 ${imageRadius + "px"} ${imageRadius + "px"};
-      }
-    }
-  }
-`;
-
-const ProjectLinksAndInfo = styled.div`
-  height: 3em;
-  width: 100%;
-  margin: 0.25em auto 0.45em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .links {
-    padding-top: 3px;
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-    > * {
-      margin: 0 7px;
-    }
-
-    .single-link {
-      transition: background-color 0.07s linear 0s;
-
-      background-color: ${colors.accent};
-      padding: 0.3em 0.75em 0.45em;
-      border-radius: 1.1em;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      overflow: hidden;
-      p {
-        margin-right: 0.4em;
-        padding-top: 0.2em;
-        color: white;
-      }
-      a {
-        color: white;
-      }
-
-      &:hover,
-      &:active {
-        background-color: ${colors.accent2};
-      }
-    }
-    .min-txt {
-      display: none;
-    }
-    @media screen and (max-width: 400px) {
-      .single-link {
-        .min-txt {
-          display: block;
-          margin-right: 9px;
-        }
-        .full-txt {
-          display: none;
-        }
       }
     }
   }
