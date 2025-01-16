@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../../colors.json";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projectMb = "2rem";
 const Project = styled.div`
@@ -20,9 +21,20 @@ const Project = styled.div`
     flex-flow: column nowrap;
     justify-content: space-between;
 
+    /* img and title -- this div anchors title to top of group*/
+    > :nth-child(1) {
+      margin-bottom: 0.25rem;
+      padding: 0;
+      /* title */
+      > :nth-child(2) {
+        padding: 0 12px;
+      }
+    }
+
     > * {
       padding: 2px 12px;
     }
+
     img {
       padding: 0;
       margin-bottom: 6px;
@@ -60,12 +72,26 @@ const Technologies = styled.div`
   }
 `;
 
+const Links = styled.div`
+  display: flex;
+  > * {
+    margin-right: 0.75rem;
+  }
+`;
+
+const DetailText = styled.p`
+  font-style: italic;
+`;
+
 export default function SmallProject(props) {
   return (
     <Project>
       <div>
-        <ImageContainer src={props.image1} />
-        <Title>{props.title}</Title>
+        <div>
+          <ImageContainer src={props.image} alt={props.alt} title={props.alt} />
+          <Title>{props.title}</Title>
+        </div>
+
         <p>{props.blurb}</p>
 
         <Technologies>
@@ -74,16 +100,19 @@ export default function SmallProject(props) {
           ))}
         </Technologies>
 
-        {props.site && (
-          <a href={props.site} target="_blank">
-            View Site
-          </a>
-        )}
-        {props.github && (
-          <a href={props.github} target="_blank">
-            View Github
-          </a>
-        )}
+        <Links>
+          {props.site && (
+            <a href={props.site} target="_blank" rel="noopener noreferrer">
+              View Site <FaExternalLinkAlt />
+            </a>
+          )}
+          {props.github && (
+            <a href={props.github} target="_blank" rel="noopener noreferrer">
+              View Github <FaGithub />
+            </a>
+          )}
+        </Links>
+        {props.detailText && <DetailText>{props.detailText}</DetailText>}
       </div>
     </Project>
   );

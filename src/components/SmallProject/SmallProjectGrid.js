@@ -17,6 +17,13 @@ const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 // todo: support for icons in title
@@ -28,8 +35,8 @@ export default function SmallProjectsGrid() {
       <ProjectsContainer>
         <SmallProject
           title={"Demystifying Gig Work"}
-          image1={"/projects/gigwork/hero.png"}
-          image2={"/projects/gigwork/overview.png"}
+          image={"/projects/gigwork/hero.png"}
+          alt="Demystifying Gig Work landing page"
           blurb={
             "Informational site to demystify technologies used to manage digital gig workers. Includes complex data tools for estimating driver earnings and expenses."
           }
@@ -41,14 +48,15 @@ export default function SmallProjectsGrid() {
             "Leaflet.js",
             "Playwright",
           ]}
+          // detailText="Built for the HAI Lab at UT Austin"
         />
 
         <SmallProject
           title={"HAI Lab Site"}
-          image1={"/projects/labsite/publications.png"}
-          image2={"/projects/labsite/landing.png"}
+          image={"/projects/labsite/publications.png"}
+          alt="HAI Lab site publications page"
           blurb={
-            "Built a CMS for the Human-AI Interaction Lab's website at UT Austin and made improvements to various pages on the site."
+            "The primary site for the Human-AI Interaction Lab's website at UT Austin. I built a CMS for this application and made improvements to various pages on the site."
           }
           site={"https://hai.ischool.utexas.edu/"}
           technologies={[
@@ -58,17 +66,16 @@ export default function SmallProjectsGrid() {
             "Payload",
             "Tailwind",
           ]}
+          // detailText="Built for the HAI Lab at UT Austin"
         />
 
         <SmallProject
           title={"Contextual Metadata"}
-          image1={"/projects/cm/tmp.png"}
-          image2={"/projects/cm/questions-tmp.gif"}
+          image={"/projects/cm/tmp.png"}
+          alt="Contextual Metadata student view"
           blurb={
-            "Classroom tool for teaching students how to research and analyze data. (Currently a work in progress.)"
+            "Classroom tool for teaching students how to research and analyze data."
           }
-          site={"https://playerbase.fun/"}
-          github={null}
           technologies={[
             "Typescript",
             "Next.js",
@@ -78,12 +85,13 @@ export default function SmallProjectsGrid() {
             "Django",
             "Docker",
           ]}
+          detailText="Currently a work in progress"
         />
 
         <SmallProject
           title={"Playerbase"}
-          image1={"/projects/rd2l-01.png"}
-          image2={"/projects/rd2l-01.png"}
+          image={"/projects/rd2l-01.png"}
+          alt="Ongoing auction on Playerbase"
           blurb={
             "Web application for running live auctions for amateur e-sports leagues directly in the browser."
           }
@@ -102,19 +110,20 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Umami Meats"}
-          image1={"/projects/umami-meats-0.png"}
-          image2={"/projects/umami-meats-1.png"}
+          image={"/projects/umami-meats-0.png"}
+          alt="Umami Meats homepage"
           blurb={
             "E-commerce site that sells a small variety of high-quality steak and sushi."
           }
           github={"https://github.com/dexters-lab-fsa-2208/umami-meats"}
           technologies={["Node.js", "Next.js", "React", "Redux", "PostgreSQL"]}
+          // detailText="Built while studying at Fullstack Academy"
         />
 
         <SmallProject
           title={"Book Beasts"}
-          image1={"/projects/book-beasts-1.png"}
-          image2={"/projects/book-beasts-2.png"}
+          image={"/projects/book-beasts-1.png"}
+          alt="Book Beasts student dashboard"
           blurb={
             "An educational and interactive experience in which children can create their own storybooks and their parents can manage their works."
           }
@@ -127,12 +136,13 @@ export default function SmallProjectsGrid() {
             "Redux",
             "Mocha",
           ]}
+          // detailText="Built while studying at Fullstack Academy"
         />
 
         <SmallProject
           title={"Tusk"}
-          image1={"/projects/tusk-01.png"}
-          image2={"/projects/tusk-03.png"}
+          image={"/projects/tusk-01.png"}
+          alt="Tusk hero selection table"
           blurb={
             "Tool for evaluating unique and complex hero matchups in Dota 2."
           }
@@ -150,8 +160,8 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Solar Sandbox"}
-          image1={"/projects/solar-sandbox-1b.jpg"}
-          image2={"/projects/solar-sandbox-1a.jpg"}
+          image={"/projects/solar-sandbox-1b.jpg"}
+          alt="Solar Sandbox custom 3D solar system"
           blurb={
             "A fun, interactive site where users can design their own solar system from scratch."
           }
@@ -164,6 +174,7 @@ export default function SmallProjectsGrid() {
             "React Three Fiber",
             "Zustand",
           ]}
+          // detailText="Built while studying at Fullstack Academy"
         />
       </ProjectsContainer>
     </ContentContainer>
