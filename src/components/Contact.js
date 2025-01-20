@@ -82,7 +82,7 @@ const HalfContainers = styled.div`
     color: black;
 
     min-height: 5em;
-    margin: 32px auto 12px;
+    margin: 32px auto;
     padding: 18px 18px 8px;
     border-radius: 20px;
 

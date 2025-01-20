@@ -76,7 +76,18 @@ const Links = styled.div`
   margin-left: 0.3rem;
   display: flex;
   > * {
-    margin-right: 0.75rem;
+    margin-right: 1.15rem;
+  }
+  a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.35rem;
+
+    text-decoration: none;
+    > span {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -104,12 +115,13 @@ export default function SmallProject(props) {
         <Links>
           {props.site && (
             <a href={props.site} target="_blank" rel="noopener noreferrer">
-              View Site <FaExternalLinkAlt />
+              <span>View Site</span> <FaExternalLinkAlt className="link-icon" />
             </a>
           )}
           {props.github && (
             <a href={props.github} target="_blank" rel="noopener noreferrer">
-              View Github <FaGithub />
+              <span>View Github</span>{" "}
+              <FaGithub size={19} className="github-icon" />
             </a>
           )}
         </Links>
