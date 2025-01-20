@@ -62,6 +62,7 @@ export default function SmallProjectsGrid() {
             "Leaflet.js",
             "Playwright",
           ]}
+          imageObjectPosition="50% 35%"
           // detailText="Built for the HAI Lab at UT Austin"
         />
 
@@ -70,7 +71,7 @@ export default function SmallProjectsGrid() {
           image={"/projects/labsite/publications.png"}
           alt="HAI Lab site publications page"
           blurb={
-            "The primary site for the Human-AI Interaction Lab's website at UT Austin. I built a CMS for this application and made improvements to various pages on the site."
+            "Made several contributions to the UT Austin Human-AI Interaction Lab website, ranging from the integration of headless CMS to various significant UX improvements."
           }
           site={"https://hai.ischool.utexas.edu/"}
           technologies={[
@@ -100,11 +101,12 @@ export default function SmallProjectsGrid() {
             "Docker",
           ]}
           detailText="Currently a work in progress"
+          imageObjectPosition="0% 0%"
         />
 
         <SmallProject
           title={"Playerbase"}
-          image={"/projects/rd2l-01.png"}
+          image={"/projects/playerbase-history-tab.png"}
           alt="Ongoing auction on Playerbase"
           blurb={
             "Web application for running live auctions for amateur e-sports leagues directly in the browser."
@@ -120,6 +122,7 @@ export default function SmallProjectsGrid() {
             "Django",
             "Docker",
           ]}
+          imageObjectPosition="20% 0%"
         />
 
         <SmallProject
@@ -132,6 +135,7 @@ export default function SmallProjectsGrid() {
           github={"https://github.com/dexters-lab-fsa-2208/umami-meats"}
           technologies={["Node.js", "Next.js", "React", "Redux", "PostgreSQL"]}
           // detailText="Built while studying at Fullstack Academy"
+          imageObjectPosition="10% 0%"
         />
 
         <SmallProject
@@ -151,6 +155,7 @@ export default function SmallProjectsGrid() {
             "Mocha",
           ]}
           // detailText="Built while studying at Fullstack Academy"
+          imageObjectPosition="0% 35%"
         />
 
         <SmallProject

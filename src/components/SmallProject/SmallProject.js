@@ -46,6 +46,7 @@ const ImageContainer = styled.img`
   width: 100%;
   height: 300px;
   object-fit: cover;
+  object-position: ${(props) => props.objectPosition};
   border-radius: 12px 12px 0 0;
 `;
 
@@ -100,7 +101,12 @@ export default function SmallProject(props) {
     <Project>
       <div>
         <div>
-          <ImageContainer src={props.image} alt={props.alt} title={props.alt} />
+          <ImageContainer
+            src={props.image}
+            alt={props.alt}
+            title={props.alt}
+            objectPosition={props.imageObjectPosition || "50% 50%"}
+          />
           <Title>{props.title}</Title>
         </div>
 
@@ -112,19 +118,23 @@ export default function SmallProject(props) {
           ))}
         </Technologies>
 
-        <Links>
-          {props.site && (
-            <a href={props.site} target="_blank" rel="noopener noreferrer">
-              <span>View Site</span> <FaExternalLinkAlt className="link-icon" />
-            </a>
-          )}
-          {props.github && (
-            <a href={props.github} target="_blank" rel="noopener noreferrer">
-              <span>View Github</span>{" "}
-              <FaGithub size={19} className="github-icon" />
-            </a>
-          )}
-        </Links>
+        {(props.site || props.github) && (
+          <Links>
+            {props.site && (
+              <a href={props.site} target="_blank" rel="noopener noreferrer">
+                <span>View Site</span>{" "}
+                <FaExternalLinkAlt className="link-icon" />
+              </a>
+            )}
+            {props.github && (
+              <a href={props.github} target="_blank" rel="noopener noreferrer">
+                <span>View Github</span>{" "}
+                <FaGithub size={19} className="github-icon" />
+              </a>
+            )}
+          </Links>
+        )}
+
         {props.detailText && <DetailText>{props.detailText}</DetailText>}
       </div>
     </Project>
