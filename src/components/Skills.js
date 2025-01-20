@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import images from "../images";
 import colors from "../colors.json";
+import { SectionHeader } from "./SmallProject/SmallProjectGrid";
 
 const SkillsContainer = styled.div`
   padding: 1.2em 1.2em 1.9em;
@@ -31,15 +32,12 @@ const SkillsContainer = styled.div`
   }
 
   h1 {
-    text-align: center;
-    font-size: 2.9rem;
     margin: 0;
     padding: 0.1em 0.2rem 0.3em;
   }
   @media screen and (min-width: 650px) {
     padding: 1.65em 1.2em 2.5em;
     > h1 {
-      font-size: 3.5rem;
       margin: 0;
       padding: 0.2em 0.25rem 0.45em;
     }
@@ -99,19 +97,19 @@ const SingleSkill = styled.div`
 export default function Skills() {
   const technologies = [
     "Git",
-    "Node.js",
-    "PostgreSQL",
-    "Express",
-    "React",
-    "Redux",
     "Next.js",
+    "PostgreSQL",
+    "Node.js",
+    "React",
+    "Express",
+    "Redux",
     "Three.js",
   ];
   const languages = ["Typescript", "Javascript", "Python"];
 
   return (
     <SkillsContainer>
-      <h1>technical skills</h1>
+      <SectionHeader>technical skills</SectionHeader>
 
       <div className="tech-list">
         {technologies.map((itm) => (

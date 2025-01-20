@@ -2,16 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { FaLinkedin } from "react-icons/fa";
 import colors from "../colors.json";
+import { SectionHeader } from "./SmallProject/SmallProjectGrid";
 
 const ContactContainer = styled.div`
   background: ${colors.backgroundSecondary};
-  padding: 0.3em 1.5em 1.5em;
-  font-size: 105%;
+  padding: 16px 12px;
   margin: 0 auto;
   color: black;
 
+  h1 {
+    padding-bottom: 16px;
+  }
+
   @media screen and (min-width: 650px) {
-    padding: 0.6em 1.5em 2.7em;
+    padding: 32px 12px;
   }
 
   > div {
@@ -67,27 +71,31 @@ const HalfContainers = styled.div`
   margin: 0.5em auto;
   padding: 0.5em 0.5em 0;
   width: fit-content;
-  hr {
-    margin: 0.6em auto;
-    width: 19em;
+  font-size: 1.1rem;
+
+  &#left {
+    line-height: 1.65rem;
   }
+
   &#right {
     background: ${colors.lighter};
     color: black;
 
     min-height: 5em;
-    margin: 1em auto 0;
-    padding: 1.15em 1.3em 0.5em;
-    border-radius: 1.5em;
+    margin: 32px auto 12px;
+    padding: 18px 18px 8px;
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.09);
   }
 `;
 
 export default function Contact() {
   return (
     <ContactContainer>
+      <SectionHeader>contact</SectionHeader>
+
       <HalfContainers id="left">
-        <h2>let's get in touch!</h2>
-        <hr />
         <p>
           I am currently looking for full-time employment and am open to select
           freelance opportunities - feel free to contact me here:
