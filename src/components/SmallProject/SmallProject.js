@@ -3,10 +3,10 @@ import styled from "styled-components";
 import colors from "../../colors.json";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const projectMb = "2rem";
+const projectMb = "36px";
 const Project = styled.div`
   /* border: 1px solid red; */
-  width: 95%;
+  width: 92%;
   margin: 0 auto;
   border-radius: 12px;
   > div {
@@ -27,12 +27,12 @@ const Project = styled.div`
       padding: 0;
       /* title */
       > :nth-child(2) {
-        padding: 0 12px;
+        padding: 4px 18px 0;
       }
     }
 
     > * {
-      padding: 2px 12px;
+      padding: 8px 18px;
     }
 
     img {
@@ -51,12 +51,12 @@ const ImageContainer = styled.img`
 
 const Title = styled.h2`
   font-family: "Quicksand", sans-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
 `;
 
 const Technologies = styled.div`
   width: fit-content;
-  margin: 0.2em auto;
+  margin: auto auto 0.2em;
   display: flex;
   flex-flow: row wrap;
   gap: 4px 6px;
@@ -73,6 +73,7 @@ const Technologies = styled.div`
 `;
 
 const Links = styled.div`
+  margin-left: 0.3rem;
   display: flex;
   > * {
     margin-right: 0.75rem;

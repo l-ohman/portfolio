@@ -26,12 +26,26 @@ const ProjectsContainer = styled.div`
   }
 `;
 
+export const SectionHeader = styled.h1`
+  text-align: center;
+  font-size: 2.9rem;
+  margin: 0;
+  padding: 0.1em 0.2rem 0.55em;
+
+  @media screen and (min-width: 650px) {
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 0 0 3rem;
+  }
+`;
+
 // todo: support for icons in title
 // todo: image alt text, hover for 2nd image, and positioning
 // todo?: note which project were for UT austin?
 export default function SmallProjectsGrid() {
   return (
     <ContentContainer>
+      <SectionHeader>recent work</SectionHeader>
       <ProjectsContainer>
         <SmallProject
           title={"Demystifying Gig Work"}

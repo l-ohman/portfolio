@@ -5,57 +5,77 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
 
 const HeroContainer = styled.div`
+
   /* background: ${colors.lighter}; */
   /* padding: 18px; */
 
   border-radius: 12px;
   color: black;
-  max-width: min(37.5rem, 675px);
+
+  /* max-width: min(37.5rem, 675px); */
+  max-width: 1200px;
+
   padding: 0 12px;
   margin: 7rem auto 4.5rem;
   h1 {
-    font-size: 3rem;
+    font-size: 4.25rem;
     margin-bottom: 0.95rem;
     padding-left: 18px;
+    /* text-align: center; */
+    @media screen and (max-width: 600px) {
+      font-size: 3.75rem;
+      margin-bottom: 0.25rem;
+    }
   }
 `;
 
 const TextContainer = styled.div`
-  background: ${colors.lighter};
+  /* background: ${colors.lighter}; */
+  /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); */
+
+
   padding: 18px;
   border-radius: 12px;
   p {
     font-size: 1.15rem;
     padding: 0.6rem 0;
+    line-height: 1.6rem;
   }
   z-index: 1;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 `;
 
 const logoP = "12px";
 const LogoLinks = styled.div`
   width: 85%;
-  max-width: 275px;
+  max-width: 325px;
   padding: 0.45em 0 0.1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: ${colors.light};
+  /* background: ${colors.light}; */
+  /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125); */
+
+
   padding: calc(12px + ${logoP}) calc(${logoP} * 1.5) ${logoP};
   margin: -12px 0;
   z-index: 0;
   border-radius: 0 0 12px 12px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125);
 `;
-const iconSize = 38;
+const iconSize = 42;
 
 export default function Hero() {
   return (
     <HeroContainer>
       <h1>hi, i'm jake.</h1>
       <TextContainer>
-        <p>I am a fullstack engineer currently based in Austin, TX.</p>
+        <p>I'm a fullstack engineer based in Austin, TX.</p>
+
+        <p>
+          Currently I am looking for full-time roles and am open to select
+          freelance opportunities.
+        </p>
+
         <p>Take a look below for my recent projects and contact information.</p>
       </TextContainer>
 
