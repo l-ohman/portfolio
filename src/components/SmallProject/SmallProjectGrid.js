@@ -54,7 +54,7 @@ export default function SmallProjectsGrid() {
           blurb={
             "Informational site to demystify technologies used to manage digital gig workers. Includes complex data tools for estimating driver earnings and expenses."
           }
-          site={"https://gig-work-new-iteration-66296e5a690a.herokuapp.com/"}
+          site={"https://demystifying-gigwork.com/"}
           technologies={[
             "Typescript",
             "Next.js",
@@ -71,7 +71,7 @@ export default function SmallProjectsGrid() {
           image={"/projects/labsite/publications.png"}
           alt="HAI Lab site publications page"
           blurb={
-            "Made several contributions to the UT Austin Human-AI Interaction Lab website, ranging from the integration of headless CMS to various significant UX improvements."
+            "Made several contributions to the UT Austin Human-AI Interaction Lab website, ranging from the integration of a headless CMS to various UX improvements."
           }
           site={"https://hai.ischool.utexas.edu/"}
           technologies={[
@@ -94,11 +94,9 @@ export default function SmallProjectsGrid() {
           technologies={[
             "Typescript",
             "Next.js",
-            "Material UI",
-            "socket.io",
-            "Redis",
-            "Django",
-            "Docker",
+            "React",
+            "Tailwind",
+            "Prisma",
           ]}
           detailText="Currently a work in progress"
           imageObjectPosition="0% 0%"
@@ -109,7 +107,7 @@ export default function SmallProjectsGrid() {
           image={"/projects/playerbase-history-tab.png"}
           alt="Ongoing auction on Playerbase"
           blurb={
-            "Web application for running live auctions for amateur e-sports leagues directly in the browser."
+            "Web application that runs live auctions for amateur e-sports leagues directly in the browser."
           }
           site={"https://playerbase.fun/"}
           github={null}
@@ -140,7 +138,7 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Book Beasts"}
-          image={"/projects/book-beasts-1.png"}
+          image={"/projects/book-beasts-2.png"}
           alt="Book Beasts student dashboard"
           blurb={
             "An educational and interactive experience in which children can create their own storybooks and their parents can manage their works."
@@ -152,7 +150,7 @@ export default function SmallProjectsGrid() {
             "PostgreSQL",
             "React",
             "Redux",
-            "Mocha",
+            // "Mocha",
           ]}
           // detailText="Built while studying at Fullstack Academy"
           imageObjectPosition="0% 35%"
