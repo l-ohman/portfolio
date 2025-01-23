@@ -1,8 +1,12 @@
 ## portfolio
 
-originally built in december 2022 / january 2023. updated in august 2023.
-
 https://l-ohman.com/
+
+todo:
+- update skills section
+- update projects monthly
+- contact form
+- new favicon
 
 <!--
 To deploy to Github Pages:
