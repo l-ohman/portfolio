@@ -46,12 +46,39 @@ const Project = styled.div`
   }
 `;
 
-const ImageContainer = styled.img`
+const ImageContainer = styled.div`
   width: 100%;
   height: 300px;
   object-fit: cover;
   object-position: ${(props) => props.objectPosition};
   border-radius: 12px 12px 0 0;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: ${(props) => props.objectPosition};
+  border-radius: 12px 12px 0 0;
+`;
+
+const HoveredImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: opacity 0.2s;
+
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: ${(props) => props.objectPosition};
+  border-radius: 12px 12px 0 0;
+
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const Title = styled.h2`
@@ -100,18 +127,31 @@ const DetailText = styled.p`
   font-style: italic;
 `;
 
+// todo: deconstruct props
 export default function SmallProject(props) {
   return (
     <Project>
       <FloatIn>
         <div>
           <div>
-            <ImageContainer
-              src={props.image}
-              alt={props.alt}
-              title={props.alt}
-              objectPosition={props.imageObjectPosition || "50% 50%"}
-            />
+            <ImageContainer>
+              <Image
+                src={props.image}
+                alt={props.alt}
+                // title={props.alt}
+                objectPosition={props.imageObjectPosition || "50% 50%"}
+              />
+
+              {props.altImage && (
+                <HoveredImage
+                  src={props.altImage}
+                  alt={props.altImageAltText}
+                  // title={props.altImageAltText}
+                  objectPosition={props.altImageObjectPosition || "50% 50%"}
+                />
+              )}
+            </ImageContainer>
+
             <Title>{props.title}</Title>
           </div>
 

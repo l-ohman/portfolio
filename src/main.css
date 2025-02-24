@@ -20,3 +20,7 @@ h2,
 h3 {
   font-family: "Quicksand", sans-serif;
 }
+
+.hoverImg {
+  display: none;
+}

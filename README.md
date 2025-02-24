@@ -7,6 +7,7 @@ todo:
 - update projects monthly
 - contact form
 - new favicon
+- overhaul css
 
 <!--
 To deploy to Github Pages:

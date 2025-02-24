@@ -86,10 +86,12 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Contextual Metadata"}
-          image={"/projects/cm/tmp.png"}
-          alt="Contextual Metadata student view"
+          image={"/projects/cm/initial-reflection.png"}
+          alt="Student reflection form"
+          altImage="/projects/cm/answer-update.png"
+          altImageAltText="Student answer modal"
           blurb={
-            "Classroom tool for teaching students how to research and analyze data."
+            "Classroom tool for teaching students how to research and analyze data. Includes several question sets and forms in which students iterate on their answers multiple times as they progress through the learning material."
           }
           technologies={[
             "Typescript",
@@ -98,8 +100,9 @@ export default function SmallProjectsGrid() {
             "Tailwind",
             "Prisma",
           ]}
-          detailText="Currently a work in progress"
+          detailText="Built for the HAI Lab at UT Austin"
           imageObjectPosition="0% 0%"
+          altImageObjectPosition="65% 50%"
         />
 
         <SmallProject
