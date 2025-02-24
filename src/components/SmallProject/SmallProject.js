@@ -4,7 +4,10 @@ import colors from "../../colors.json";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import FloatIn from "../animators/FloatIn";
 
+//**todo: desparately need to redo the CSS in this project**//
+
 const projectMb = "36px";
+
 const Project = styled.div`
   /* border: 1px solid red; */
   width: 92%;
@@ -41,7 +44,6 @@ const Project = styled.div`
 
     img {
       padding: 0;
-      margin-bottom: 6px;
     }
   }
 `;
@@ -49,8 +51,6 @@ const Project = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   height: 300px;
-  object-fit: cover;
-  object-position: ${(props) => props.objectPosition};
   border-radius: 12px 12px 0 0;
 `;
 
@@ -82,6 +82,7 @@ const HoveredImage = styled.img`
 `;
 
 const Title = styled.h2`
+  margin-top: 10px;
   font-family: "Quicksand", sans-serif;
   font-size: 1.9rem;
 `;

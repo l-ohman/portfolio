@@ -40,8 +40,8 @@ export const SectionHeader = styled.h1`
 `;
 
 // todo: support for icons in title
-// todo: image alt text, hover for 2nd image, and positioning
 // todo?: note which project were for UT austin?
+// todo: extract this data to a static file instead of writing it directly in react
 export default function SmallProjectsGrid() {
   return (
     <ContentContainer>
@@ -51,6 +51,9 @@ export default function SmallProjectsGrid() {
           title={"Demystifying Gig Work"}
           image={"/projects/gigwork/hero.png"}
           alt="Demystifying Gig Work landing page"
+          altImage="/projects/gigwork/breakdown.png"
+          altImageAltText="Gig work breakdown"
+          altImageObjectPosition="0% 30%"
           blurb={
             "Informational site to demystify technologies used to manage digital gig workers. Includes complex data tools for estimating driver earnings and expenses."
           }
@@ -63,24 +66,6 @@ export default function SmallProjectsGrid() {
             "Playwright",
           ]}
           imageObjectPosition="50% 35%"
-          // detailText="Built for the HAI Lab at UT Austin"
-        />
-
-        <SmallProject
-          title={"HAI Lab Site"}
-          image={"/projects/labsite/publications.png"}
-          alt="HAI Lab site publications page"
-          blurb={
-            "Made several contributions to the UT Austin Human-AI Interaction Lab website, ranging from the integration of a headless CMS to various UX improvements."
-          }
-          site={"https://hai.ischool.utexas.edu/"}
-          technologies={[
-            "Typescript",
-            "Next.js",
-            "React",
-            "Payload",
-            "Tailwind",
-          ]}
           // detailText="Built for the HAI Lab at UT Austin"
         />
 
@@ -106,9 +91,33 @@ export default function SmallProjectsGrid() {
         />
 
         <SmallProject
+          title={"HAI Lab Site"}
+          image="/projects/labsite/publications.png"
+          alt="HAI Lab site publications page"
+          altImage="/projects/labsite/admin.png"
+          altImageAltText="HAI Lab site admin view"
+          altImageObjectPosition="0% 0%"
+          blurb={
+            "Made several contributions to the UT Austin Human-AI Interaction Lab website, ranging from the integration of a headless CMS to various UX improvements."
+          }
+          site={"https://hai.ischool.utexas.edu/"}
+          technologies={[
+            "Typescript",
+            "Next.js",
+            "React",
+            "Payload",
+            "Tailwind",
+          ]}
+          // detailText="Built for the HAI Lab at UT Austin"
+        />
+
+        <SmallProject
           title={"Playerbase"}
-          image={"/projects/playerbase-history-tab.png"}
+          image={"/projects/playerbase/history-tab.png"}
           alt="Ongoing auction on Playerbase"
+          altImage="/projects/playerbase/gunnar-stream.png"
+          altImageAltText="Pro Dota 2 player 'Gunnar' livestreams his perspective in the auction"
+          altImageObjectPosition="0% 0%"
           blurb={
             "Web application that runs live auctions for amateur e-sports leagues directly in the browser."
           }
@@ -128,8 +137,11 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Umami Meats"}
-          image={"/projects/umami-meats-0.png"}
+          image={"/projects/umami/home.png"}
           alt="Umami Meats homepage"
+          altImage="/projects/umami/cart.png"
+          altImageAltText="Umami Meats cart"
+          altImageObjectPosition="0% 0%"
           blurb={
             "E-commerce site that sells a small variety of high-quality steak and sushi."
           }
@@ -141,8 +153,11 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Book Beasts"}
-          image={"/projects/book-beasts-2.png"}
+          image={"/projects/bb/editor-view.png"}
           alt="Book Beasts student dashboard"
+          altImage="/projects/bb/my-books.png"
+          altImageAltText="'My Books' view"
+          altImageObjectPosition="0% 0%"
           blurb={
             "An educational and interactive experience in which children can create their own storybooks and their parents can manage their works."
           }
@@ -161,8 +176,11 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Tusk"}
-          image={"/projects/tusk-01.png"}
+          image={"/projects/tusk/home.png"}
           alt="Tusk hero selection table"
+          altImage="/projects/tusk/breakdown.png"
+          altImageAltText="Tusk matchup breakdown"
+          altImageObjectPosition="0% 0%"
           blurb={
             "Tool for evaluating unique and complex hero matchups in Dota 2."
           }
@@ -180,8 +198,11 @@ export default function SmallProjectsGrid() {
 
         <SmallProject
           title={"Solar Sandbox"}
-          image={"/projects/solar-sandbox-1b.jpg"}
+          image={"/projects/solar/3d-view.jpg"}
           alt="Solar Sandbox custom 3D solar system"
+          altImage="/projects/solar/node-graph.jpg"
+          altImageAltText="Solar Sandbox node graph editor"
+          altImageObjectPosition="50% 0%"
           blurb={
             "A fun, interactive site where users can design their own solar system from scratch."
           }
