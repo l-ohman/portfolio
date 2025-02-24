@@ -5,7 +5,6 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
 
 const HeroContainer = styled.div`
-
   /* background: ${colors.lighter}; */
   /* padding: 18px; */
 
@@ -33,7 +32,6 @@ const TextContainer = styled.div`
   /* background: ${colors.lighter}; */
   /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); */
 
-
   padding: 18px;
   border-radius: 12px;
   p {
@@ -55,7 +53,6 @@ const LogoLinks = styled.div`
 
   /* background: ${colors.light}; */
   /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.125); */
-
 
   padding: calc(12px + ${logoP}) calc(${logoP} * 1.5) ${logoP};
   margin: -12px 0;

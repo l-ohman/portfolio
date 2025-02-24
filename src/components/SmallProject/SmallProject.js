@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../colors.json";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import FloatIn from "../animators/FloatIn";
 
 const projectMb = "36px";
 const Project = styled.div`
@@ -10,6 +11,9 @@ const Project = styled.div`
   margin: 0 auto;
   border-radius: 12px;
   > div {
+    height: 100%;
+  }
+  > div > div {
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.15);
     height: calc(100% - ${projectMb});
     background: ${colors.light};
@@ -99,44 +103,50 @@ const DetailText = styled.p`
 export default function SmallProject(props) {
   return (
     <Project>
-      <div>
+      <FloatIn>
         <div>
-          <ImageContainer
-            src={props.image}
-            alt={props.alt}
-            title={props.alt}
-            objectPosition={props.imageObjectPosition || "50% 50%"}
-          />
-          <Title>{props.title}</Title>
+          <div>
+            <ImageContainer
+              src={props.image}
+              alt={props.alt}
+              title={props.alt}
+              objectPosition={props.imageObjectPosition || "50% 50%"}
+            />
+            <Title>{props.title}</Title>
+          </div>
+
+          <p>{props.blurb}</p>
+
+          <Technologies>
+            {props.technologies.map((tech, i) => (
+              <div key={`${tech}_${i}`}>{tech}</div>
+            ))}
+          </Technologies>
+
+          {(props.site || props.github) && (
+            <Links>
+              {props.site && (
+                <a href={props.site} target="_blank" rel="noopener noreferrer">
+                  <span>View Site</span>{" "}
+                  <FaExternalLinkAlt className="link-icon" />
+                </a>
+              )}
+              {props.github && (
+                <a
+                  href={props.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>View Github</span>{" "}
+                  <FaGithub size={19} className="github-icon" />
+                </a>
+              )}
+            </Links>
+          )}
+
+          {props.detailText && <DetailText>{props.detailText}</DetailText>}
         </div>
-
-        <p>{props.blurb}</p>
-
-        <Technologies>
-          {props.technologies.map((tech, i) => (
-            <div key={`${tech}_${i}`}>{tech}</div>
-          ))}
-        </Technologies>
-
-        {(props.site || props.github) && (
-          <Links>
-            {props.site && (
-              <a href={props.site} target="_blank" rel="noopener noreferrer">
-                <span>View Site</span>{" "}
-                <FaExternalLinkAlt className="link-icon" />
-              </a>
-            )}
-            {props.github && (
-              <a href={props.github} target="_blank" rel="noopener noreferrer">
-                <span>View Github</span>{" "}
-                <FaGithub size={19} className="github-icon" />
-              </a>
-            )}
-          </Links>
-        )}
-
-        {props.detailText && <DetailText>{props.detailText}</DetailText>}
-      </div>
+      </FloatIn>
     </Project>
   );
 }

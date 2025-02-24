@@ -3,6 +3,7 @@ import styled from "styled-components";
 import images from "../images";
 import colors from "../colors.json";
 import { SectionHeader } from "./SmallProject/SmallProjectGrid";
+import FloatIn from "./animators/FloatIn";
 
 const SkillsContainer = styled.div`
   padding: 1.2em 1.2em 1.9em;
@@ -111,35 +112,39 @@ export default function Skills() {
     <SkillsContainer>
       <SectionHeader>technical skills</SectionHeader>
 
-      <div className="tech-list">
-        {technologies.map((itm) => (
-          <SingleSkill key={itm}>
-            <img
-              src={images.skills[itm]}
-              alt={`${itm} Logo`}
-              id={itm === "React" ? "react-logo" : ""}
-              className="stack-logo technologies"
-              title={`${itm} Logo`}
-            />
-            <p className="tech-txt">{itm}</p>
-          </SingleSkill>
-        ))}
-      </div>
+      <FloatIn>
+        <div className="tech-list">
+          {technologies.map((itm) => (
+            <SingleSkill key={itm}>
+              <img
+                src={images.skills[itm]}
+                alt={`${itm} Logo`}
+                id={itm === "React" ? "react-logo" : ""}
+                className="stack-logo technologies"
+                title={`${itm} Logo`}
+              />
+              <p className="tech-txt">{itm}</p>
+            </SingleSkill>
+          ))}
+        </div>
+      </FloatIn>
 
       <hr id="tech-language-divider" />
 
-      <div className="tech-list" id="languages">
-        {languages.map((itm) => (
-          <SingleSkill key={itm}>
-            <img
-              src={images.skills[itm]}
-              alt={`${itm} Logo`}
-              className="stack-logo language"
-            />
-            <p className="tech-txt">{itm}</p>
-          </SingleSkill>
-        ))}
-      </div>
+      <FloatIn>
+        <div className="tech-list" id="languages">
+          {languages.map((itm) => (
+            <SingleSkill key={itm}>
+              <img
+                src={images.skills[itm]}
+                alt={`${itm} Logo`}
+                className="stack-logo language"
+              />
+              <p className="tech-txt">{itm}</p>
+            </SingleSkill>
+          ))}
+        </div>
+      </FloatIn>
     </SkillsContainer>
   );
 }
