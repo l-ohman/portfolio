@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../../colors.json";
+import colors from "../../data/colors.json";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import FloatIn from "../animators/FloatIn";
+import FloatIn from "../FloatIn";
 
 //**todo: desparately need to redo the CSS in this project**//
 

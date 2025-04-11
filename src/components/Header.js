@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../../colors.json";
+import colors from "../data/colors.json";
 
 const HeaderContainer = styled.div`
   position: fixed;
@@ -29,7 +29,7 @@ const HeaderContainer = styled.div`
     .single-link:hover {
       cursor: pointer;
       transition: color 0.08s linear 0s;
-      color: #E9E9E9;
+      color: #e9e9e9;
     }
   }
 `;
@@ -45,13 +45,24 @@ export default function Header({ hero, projects, skills, contact }) {
         window.scrollTo({ top: hero.current.offsetTop, behavior: "smooth" });
         break;
       case "projects":
-        window.scrollTo({ top: (projects.current.offsetTop - 30), behavior: "smooth" });
+        window.scrollTo({
+          top: projects.current.offsetTop - 30,
+          behavior: "smooth",
+        });
         break;
       case "skills":
-        window.scrollTo({ top: (skills.current.offsetTop - 30), left: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: skills.current.offsetTop - 30,
+          left: 0,
+          behavior: "smooth",
+        });
         break;
       case "contact":
-        window.scrollTo({ top: (contact.current.offsetTop - 30), left: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: contact.current.offsetTop - 30,
+          left: 0,
+          behavior: "smooth",
+        });
         break;
       default:
         return;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Header, Hero, Skills, ProjectList, Contact } from "./";
+import { Header, Hero, Skills, Contact } from "./";
 import SmallProjectsContainer from "./SmallProject/SmallProjectGrid";
 
 const ContentContainer = styled.div`
@@ -33,7 +33,6 @@ export default function MainPage() {
         </div>
 
         <div ref={links.projects}>
-          {/* <ProjectList /> */}
           <SmallProjectsContainer />
         </div>
 

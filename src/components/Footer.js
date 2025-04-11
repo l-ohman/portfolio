@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoMail, IoDocumentTextSharp } from "react-icons/io5";
-import colors from "../../colors.json";
+import colors from "../data/colors.json";
 
 const footerHeight = 4.5;
 const FooterContainer = styled.div`

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import images from "../images";
-import colors from "../colors.json";
+import colors from "../data/colors.json";
 import { SectionHeader } from "./SmallProject/SmallProjectGrid";
-import FloatIn from "./animators/FloatIn";
+import FloatIn from "./FloatIn";
 
 const SkillsContainer = styled.div`
   padding: 1.2em 1.2em 1.9em;

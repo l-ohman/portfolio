@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaLinkedin } from "react-icons/fa";
-import colors from "../colors.json";
+import colors from "../data/colors.json";
 import { SectionHeader } from "./SmallProject/SmallProjectGrid";
 
 const ContactContainer = styled.div`
