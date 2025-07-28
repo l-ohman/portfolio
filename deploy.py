@@ -9,7 +9,7 @@ def updateAssetManifest():
         data = json.load(file)
 
     # Updating path from "/static/etc" to "./static/etc"
-    for k, v in data.items():
+    for k, v in data["files"].items():
         if v[0] != ".":
             data[k] = "." + v
 
